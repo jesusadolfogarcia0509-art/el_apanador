@@ -1,0 +1,32 @@
+[
+    {
+      "title": "Aflojar tuerca con monedas",
+      "problem": "No tengo llave inglesa del tamaño correcto",
+      "solution_text": "Si la llave inglesa es demasiado grande para la tuerca, inserta una moneda entre la cara de la tuerca y la mandíbula de la llave para rellenar el hueco. Esto te dará el agarre necesario para girarla.",
+      "risk_level": "Bajo",
+      "difficulty": 1,
+      "affiliate_url_primary": "https://amzn.to/ejemplo-juego-llaves",
+      "affiliate_url_secondary": null,
+      "price": null
+    },
+    {
+      "title": "Soporte de móvil con gafas de sol",
+      "problem": "Quiero ver un video pero el móvil se cae",
+      "solution_text": "Dobla unas gafas de sol y colócalas sobre la mesa al revés. El móvil se apoya perfectamente entre las patillas y los cristales, creando un soporte estable instantáneo.",
+      "risk_level": "Bajo",
+      "difficulty": 1,
+      "affiliate_url_primary": null,
+      "affiliate_url_secondary": null,
+      "price": null
+    },
+    {
+      "title": "Arreglar cremallera con anilla",
+      "problem": "El tirador de la cremallera se ha roto",
+      "solution_text": "Usa una anilla de llavero vieja. Pásala por el agujero del deslizador de la cremallera. Funciona igual de bien y es mucho más resistente que el original.",
+      "risk_level": "Bajo",
+      "difficulty": 2,
+      "affiliate_url_primary": null,
+      "affiliate_url_secondary": null,
+      "price": null
+    }
+  ]

@@ -1,0 +1,110 @@
+═══════════════════════════════════════════════════════════════
+  EL APAÑADOR - LISTA DE ARCHIVOS PRINCIPALES
+═══════════════════════════════════════════════════════════════
+
+📁 ESTRUCTURA COMPLETA DEL PROYECTO
+═══════════════════════════════════════════════════════════════
+
+FRONTEND - JavaScript
+───────────────────────────────────────────────────────────────
+✅ frontend/js/app.js                    - Aplicación principal
+✅ frontend/js/detalle-truco.js          - Detalle con CTAs
+✅ frontend/js/Scanner.js                - Escáner IA
+✅ frontend/js/LegalDisclaimer.js       - Disclaimer legal
+✅ frontend/js/RiskPopup.js              - Popup de riesgo
+✅ frontend/js/legal_texts.js           - Textos legales
+✅ frontend/js/utils.js                  - Utilidades
+
+FRONTEND - CSS
+───────────────────────────────────────────────────────────────
+✅ css/styles.css                        - Estilos base
+✅ css/components.css                    - Componentes
+✅ css/detalle-truco.css                 - Detalle + CTAs
+✅ css/legal.css                         - Componentes legales
+✅ css/scanner.css                       - Escáner
+
+FRONTEND - HTML
+───────────────────────────────────────────────────────────────
+✅ index.html                            - Página principal
+
+BACKEND - Servidor
+───────────────────────────────────────────────────────────────
+✅ server/index.js                       - Servidor Express
+✅ server/middleware/errorHandler.js    - Manejo errores
+
+BACKEND - Modelos (Sequelize)
+───────────────────────────────────────────────────────────────
+✅ server/models/index.js                - Configuración
+✅ server/models/Problem.js              - Modelo Problema
+✅ server/models/Solution.js            - Modelo Solución
+✅ server/models/Tool.js                 - Modelo Herramienta
+✅ server/models/RiskLevel.js            - Nivel de Riesgo
+✅ server/models/Service.js             - Servicio
+✅ server/models/SolutionTool.js        - Relación N:M
+✅ server/models/ProblemService.js      - Relación N:M
+✅ server/models/ServiceLead.js         - Leads
+
+BACKEND - Rutas API
+───────────────────────────────────────────────────────────────
+✅ server/routes/problems.js            - API Problemas
+✅ server/routes/solutions.js           - API Soluciones
+✅ server/routes/tools.js               - API Herramientas
+✅ server/routes/busqueda.js            - API Búsqueda
+✅ server/routes/analytics.js           - API Analytics
+✅ server/routes/scanner.js              - API Escáner
+
+BACKEND - Utilidades
+───────────────────────────────────────────────────────────────
+✅ server/utils/scoring.js              - Algoritmo scoring
+
+BASE DE DATOS
+───────────────────────────────────────────────────────────────
+✅ database/schema.sql                   - Esquema PostgreSQL
+
+DATOS
+───────────────────────────────────────────────────────────────
+✅ data/seed/solutions.json             - 20 soluciones seed
+✅ data/trucos/truco_001.json          - Ejemplo completo
+✅ data/ejemplos/                       - Ejemplos separados
+
+SCRIPTS
+───────────────────────────────────────────────────────────────
+✅ scripts/importar-seed-data.js       - Importar seed
+✅ scripts/importar-datos-postgres.js  - Importar ejemplo
+
+CONFIGURACIÓN
+───────────────────────────────────────────────────────────────
+✅ package.json                         - Dependencias
+✅ .env.example                         - Variables entorno
+✅ .gitignore                           - Archivos ignorar
+
+DOCUMENTACIÓN
+───────────────────────────────────────────────────────────────
+✅ docs/ARQUITECTURA.md                 - Arquitectura
+✅ docs/MIGRACION_POSTGRESQL.md        - Migración BD
+✅ docs/COMPONENTES_LEGALES.md          - Componentes legales
+✅ docs/SEED_DATA.md                    - Seed data
+✅ docs/CTAS.md                         - CTAs
+✅ README.md                            - Documentación principal
+
+═══════════════════════════════════════════════════════════════
+  CARACTERÍSTICAS IMPLEMENTADAS
+═══════════════════════════════════════════════════════════════
+
+✅ Búsqueda multimodal (texto, voz, imagen)
+✅ Detalle de soluciones con pasos
+✅ CTAs de monetización (Amazon + Profesionales)
+✅ Escáner de herramientas con IA
+✅ Componentes legales (Disclaimer + Risk Popup)
+✅ Sistema de favoritos y recientes
+✅ Feedback de usuarios
+✅ Analytics y tracking
+✅ Base de datos PostgreSQL optimizada
+✅ Modelos con campos de monetización
+✅ Sistema de scoring para resultados
+✅ Responsive design completo
+
+═══════════════════════════════════════════════════════════════
+
+
+
