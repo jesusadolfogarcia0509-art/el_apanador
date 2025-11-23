@@ -140,11 +140,11 @@ input#searchInput {
     color: #64748b;
 }
 
-/* Botón de Amazon (El que da dinero) */
+/* Botón de Amazon (Naranja) */
 .amazon-btn {
     display: block;
     width: 100%;
-    background: #FF9900; /* Color Amazon */
+    background: #FF9900;
     color: white;
     text-align: center;
     padding: 15px;
@@ -156,3 +156,24 @@ input#searchInput {
     box-sizing: border-box;
 }
 .amazon-btn:hover { background: #e88b00; }
+
+/* Botón de Video (Rojo) */
+.video-btn {
+    display: block;
+    width: 100%;
+    background: #ff0000;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.video-btn:hover { background: #cc0000; }

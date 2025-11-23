@@ -26,11 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
         renderSolutions(filtered);
     });
 
-    // 3. Lógica para cerrar el Modal
+    // 3. Cerrar modal
     closeBtn.onclick = () => modal.style.display = "none";
     window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
 
-    // 4. Función que pinta las tarjetas
+    // 4. Renderizar lista
     function renderSolutions(solutions) {
         list.innerHTML = '';
         if(solutions.length === 0) {
@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p style="color:#64748b; margin:0">${sol.problem}</p>
             `;
             
-            // AL HACER CLIC: Abrimos el Modal bonito
             card.addEventListener('click', () => {
                 openModal(sol);
             });
@@ -61,11 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 5. Función que abre el detalle y decide si mostrar el botón de Amazon
+    // 5. Abrir Modal con Video y Amazon
     function openModal(sol) {
         let buyButtonHTML = '';
+        let videoButtonHTML = '';
         
-        // Si el truco tiene enlace de afiliado, creamos el botón naranja
+        // A) Botón Amazon
         if (sol.affiliate_url_primary) {
             buyButtonHTML = `
                 <a href="${sol.affiliate_url_primary}" target="_blank" class="amazon-btn">
@@ -77,9 +77,22 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
+        // B) Botón Video (Búsqueda inteligente)
+        // Si no hay video específico en la base de datos, buscamos en YouTube por título
+        const videoUrl = sol.video_url || `https://www.youtube.com/results?search_query=${encodeURIComponent(sol.title + " truco casero")}`;
+        
+        videoButtonHTML = `
+            <a href="${videoUrl}" target="_blank" class="video-btn">
+                ▶️ Ver Tutorial en YouTube
+            </a>
+        `;
+
         modalBody.innerHTML = `
             <h2 style="margin-top:0">${sol.title}</h2>
             <p style="font-size:1.1rem; color:#333; line-height: 1.6;">${sol.solution_text}</p>
+            
+            ${videoButtonHTML}
+            
             <hr style="border:0; border-top:1px solid #eee; margin:20px 0">
             ${buyButtonHTML}
         `;
