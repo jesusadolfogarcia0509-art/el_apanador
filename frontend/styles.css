@@ -47,6 +47,7 @@ input#searchInput {
     font-size: 16px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     outline: none;
+    box-sizing: border-box; /* Importante para que no se salga */
 }
 
 /* Botón Escáner */
@@ -64,6 +65,7 @@ input#searchInput {
     font-weight: bold;
     cursor: pointer;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* Lista de Trucos */
@@ -77,17 +79,42 @@ input#searchInput {
     gap: 15px;
 }
 
+/* --- NUEVO DISEÑO DE TARJETA CON IMAGEN --- */
 .solution-card {
     background: var(--card);
-    padding: 20px;
+    /* Quitamos padding general porque lo llevan los hijos */
     border-radius: 12px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     transition: transform 0.2s;
     cursor: pointer;
+    display: flex; /* Flex para poner imagen al lado del texto */
+    overflow: hidden; /* Para que la imagen respete el borde redondeado */
+    align-items: stretch; /* Que se estiren al mismo alto */
 }
 
 .solution-card:active {
     transform: scale(0.98);
+}
+
+/* Contenedor de la imagen en la tarjeta */
+.card-image-container {
+    width: 110px; /* Ancho fijo para la imagen */
+    min-width: 110px;
+    background: #e2e8f0;
+}
+
+/* La imagen en sí dentro de la tarjeta */
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para llenar el hueco sin deformar */
+    display: block;
+}
+
+/* Contenedor del texto en la tarjeta */
+.card-content {
+    padding: 15px;
+    flex-grow: 1; /* Ocupa el resto del espacio */
 }
 
 .tag {
@@ -98,9 +125,11 @@ input#searchInput {
     color: #475569;
 }
 
+/* Bordes de colores según riesgo (aplicado al borde izquierdo de la tarjeta entera) */
 .risk-alto { border-left: 5px solid #ef4444; }
 .risk-medio { border-left: 5px solid #f59e0b; }
 .risk-bajo { border-left: 5px solid #22c55e; }
+
 
 /* --- Estilos del Modal (Pop-up) --- */
 .modal {
@@ -109,22 +138,38 @@ input#searchInput {
     background: rgba(0,0,0,0.6);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start; /* Alineado arriba en móviles */
     z-index: 1000;
     backdrop-filter: blur(5px);
+    overflow-y: auto; /* Scroll si es muy alto */
+    padding: 20px 0;
 }
 
 .modal-content {
     background: white;
-    padding: 2rem;
+    /* Quitamos padding del content, lo pondrá el modalBody */
     border-radius: 15px;
     width: 90%;
     max-width: 500px;
     position: relative;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     animation: slideUp 0.3s ease;
-    max-height: 80vh;
-    overflow-y: auto;
+    margin: auto; /* Centrado vertical si cabe */
+    overflow: hidden; /* Para la imagen de cabecera */
+}
+
+/* Nueva imagen grande en el modal */
+.modal-hero-img {
+    width: 100%;
+    height: 200px; /* Altura fija para la cabecera */
+    object-fit: cover;
+    display: block;
+    background: #e2e8f0;
+}
+
+/* Padding para el texto dentro del modal */
+#modalBody {
+    padding: 20px;
 }
 
 @keyframes slideUp {
@@ -134,13 +179,20 @@ input#searchInput {
 
 .close-btn {
     position: absolute;
-    top: 10px; right: 20px;
+    top: 10px; right: 15px;
     font-size: 28px;
     cursor: pointer;
-    color: #64748b;
+    color: white; /* Blanco para que se vea sobre la imagen oscura o el fondo */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Sombra para que se vea siempre */
+    z-index: 10;
+    background: rgba(0,0,0,0.3);
+    width: 35px; height: 35px;
+    text-align: center; line-height: 35px;
+    border-radius: 50%;
 }
 
-/* Botón de Amazon (Naranja) */
+
+/* Botón de Amazon */
 .amazon-btn {
     display: block;
     width: 100%;
@@ -157,7 +209,7 @@ input#searchInput {
 }
 .amazon-btn:hover { background: #e88b00; }
 
-/* Botón de Video (Rojo) */
+/* Botón de Video */
 .video-btn {
     display: block;
     width: 100%;
