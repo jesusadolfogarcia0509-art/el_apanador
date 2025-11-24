@@ -22,27 +22,29 @@ body {
 
 /* Cabecera */
 header {
-    background: rgba(2, 6, 23, 0.9); /* Casi negro y semitransparente */
+    background: rgba(2, 6, 23, 0.95); /* Un pelín más oscuro para que se funda con el logo */
     color: white;
-    padding: 0.8rem 1rem;
+    padding: 1rem; /* Un poco más de espacio */
     position: sticky; top: 0; z-index: 100;
-    backdrop-filter: blur(10px); /* Efecto cristal */
+    backdrop-filter: blur(10px);
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .brand { 
-    font-size: 1.5rem; 
+    font-size: 1.8rem; /* Texto MÁS GRANDE */
     font-weight: 900;
-    display: flex; align-items: center; justify-content: center; gap: 12px;
-    text-transform: uppercase; letter-spacing: 1px;
-    text-shadow: 0 2px 10px rgba(59, 130, 246, 0.5); /* Brillo en el texto */
+    display: flex; align-items: center; justify-content: center;
+    gap: 15px; /* Más separación entre icono y texto */
+    text-transform: uppercase; letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(59, 130, 246, 0.5);
 }
 
 .logo-img {
-    height: 45px; width: auto;
-    border-radius: 8px;
-    border: 2px solid rgba(255,255,255,0.1);
+    height: 65px; /* Icono MUCHO MÁS GRANDE */
+    width: auto;
+    /* Ya no necesitamos bordes porque el fondo se funde */
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3)); /* Sombra para que destaque */
 }
 
 /* Buscador */
