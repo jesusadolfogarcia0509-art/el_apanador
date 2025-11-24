@@ -17,11 +17,29 @@ body {
 header {
     background: var(--dark);
     color: white;
-    padding: 1rem;
+    padding: 0.8rem 1rem; /* Ajustado un poco el padding */
     position: sticky; top: 0; z-index: 100;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-.brand { font-size: 1.3rem; font-weight: 800; text-align: center; }
+
+.brand { 
+    font-size: 1.5rem; 
+    font-weight: 900; /* Letra más gruesa para el nombre */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-transform: uppercase; /* Todo en mayúsculas */
+    letter-spacing: 1px;
+}
+
+/* --- ESTILO DEL NUEVO LOGO --- */
+.logo-img {
+    height: 45px; /* Altura fija para que no descuadre la cabecera */
+    width: auto;  /* El ancho se ajusta solo */
+    border-radius: 6px; /* Bordes suavizados */
+    border: 1px solid rgba(255,255,255,0.2); /* Borde sutil */
+}
 
 /* Buscador y Filtros */
 .search-container {
@@ -39,13 +57,13 @@ input#searchInput {
     box-sizing: border-box;
 }
 
-/* Barra de Categorías (Scroll Horizontal) */
+/* Barra de Categorías */
 .category-scroll {
     display: flex;
     gap: 10px;
-    overflow-x: auto; /* Permite deslizar con el dedo */
+    overflow-x: auto; 
     padding: 15px 0 5px 0;
-    scrollbar-width: none; /* Ocultar barra scroll */
+    scrollbar-width: none; 
 }
 .category-scroll::-webkit-scrollbar { display: none; }
 
@@ -57,7 +75,7 @@ input#searchInput {
     font-size: 0.9rem;
     font-weight: 600;
     color: #64748b;
-    white-space: nowrap; /* Que no se parta el texto */
+    white-space: nowrap; 
     cursor: pointer;
     transition: all 0.2s;
 }
@@ -78,12 +96,11 @@ input#searchInput {
     font-weight: bold; cursor: pointer;
 }
 
-/* --- REJILLA DE TRUCOS (LA CLAVE) --- */
+/* Rejilla de Trucos */
 #solutionsList {
     padding: 0 10px 50px 10px;
     max-width: 900px; margin: 0 auto;
     display: grid;
-    /* PC: Mínimo 300px por tarjeta */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 15px;
 }
@@ -96,10 +113,9 @@ input#searchInput {
     cursor: pointer;
     overflow: hidden;
     display: flex;
-    /* Por defecto (PC) imagen a la izquierda */
     flex-direction: row; 
     align-items: stretch;
-    height: 120px; /* Altura fija en PC */
+    height: 120px; 
 }
 
 .card-image-container {
@@ -122,50 +138,47 @@ input#searchInput {
     display: inline-block;
 }
 
-/* Bordes de colores */
 .risk-alto { border-left: 4px solid #ef4444; }
 .risk-medio { border-left: 4px solid #f59e0b; }
 .risk-bajo { border-left: 4px solid #10b981; }
 
-/* --- MODO MÓVIL (2 COLUMNAS MOSAICO) --- */
+/* Modo Móvil */
 @media (max-width: 768px) {
     #solutionsList {
-        /* Forzamos 2 columnas */
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
     .solution-card {
-        /* En móvil cambiamos a vertical: Imagen ARRIBA, Texto ABAJO */
         flex-direction: column;
-        height: auto; /* Altura automática según contenido */
-        aspect-ratio: 0.8; /* Proporción rectangular vertical */
+        height: auto; 
+        aspect-ratio: 0.8; 
     }
 
     .card-image-container {
-        width: 100%; /* Imagen ocupa todo el ancho */
-        height: 100px; /* Altura fija para la foto */
+        width: 100%; 
+        height: 100px; 
         min-width: auto;
     }
 
     .card-content {
         padding: 8px;
-        justify-content: flex-start; /* Texto arriba */
+        justify-content: flex-start;
     }
 
     .card-title { font-size: 0.9rem; }
 }
 
-/* --- MODAL --- */
+/* Modal */
 .modal {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.8);
-    display: flex; justify-content: center; align-items: end; /* Sale de abajo en móvil */
+    display: flex; justify-content: center; align-items: end;
     z-index: 2000; backdrop-filter: blur(5px);
 }
 .modal-content {
     background: white; width: 100%; max-width: 500px;
-    border-radius: 20px 20px 0 0; /* Redondeado solo arriba */
+    border-radius: 20px 20px 0 0;
     max-height: 90vh; overflow-y: auto;
     animation: slideUp 0.3s ease;
     position: relative;
@@ -179,7 +192,7 @@ input#searchInput {
     border-radius: 50%; font-size: 20px; cursor: pointer;
 }
 
-/* Botones Modal */
+/* Botones */
 .amazon-btn, .video-btn {
     display: flex; justify-content: center; align-items: center; gap: 8px;
     width: 100%; padding: 14px; border-radius: 10px;
