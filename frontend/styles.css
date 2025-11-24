@@ -1,16 +1,23 @@
 :root {
     --primary: #2563eb;
-    --dark: #1e293b;
-    --bg: #f1f5f9;
+    --primary-dark: #1e40af;
+    --dark: #0f172a;
     --card: #ffffff;
+    --text-gray: #64748b;
 }
 
 body {
     font-family: 'Segoe UI', system-ui, sans-serif;
-    background-color: var(--bg);
     margin: 0;
     padding: 0;
     color: var(--dark);
+    
+    /* --- CAMBIO 1: EL DEGRADADO --- */
+    /* Un degradado que va de azul muy suave arriba a un azul más intenso abajo */
+    /* Esto elimina el efecto "soso" y da profundidad */
+    background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
+    min-height: 100vh; /* Asegura que el color cubra toda la pantalla */
+    background-attachment: fixed; /* El fondo se queda fijo mientras haces scroll (efecto moderno) */
 }
 
 /* Cabecera */
@@ -21,43 +28,52 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra más elegante */
 }
 
 .brand {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.4rem;
+    font-weight: 800;
     display: flex;
     align-items: center;
     gap: 10px;
+    max-width: 900px; /* Alineado con el contenido */
+    margin: 0 auto;
 }
 
 /* Buscador */
 .search-container {
-    padding: 1rem;
-    max-width: 600px;
+    padding: 2rem 1rem;
+    max-width: 900px; /* Hacemos el contenedor más ancho para que quepan 2 cartas */
     margin: 0 auto;
 }
 
 input#searchInput {
     width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 12px;
+    padding: 18px;
+    border: 2px solid transparent;
+    border-radius: 15px;
     font-size: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1); /* Sombra azulada sutil */
     outline: none;
-    box-sizing: border-box; /* Importante para que no se salga */
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input#searchInput:focus {
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.2);
+    transform: translateY(-2px);
 }
 
 /* Botón Escáner */
 .scanner-btn {
     display: block;
     width: 100%;
-    max-width: 600px;
-    margin: 10px auto;
+    max-width: 900px;
+    margin: 0 auto 30px auto;
     padding: 15px;
-    background: var(--primary);
+    background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%); /* Degradado en el botón */
     color: white;
     border: none;
     border-radius: 12px;
@@ -66,166 +82,190 @@ input#searchInput {
     cursor: pointer;
     text-align: center;
     box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    transition: transform 0.2s;
 }
 
-/* Lista de Trucos */
+.scanner-btn:active {
+    transform: scale(0.98);
+}
+
+/* --- CAMBIO 2: LISTA EN DOS COLUMNAS (GRID) --- */
 #solutionsList {
-    padding: 1rem;
-    max-width: 600px;
+    padding: 0 1rem 4rem 1rem;
+    max-width: 900px; /* Más ancho para que quepan dos */
     margin: 0 auto;
-    padding-bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    
+    /* LA MAGIA DE LA REJILLA */
+    display: grid;
+    /* Esto dice: Crea columnas de mínimo 350px. Si caben dos, pon dos. Si no, una. */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 20px; /* Espacio entre tarjetas */
 }
 
-/* --- NUEVO DISEÑO DE TARJETA CON IMAGEN --- */
+/* Tarjetas */
 .solution-card {
     background: var(--card);
-    /* Quitamos padding general porque lo llevan los hijos */
-    border-radius: 12px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     cursor: pointer;
-    display: flex; /* Flex para poner imagen al lado del texto */
-    overflow: hidden; /* Para que la imagen respete el borde redondeado */
-    align-items: stretch; /* Que se estiren al mismo alto */
+    display: flex;
+    overflow: hidden;
+    align-items: stretch;
+    border: 1px solid rgba(255,255,255,0.5); /* Borde sutil */
 }
 
-.solution-card:active {
-    transform: scale(0.98);
+.solution-card:hover {
+    transform: translateY(-5px); /* Efecto de flotar al pasar el ratón */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 /* Contenedor de la imagen en la tarjeta */
 .card-image-container {
-    width: 110px; /* Ancho fijo para la imagen */
-    min-width: 110px;
+    width: 120px;
+    min-width: 120px;
     background: #e2e8f0;
 }
 
-/* La imagen en sí dentro de la tarjeta */
 .card-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Recorta la imagen para llenar el hueco sin deformar */
+    object-fit: cover;
     display: block;
+    transition: transform 0.5s;
 }
 
-/* Contenedor del texto en la tarjeta */
+.solution-card:hover .card-img {
+    transform: scale(1.1); /* La imagen hace zoom suave al pasar el ratón */
+}
+
 .card-content {
-    padding: 15px;
-    flex-grow: 1; /* Ocupa el resto del espacio */
+    padding: 18px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .tag {
-    background: #e2e8f0;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    color: #475569;
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--text-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* Bordes de colores según riesgo (aplicado al borde izquierdo de la tarjeta entera) */
-.risk-alto { border-left: 5px solid #ef4444; }
-.risk-medio { border-left: 5px solid #f59e0b; }
-.risk-bajo { border-left: 5px solid #22c55e; }
+/* Bordes de colores más vibrantes */
+.risk-alto { border-left: 6px solid #ef4444; }
+.risk-medio { border-left: 6px solid #f59e0b; }
+.risk-bajo { border-left: 6px solid #10b981; }
 
-
-/* --- Estilos del Modal (Pop-up) --- */
+/* --- ESTILOS DEL MODAL --- */
 .modal {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(15, 23, 42, 0.8); /* Fondo oscuro más elegante */
     display: flex;
     justify-content: center;
-    align-items: start; /* Alineado arriba en móviles */
+    align-items: center;
     z-index: 1000;
-    backdrop-filter: blur(5px);
-    overflow-y: auto; /* Scroll si es muy alto */
-    padding: 20px 0;
+    backdrop-filter: blur(8px); /* Efecto borroso detrás */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .modal-content {
     background: white;
-    /* Quitamos padding del content, lo pondrá el modalBody */
-    border-radius: 15px;
-    width: 90%;
+    border-radius: 20px;
+    width: 100%;
     max-width: 500px;
     position: relative;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    animation: slideUp 0.3s ease;
-    margin: auto; /* Centrado vertical si cabe */
-    overflow: hidden; /* Para la imagen de cabecera */
-}
-
-/* Nueva imagen grande en el modal */
-.modal-hero-img {
-    width: 100%;
-    height: 200px; /* Altura fija para la cabecera */
-    object-fit: cover;
-    display: block;
-    background: #e2e8f0;
-}
-
-/* Padding para el texto dentro del modal */
-#modalBody {
-    padding: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 @keyframes slideUp {
-    from { transform: translateY(50px); opacity: 0; }
+    from { transform: translateY(100px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-hero-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+#modalBody {
+    padding: 25px;
+}
+
+#modalBody h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--dark);
 }
 
 .close-btn {
     position: absolute;
-    top: 10px; right: 15px;
-    font-size: 28px;
+    top: 15px; right: 15px;
+    font-size: 24px;
     cursor: pointer;
-    color: white; /* Blanco para que se vea sobre la imagen oscura o el fondo */
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5); /* Sombra para que se vea siempre */
-    z-index: 10;
-    background: rgba(0,0,0,0.3);
-    width: 35px; height: 35px;
-    text-align: center; line-height: 35px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    width: 40px; height: 40px;
+    text-align: center; line-height: 40px;
     border-radius: 50%;
+    transition: background 0.2s;
 }
+.close-btn:hover { background: rgba(0,0,0,0.7); }
 
-
-/* Botón de Amazon */
-.amazon-btn {
-    display: block;
-    width: 100%;
-    background: #FF9900;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    box-sizing: border-box;
-}
-.amazon-btn:hover { background: #e88b00; }
-
-/* Botón de Video */
-.video-btn {
-    display: block;
-    width: 100%;
-    background: #ff0000;
-    color: white;
-    text-align: center;
-    padding: 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    box-sizing: border-box;
+/* Botones */
+.amazon-btn, .video-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
 }
-.video-btn:hover { background: #cc0000; }
+
+.amazon-btn {
+    background: linear-gradient(45deg, #FF9900, #ffb347);
+    color: white;
+}
+.amazon-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px rgba(255, 153, 0, 0.3);
+}
+
+.video-btn {
+    background: white;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+}
+.video-btn:hover {
+    background: #fff0f0;
+}
+
+/* --- RESPONSIVE --- */
+/* En móviles volverá a ser de 1 columna automáticamente */
+@media (max-width: 768px) {
+    #solutionsList {
+        grid-template-columns: 1fr; /* 1 sola columna en móvil */
+    }
+}
