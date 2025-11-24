@@ -1,271 +1,190 @@
 :root {
     --primary: #2563eb;
-    --primary-dark: #1e40af;
     --dark: #0f172a;
+    --bg-gradient: linear-gradient(180deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
     --card: #ffffff;
-    --text-gray: #64748b;
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0; padding: 0;
     color: var(--dark);
-    
-    /* --- CAMBIO 1: EL DEGRADADO --- */
-    /* Un degradado que va de azul muy suave arriba a un azul más intenso abajo */
-    /* Esto elimina el efecto "soso" y da profundidad */
-    background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 50%, #bfdbfe 100%);
-    min-height: 100vh; /* Asegura que el color cubra toda la pantalla */
-    background-attachment: fixed; /* El fondo se queda fijo mientras haces scroll (efecto moderno) */
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    background-attachment: fixed;
 }
 
-/* Cabecera */
 header {
     background: var(--dark);
     color: white;
     padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Sombra más elegante */
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+.brand { font-size: 1.3rem; font-weight: 800; text-align: center; }
 
-.brand {
-    font-size: 1.4rem;
-    font-weight: 800;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    max-width: 900px; /* Alineado con el contenido */
-    margin: 0 auto;
-}
-
-/* Buscador */
+/* Buscador y Filtros */
 .search-container {
-    padding: 2rem 1rem;
-    max-width: 900px; /* Hacemos el contenedor más ancho para que quepan 2 cartas */
+    padding: 1rem;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 input#searchInput {
     width: 100%;
-    padding: 18px;
-    border: 2px solid transparent;
-    border-radius: 15px;
+    padding: 15px;
+    border: none; border-radius: 12px;
     font-size: 16px;
-    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1); /* Sombra azulada sutil */
-    outline: none;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.1);
     box-sizing: border-box;
-    transition: all 0.3s ease;
 }
 
-input#searchInput:focus {
+/* Barra de Categorías (Scroll Horizontal) */
+.category-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Permite deslizar con el dedo */
+    padding: 15px 0 5px 0;
+    scrollbar-width: none; /* Ocultar barra scroll */
+}
+.category-scroll::-webkit-scrollbar { display: none; }
+
+.cat-btn {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #64748b;
+    white-space: nowrap; /* Que no se parta el texto */
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cat-btn.active {
+    background: var(--primary);
+    color: white;
     border-color: var(--primary);
-    box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.2);
-    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
 }
 
 /* Botón Escáner */
 .scanner-btn {
-    display: block;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 30px auto;
-    padding: 15px;
-    background: linear-gradient(90deg, #2563eb 0%, #3b82f6 100%); /* Degradado en el botón */
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    box-sizing: border-box;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-    transition: transform 0.2s;
+    display: block; width: 90%; max-width: 400px;
+    margin: 0 auto 20px auto; padding: 12px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    color: white; border: none; border-radius: 10px;
+    font-weight: bold; cursor: pointer;
 }
 
-.scanner-btn:active {
-    transform: scale(0.98);
-}
-
-/* --- CAMBIO 2: LISTA EN DOS COLUMNAS (GRID) --- */
+/* --- REJILLA DE TRUCOS (LA CLAVE) --- */
 #solutionsList {
-    padding: 0 1rem 4rem 1rem;
-    max-width: 900px; /* Más ancho para que quepan dos */
-    margin: 0 auto;
-    
-    /* LA MAGIA DE LA REJILLA */
+    padding: 0 10px 50px 10px;
+    max-width: 900px; margin: 0 auto;
     display: grid;
-    /* Esto dice: Crea columnas de mínimo 350px. Si caben dos, pon dos. Si no, una. */
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
-    gap: 20px; /* Espacio entre tarjetas */
+    /* PC: Mínimo 300px por tarjeta */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
 }
 
-/* Tarjetas */
+/* Tarjeta */
 .solution-card {
     background: var(--card);
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     cursor: pointer;
-    display: flex;
     overflow: hidden;
+    display: flex;
+    /* Por defecto (PC) imagen a la izquierda */
+    flex-direction: row; 
     align-items: stretch;
-    border: 1px solid rgba(255,255,255,0.5); /* Borde sutil */
+    height: 120px; /* Altura fija en PC */
 }
 
-.solution-card:hover {
-    transform: translateY(-5px); /* Efecto de flotar al pasar el ratón */
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-}
-
-/* Contenedor de la imagen en la tarjeta */
 .card-image-container {
-    width: 120px;
-    min-width: 120px;
-    background: #e2e8f0;
+    width: 120px; min-width: 120px;
+    background: #eee;
 }
-
-.card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s;
-}
-
-.solution-card:hover .card-img {
-    transform: scale(1.1); /* La imagen hace zoom suave al pasar el ratón */
-}
+.card-img { width: 100%; height: 100%; object-fit: cover; }
 
 .card-content {
-    padding: 18px;
+    padding: 10px;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: flex; flex-direction: column; justify-content: center;
 }
-
+.card-title { margin: 0; font-size: 1rem; line-height: 1.2; }
 .tag {
-    background: #f1f5f9;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: var(--text-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    background: #f1f5f9; color: #64748b;
+    padding: 2px 8px; border-radius: 10px;
+    font-size: 0.7rem; font-weight: bold;
+    text-transform: uppercase; margin-bottom: 5px;
+    display: inline-block;
 }
 
-/* Bordes de colores más vibrantes */
-.risk-alto { border-left: 6px solid #ef4444; }
-.risk-medio { border-left: 6px solid #f59e0b; }
-.risk-bajo { border-left: 6px solid #10b981; }
+/* Bordes de colores */
+.risk-alto { border-left: 4px solid #ef4444; }
+.risk-medio { border-left: 4px solid #f59e0b; }
+.risk-bajo { border-left: 4px solid #10b981; }
 
-/* --- ESTILOS DEL MODAL --- */
-.modal {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(15, 23, 42, 0.8); /* Fondo oscuro más elegante */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    backdrop-filter: blur(8px); /* Efecto borroso detrás */
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.modal-content {
-    background: white;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 500px;
-    position: relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    overflow: hidden;
-    max-height: 90vh;
-    overflow-y: auto;
-}
-
-@keyframes slideUp {
-    from { transform: translateY(100px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-.modal-hero-img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-}
-
-#modalBody {
-    padding: 25px;
-}
-
-#modalBody h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: var(--dark);
-}
-
-.close-btn {
-    position: absolute;
-    top: 15px; right: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    background: rgba(0,0,0,0.4);
-    width: 40px; height: 40px;
-    text-align: center; line-height: 40px;
-    border-radius: 50%;
-    transition: background 0.2s;
-}
-.close-btn:hover { background: rgba(0,0,0,0.7); }
-
-/* Botones */
-.amazon-btn, .video-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    padding: 16px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-sizing: border-box;
-}
-
-.amazon-btn {
-    background: linear-gradient(45deg, #FF9900, #ffb347);
-    color: white;
-}
-.amazon-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px rgba(255, 153, 0, 0.3);
-}
-
-.video-btn {
-    background: white;
-    color: #ff0000;
-    border: 2px solid #ff0000;
-}
-.video-btn:hover {
-    background: #fff0f0;
-}
-
-/* --- RESPONSIVE --- */
-/* En móviles volverá a ser de 1 columna automáticamente */
+/* --- MODO MÓVIL (2 COLUMNAS MOSAICO) --- */
 @media (max-width: 768px) {
     #solutionsList {
-        grid-template-columns: 1fr; /* 1 sola columna en móvil */
+        /* Forzamos 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
+
+    .solution-card {
+        /* En móvil cambiamos a vertical: Imagen ARRIBA, Texto ABAJO */
+        flex-direction: column;
+        height: auto; /* Altura automática según contenido */
+        aspect-ratio: 0.8; /* Proporción rectangular vertical */
+    }
+
+    .card-image-container {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        height: 100px; /* Altura fija para la foto */
+        min-width: auto;
+    }
+
+    .card-content {
+        padding: 8px;
+        justify-content: flex-start; /* Texto arriba */
+    }
+
+    .card-title { font-size: 0.9rem; }
 }
+
+/* --- MODAL --- */
+.modal {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex; justify-content: center; align-items: end; /* Sale de abajo en móvil */
+    z-index: 2000; backdrop-filter: blur(5px);
+}
+.modal-content {
+    background: white; width: 100%; max-width: 500px;
+    border-radius: 20px 20px 0 0; /* Redondeado solo arriba */
+    max-height: 90vh; overflow-y: auto;
+    animation: slideUp 0.3s ease;
+    position: relative;
+}
+.modal-hero-img { width: 100%; height: 200px; object-fit: cover; }
+@keyframes slideUp { from {transform: translateY(100%);} to {transform: translateY(0);} }
+.close-btn {
+    position: absolute; top: 15px; right: 15px;
+    background: rgba(0,0,0,0.5); color: white;
+    width: 30px; height: 30px; text-align: center; line-height: 30px;
+    border-radius: 50%; font-size: 20px; cursor: pointer;
+}
+
+/* Botones Modal */
+.amazon-btn, .video-btn {
+    display: flex; justify-content: center; align-items: center; gap: 8px;
+    width: 100%; padding: 14px; border-radius: 10px;
+    text-decoration: none; font-weight: bold; margin-top: 10px;
+    box-sizing: border-box;
+}
+.amazon-btn { background: #FF9900; color: white; }
+.video-btn { background: white; color: #ff0000; border: 2px solid #ff0000; }

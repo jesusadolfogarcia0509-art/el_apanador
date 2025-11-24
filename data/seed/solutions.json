@@ -1,8 +1,9 @@
 [
   {
     "title": "Aflojar tuerca con monedas",
+    "category": "Herramientas",
     "problem": "No tengo llave inglesa del tamaño correcto",
-    "solution_text": "Si la llave inglesa es demasiado grande para la tuerca, inserta una moneda entre la cara de la tuerca y la mandíbula de la llave para rellenar el hueco. Esto te dará el agarre necesario para girarla.",
+    "solution_text": "Si la llave inglesa es demasiado grande para la tuerca, inserta una moneda entre la cara de la tuerca y la mandíbula de la llave para rellenar el hueco.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/tuerca.jpg",
@@ -11,9 +12,10 @@
     "price": null
   },
   {
-    "title": "Soporte de móvil con gafas de sol",
+    "title": "Soporte de móvil con gafas",
+    "category": "Tecnología",
     "problem": "Quiero ver un video pero el móvil se cae",
-    "solution_text": "Dobla unas gafas de sol y colócalas sobre la mesa al revés. El móvil se apoya perfectamente entre las patillas y los cristales, creando un soporte estable instantáneo.",
+    "solution_text": "Dobla unas gafas de sol y colócalas boca abajo. El móvil se apoya perfectamente entre las patillas.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/gafas.jpg",
@@ -22,9 +24,10 @@
     "price": null
   },
   {
-    "title": "Arreglar cremallera con anilla",
+    "title": "Arreglar cremallera",
+    "category": "Ropa",
     "problem": "El tirador de la cremallera se ha roto",
-    "solution_text": "Usa una anilla de llavero vieja. Pásala por el agujero del deslizador de la cremallera. Funciona igual de bien y es mucho más resistente que el original.",
+    "solution_text": "Usa una anilla de llavero vieja. Pásala por el agujero del deslizador. Es más resistente que el original.",
     "risk_level": "Bajo",
     "difficulty": 2,
     "image_url": "images/trucos/cremallera.jpg",
@@ -33,9 +36,10 @@
     "price": null
   },
   {
-    "title": "Amplificador de altavoz con rollo",
+    "title": "Amplificador casero",
+    "category": "Tecnología",
     "problem": "El móvil suena muy bajo",
-    "solution_text": "Corta una ranura en un rollo de papel higiénico vacío e inserta el móvil (con el altavoz dentro). Pon dos vasos de plástico en los extremos. El sonido se amplificará acústicamente.",
+    "solution_text": "Corta una ranura en un rollo de papel higiénico e inserta el móvil. Pon dos vasos en los extremos para amplificar.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/altavoz.jpg",
@@ -44,9 +48,10 @@
     "price": null
   },
   {
-    "title": "Desatornillar tornillo barrido",
-    "problem": "El destornillador resbala en el tornillo",
-    "solution_text": "Coloca una banda elástica ancha (goma) sobre la cabeza del tornillo. Presiona el destornillador con fuerza sobre la goma. La goma rellenará los huecos y dará fricción extra.",
+    "title": "Tornillo barrido",
+    "category": "Herramientas",
+    "problem": "El destornillador resbala",
+    "solution_text": "Coloca una banda elástica ancha sobre la cabeza del tornillo. Presiona fuerte con el destornillador para ganar agarre.",
     "risk_level": "Medio",
     "difficulty": 3,
     "image_url": "images/trucos/tornillo.jpg",
@@ -55,9 +60,10 @@
     "price": null
   },
   {
-    "title": "Enfriar portátil con cartones de huevo",
+    "title": "Enfriar portátil",
+    "category": "Tecnología",
     "problem": "El portátil se sobrecalienta",
-    "solution_text": "Coloca el portátil sobre un cartón de huevos vacío. La forma irregular permite que el aire circule por debajo mucho mejor que sobre una mesa lisa.",
+    "solution_text": "Elévalo sobre cartones de huevos vacíos. La forma irregular permite que el aire circule por debajo.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/portatil.jpg",
@@ -66,9 +72,10 @@
     "price": null
   },
   {
-    "title": "Organizar cables con clips",
-    "problem": "Los cables se caen detrás de la mesa",
-    "solution_text": "Engancha clips de papelería grandes (de pinza) en el borde de tu mesa. Pasa el cabezal del cable USB por las anillas metálicas del clip. Se quedarán ahí siempre.",
+    "title": "Organizar cables",
+    "category": "Tecnología",
+    "problem": "Cables caídos tras la mesa",
+    "solution_text": "Engancha clips de papelería en el borde de la mesa y pasa los cables por sus anillas metálicas.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/cables.jpg",
@@ -77,9 +84,10 @@
     "price": null
   },
   {
-    "title": "Limpiar faros de coche con pasta de dientes",
-    "problem": "Los faros están opacos y amarillentos",
-    "solution_text": "Aplica pasta de dientes (la blanca, no gel) sobre el faro. Frota con un trapo viejo en círculos durante 5 minutos. Enjuaga con agua. El abrasivo suave pule el plástico.",
+    "title": "Pulir faros",
+    "category": "Coche",
+    "problem": "Faros opacos y amarillentos",
+    "solution_text": "Frota pasta de dientes blanca sobre el faro con un trapo en círculos. Enjuaga y verás la diferencia.",
     "risk_level": "Bajo",
     "difficulty": 2,
     "image_url": "images/trucos/faros.jpg",
@@ -88,9 +96,10 @@
     "price": null
   },
   {
-    "title": "Arreglar pata de mesa coja",
+    "title": "Mesa coja",
+    "category": "Hogar",
     "problem": "La mesa baila",
-    "solution_text": "Corta un corcho de botella en rodajas finas (como si fuera un salchichón). Pega una rodaja debajo de la pata corta. El corcho es antideslizante y absorbe vibraciones.",
+    "solution_text": "Corta una rodaja de corcho de botella y pégala bajo la pata corta. Absorbe vibraciones y no resbala.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/mesa.jpg",
@@ -99,9 +108,10 @@
     "price": null
   },
   {
-    "title": "Sacar abolladura de coche con agua hirviendo",
-    "problem": "Pequeño golpe en el parachoques de plástico",
-    "solution_text": "Hierve agua y viértela sobre la abolladura. El plástico se ablandará. Inmediatamente, empuja desde atrás (si puedes) o usa un desatascador de baño para tirar hacia fuera.",
+    "title": "Abolladura coche",
+    "category": "Coche",
+    "problem": "Golpe en parachoques plástico",
+    "solution_text": "Vierte agua hirviendo sobre el golpe para ablandar el plástico y empuja desde atrás para sacarlo.",
     "risk_level": "Medio",
     "difficulty": 4,
     "image_url": "images/trucos/abolladura.jpg",
@@ -110,9 +120,10 @@
     "price": null
   },
   {
-    "title": "Afilador de cuchillos con taza",
-    "problem": "El cuchillo no corta y no tengo afilador",
-    "solution_text": "Dale la vuelta a una taza de cerámica. La base sin esmaltar es una piedra de afilar perfecta. Pasa la hoja del cuchillo en un ángulo de 20 grados varias veces.",
+    "title": "Afilar cuchillo",
+    "category": "Hogar",
+    "problem": "Cuchillo no corta",
+    "solution_text": "Usa la base sin esmaltar de una taza de cerámica como piedra de afilar. Pasa la hoja en ángulo de 20º.",
     "risk_level": "Medio",
     "difficulty": 2,
     "image_url": "images/trucos/cuchillo.jpg",
@@ -121,9 +132,10 @@
     "price": null
   },
   {
-    "title": "Cinta aislante de emergencia",
-    "problem": "Cable pelado y no tengo cinta aislante",
-    "solution_text": "Si es bajo voltaje (auriculares, cargador USB), puedes usar esmalte de uñas transparente. Aplica varias capas y deja secar. Crea una capa aislante básica.",
+    "title": "Cable pelado",
+    "category": "Tecnología",
+    "problem": "Sin cinta aislante",
+    "solution_text": "Para bajo voltaje, aplica varias capas de esmalte de uñas transparente sobre la zona pelada.",
     "risk_level": "Alto",
     "difficulty": 2,
     "image_url": "images/trucos/cinta.jpg",
@@ -132,9 +144,10 @@
     "price": null
   },
   {
-    "title": "Desatascar fregadero sin químicos",
-    "problem": "El agua no traga bien",
-    "solution_text": "Vierte media taza de bicarbonato y media de vinagre. Tapa el desagüe y espera 15 min. Vierte agua hirviendo. La reacción química disuelve la grasa.",
+    "title": "Desatascar tubería",
+    "category": "Hogar",
+    "problem": "Agua no traga",
+    "solution_text": "Bicarbonato + Vinagre. Tapa 15 min. Luego agua hirviendo. La reacción disuelve la grasa.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/fregadero.jpg",
@@ -143,9 +156,10 @@
     "price": null
   },
   {
-    "title": "Quitar pegatinas o etiquetas",
-    "problem": "Queda pegamento al quitar el precio",
-    "solution_text": "Calienta la pegatina con un secador de pelo durante 30 segundos. El calor ablanda el adhesivo y sale de una pieza sin dejar rastro.",
+    "title": "Quitar pegatinas",
+    "category": "Hogar",
+    "problem": "Queda pegamento",
+    "solution_text": "Calienta con secador de pelo 30 seg. El adhesivo se ablanda y sale de una pieza.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/pegatina.jpg",
@@ -154,9 +168,10 @@
     "price": null
   },
   {
-    "title": "Afilar tijeras con papel de aluminio",
-    "problem": "Las tijeras no cortan bien",
-    "solution_text": "Dobla una hoja de papel de aluminio varias veces hasta que sea gruesa. Haz cortes repetidos con la tijera. La fricción con el aluminio afila las hojas.",
+    "title": "Afilar tijeras",
+    "category": "Hogar",
+    "problem": "Tijeras no cortan",
+    "solution_text": "Corta varias veces una hoja de papel de aluminio doblada. La fricción afila las hojas.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/tijeras.jpg",
@@ -165,9 +180,10 @@
     "price": null
   },
   {
-    "title": "Recoger polvo al taladrar",
-    "problem": "Mancho el suelo al hacer agujeros",
-    "solution_text": "Dobla un Post-it por la mitad y pégalo justo debajo de donde vas a taladrar. Hará de repisa y recogerá todo el polvillo que caiga.",
+    "title": "Polvo taladro",
+    "category": "Herramientas",
+    "problem": "Mancho al taladrar",
+    "solution_text": "Pega un Post-it doblado justo debajo del agujero para recoger el polvo que cae.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/taladro.jpg",
@@ -176,9 +192,10 @@
     "price": null
   },
   {
-    "title": "Abrir bote de cristal atascado",
-    "problem": "La tapa no gira",
-    "solution_text": "Ponte unos guantes de goma de fregar o enrolla una goma elástica alrededor de la tapa para mejorar el agarre. Si falla, golpea suavemente el borde de la tapa con una cuchara para romper el vacío.",
+    "title": "Abrir botes",
+    "category": "Hogar",
+    "problem": "Tapa atascada",
+    "solution_text": "Usa guantes de goma para mejorar el agarre o pon una goma elástica alrededor de la tapa.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/bote.jpg",
@@ -187,9 +204,10 @@
     "price": null
   },
   {
-    "title": "Usar pilas pequeñas en hueco grande",
-    "problem": "Tengo pilas AA pero necesito C",
-    "solution_text": "Haz una bola de papel de aluminio y ponla en el polo negativo (plano) para rellenar el espacio. La electricidad pasa igual. Solo para emergencias.",
+    "title": "Adaptar pilas",
+    "category": "Tecnología",
+    "problem": "Necesito pilas grandes",
+    "solution_text": "Usa una pila pequeña y rellena el hueco del polo negativo con una bola de papel de aluminio.",
     "risk_level": "Medio",
     "difficulty": 2,
     "image_url": "images/trucos/pilas.jpg",
@@ -198,9 +216,10 @@
     "price": null
   },
   {
-    "title": "Limpiar teclado del ordenador",
-    "problem": "Hay suciedad entre las teclas",
-    "solution_text": "Pasa la parte adhesiva de un Post-it entre las filas de teclas para recoger pelusas y migas. Para manchas, usa un bastoncillo con alcohol.",
+    "title": "Limpiar teclado",
+    "category": "Tecnología",
+    "problem": "Suciedad entre teclas",
+    "solution_text": "Pasa la parte adhesiva de un Post-it entre las filas para recoger migas.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/teclado.jpg",
@@ -209,9 +228,10 @@
     "price": null
   },
   {
-    "title": "Reparar golpe en madera",
-    "problem": "La mesa de madera tiene una abolladura",
-    "solution_text": "Pon un trapo húmedo sobre el golpe. Aplica una plancha caliente encima unos segundos. El vapor hará que la madera se hinche y recupere su forma.",
+    "title": "Golpe en madera",
+    "category": "Hogar",
+    "problem": "Mesa abollada",
+    "solution_text": "Trapo húmedo sobre el golpe + Plancha caliente. El vapor hincha la madera y recupera la forma.",
     "risk_level": "Medio",
     "difficulty": 3,
     "image_url": "images/trucos/madera.jpg",

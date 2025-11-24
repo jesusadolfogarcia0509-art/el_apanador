@@ -16,6 +16,15 @@
 
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="¿Qué se te ha roto hoy? (ej. tornillo, grifo...)">
+        
+        <div class="category-scroll">
+            <button class="cat-btn active" data-cat="all">Todas</button>
+            <button class="cat-btn" data-cat="Hogar">🏠 Hogar</button>
+            <button class="cat-btn" data-cat="Tecnología">📱 Tecnología</button>
+            <button class="cat-btn" data-cat="Herramientas">🔧 Herramientas</button>
+            <button class="cat-btn" data-cat="Coche">🚗 Coche</button>
+            <button class="cat-btn" data-cat="Ropa">👕 Ropa</button>
+        </div>
     </div>
 
     <button class="scanner-btn" onclick="alert('Abriendo cámara... (Simulación)')">
@@ -23,14 +32,13 @@
     </button>
 
     <div id="solutionsList">
-        <p style="text-align:center">Cargando la base de conocimientos...</p>
+        <p style="text-align:center; color: white;">Cargando la base de conocimientos...</p>
     </div>
 
     <div id="detailModal" class="modal" style="display:none;">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
-            <div id="modalBody">
-                </div>
+            <div id="modalBody"></div>
         </div>
     </div>
 
