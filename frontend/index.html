@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APAÑA-TE - Soluciones Rápidas</title> <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/jpeg" href="images/logo.jpg"> </head>
+    <title>APAÑA-TE - Soluciones Rápidas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo-icon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+</head>
 <body>
 
     <header>
@@ -15,10 +19,11 @@
     </header>
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="¿Qué necesitas apañar hoy? (ej. tornillo, grifo...)">
+        <input type="text" id="searchInput" placeholder="¿Qué necesitas apañar hoy?">
         
         <div class="category-scroll">
             <button class="cat-btn active" data-cat="all">Todas</button>
+            <button class="cat-btn heart-filter" data-cat="favorites">❤️ Favoritos</button>
             <button class="cat-btn" data-cat="Hogar">🏠 Hogar</button>
             <button class="cat-btn" data-cat="Tecnología">📱 Tecnología</button>
             <button class="cat-btn" data-cat="Herramientas">🔧 Herramientas</button>
