@@ -10,23 +10,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCategory = 'all';
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-    // OBSERVADOR DE ANIMACIONES
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+            if(entry.isIntersecting) entry.target.classList.add('visible');
         });
     }, { threshold: 0.1 });
 
-    // REGISTRO PWA
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(console.log);
     }
 
-    // --- CAMBIO REALIZADO AQUÍ ---
-    // 1. Cargar datos (Ahora lee el archivo local para Vercel)
-    fetch('./data/solutions.json') 
+    fetch('./data/solutions.json')
         .then(res => res.json())
         .then(data => {
             allSolutions = data;
@@ -34,10 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => console.error('Error cargando JSON:', err));
 
-    // Buscador
     searchInput.addEventListener('input', (e) => filterData(e.target.value, currentCategory));
 
-    // Categorías
     catButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             catButtons.forEach(b => b.classList.remove('active'));
@@ -133,12 +125,16 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        const videoUrl = sol.video_url || `https://www.youtube.com/results?search_query=${encodeURIComponent(sol.title + " truco casero")}`;
+        const ytUrl = sol.video_url || `https://www.youtube.com/results?search_query=${encodeURIComponent(sol.title + " truco casero")}`;
+        const ytButton = `<a href="${ytUrl}" target="_blank" class="action-btn video-btn">▶️ YouTube</a>`;
+
+        const tiktokUrl = sol.tiktok_url || `https://www.tiktok.com/search?q=${encodeURIComponent(sol.title + " hack")}`;
+        const tiktokButton = `<a href="${tiktokUrl}" target="_blank" class="action-btn tiktok-btn">🎵 TikTok</a>`;
+
         const shareText = `¡Mira este truco: ${sol.title}! 👉 https://el-apanador-jesus.onrender.com`;
         const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
         const modalImageSrc = sol.image_url || 'https://placehold.co/600x300/e2e8f0/475569?text=Sin+Foto';
 
-        // Lógica Relacionados Blindada
         let related = allSolutions.filter(s => s.category === sol.category && s.title !== sol.title);
         if (related.length < 2) {
             const randomRest = allSolutions.filter(s => s.title !== sol.title).sort(() => 0.5 - Math.random());
@@ -166,8 +162,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2 style="margin-top:0">${sol.title}</h2>
                 <p style="font-size:1.1rem; line-height: 1.6; opacity: 0.9;">${sol.solution_text}</p>
                 
-                <a href="${videoUrl}" target="_blank" class="action-btn video-btn">▶️ Ver Video</a>
+                <div class="video-actions">
+                    ${ytButton}
+                    ${tiktokButton}
+                </div>
+
                 <a href="${whatsappUrl}" target="_blank" class="action-btn whatsapp-btn">📲 Compartir</a>
+                
                 <hr style="border:0; border-top:1px solid rgba(255,255,255,0.1); margin:15px 0">
                 ${buyButtonHTML}
                 ${relatedHTML}
