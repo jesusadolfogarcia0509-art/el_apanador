@@ -3,7 +3,7 @@
     "title": "Aflojar tuerca con monedas",
     "category": "Herramientas",
     "problem": "No tengo llave inglesa del tamaño correcto",
-    "solution_text": "Si la llave inglesa es demasiado grande para la tuerca, inserta una moneda entre la cara de la tuerca y la mandíbula de la llave para rellenar el hueco.",
+    "solution_text": "Si la llave inglesa es demasiado grande para la tuerca, inserta una moneda entre la cara de la tuerca y la mandíbula de la llave para rellenar el hueco. Esto te dará el agarre necesario para girarla.",
     "risk_level": "Bajo",
     "difficulty": 1,
     "image_url": "images/trucos/tuerca.jpg",
@@ -246,7 +246,7 @@
     "solution_text": "Frota la mina de un lápiz (grafito) sobre la bisagra o aplica unas gotas de aceite de cocina con un papel.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Puerta+Chirria",
+    "image_url": "images/trucos/puerta.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=lubricante+3+en+uno",
     "affiliate_url_secondary": null,
     "price": null
@@ -258,7 +258,7 @@
     "solution_text": "Saca el muelle de un bolígrafo viejo y enróscalo alrededor de la parte final del cable para evitar que se parta.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Muelle+Cable",
+    "image_url": "images/trucos/muelle.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=protector+cables",
     "affiliate_url_secondary": null,
     "price": null
@@ -270,7 +270,7 @@
     "solution_text": "Usa un palillo de madera (nunca metal) para sacar suavemente la pelusa acumulada dentro del puerto de carga.",
     "risk_level": "Medio",
     "difficulty": 2,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Limpiar+Puerto",
+    "image_url": "images/trucos/puerto.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=kit+limpieza+movil",
     "affiliate_url_secondary": null,
     "price": null
@@ -282,7 +282,7 @@
     "solution_text": "Ponte calcetines muy gruesos y los zapatos. Aplica calor con un secador de pelo en las zonas que aprietan mientras mueves los dedos.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Zapatos+Secador",
+    "image_url": "images/trucos/zapatos.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=dilatador+calzado",
     "affiliate_url_secondary": null,
     "price": null
@@ -294,7 +294,7 @@
     "solution_text": "Deja un recipiente abierto con bicarbonato de sodio o granos de café debajo del asiento durante una noche. Absorben los olores.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Olor+Coche",
+    "image_url": "images/trucos/olor.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=ambientador+coche",
     "affiliate_url_secondary": null,
     "price": null
@@ -306,7 +306,7 @@
     "solution_text": "Aplica unas gotas de refresco de cola o vinagre sobre el tornillo y déjalo actuar 15 minutos. El ácido se comerá el óxido.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Tornillo+Oxidado",
+    "image_url": "images/trucos/oxido.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=wd40",
     "affiliate_url_secondary": null,
     "price": null
@@ -318,7 +318,7 @@
     "solution_text": "Frota un cubito de hielo sobre el chicle hasta que se congele y se ponga duro. Luego raspa con un cuchillo sin filo y saltará.",
     "risk_level": "Bajo",
     "difficulty": 2,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Chicle+Hielo",
+    "image_url": "images/trucos/chicle.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=quita+chicles",
     "affiliate_url_secondary": null,
     "price": null
@@ -330,7 +330,7 @@
     "solution_text": "Pon dos tiras de cinta de carrocero (papel) en forma de cruz donde vas a taladrar. La broca agarrará en la cinta y no romperá el esmalte.",
     "risk_level": "Medio",
     "difficulty": 2,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Taladro+Azulejo",
+    "image_url": "images/trucos/azulejo.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=broca+diamante",
     "affiliate_url_secondary": null,
     "price": null
@@ -342,7 +342,7 @@
     "solution_text": "Mete un par de palillos de dientes de madera en el agujero con un poco de cola, rompe lo que sobra y vuelve a meter el tornillo.",
     "risk_level": "Bajo",
     "difficulty": 2,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Clavo+Pared",
+    "image_url": "images/trucos/clavo.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=masilla+pared",
     "affiliate_url_secondary": null,
     "price": null
@@ -354,7 +354,7 @@
     "solution_text": "Si no tienes aguja a mano, aplica una gota de esmalte de uñas transparente sobre los hilos del botón para fijarlos temporalmente.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Boton+Esmalte",
+    "image_url": "images/trucos/boton.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=kit+costura+viaje",
     "affiliate_url_secondary": null,
     "price": null
@@ -366,7 +366,7 @@
     "solution_text": "Pon un poco de pegamento de barra o grasa en la punta de tu dedo o del destornillador para que la tuerca se quede pegada mientras la llevas al sitio.",
     "risk_level": "Bajo",
     "difficulty": 2,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Tuerca+Dificil",
+    "image_url": "images/trucos/tuerca_dificil.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=herramienta+imantada",
     "affiliate_url_secondary": null,
     "price": null
@@ -378,7 +378,7 @@
     "solution_text": "Pasa una cuchilla de afeitar desechable con mucho cuidado sobre la prenda estirada para rasurar las bolitas sin cortar la tela.",
     "risk_level": "Medio",
     "difficulty": 3,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Ropa+Cuchilla",
+    "image_url": "images/trucos/pelusas.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=quitapelusas+electrico",
     "affiliate_url_secondary": null,
     "price": null
@@ -390,7 +390,7 @@
     "solution_text": "Aplica un poco de mayonesa o pasta de dientes blanca sobre la mancha, deja actuar 5 minutos y frota suavemente con un paño.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Mancha+Madera",
+    "image_url": "images/trucos/mancha.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+muebles",
     "affiliate_url_secondary": null,
     "price": null
@@ -402,7 +402,7 @@
     "solution_text": "Extiende espuma de afeitar sobre el espejo y límpialo con un trapo seco. Crea una película que evita el vaho durante días.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Espejo+Espuma",
+    "image_url": "images/trucos/vaho.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=spray+antivaho",
     "affiliate_url_secondary": null,
     "price": null
@@ -414,7 +414,7 @@
     "solution_text": "Si asoma un poco, usa silicona caliente: calienta una barrita, pégala al trozo de llave, deja enfriar y tira con fuerza hacia fuera.",
     "risk_level": "Alto",
     "difficulty": 4,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Llave+Rota",
+    "image_url": "images/trucos/llave.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=extractor+llaves+rotas",
     "affiliate_url_secondary": null,
     "price": null
@@ -426,7 +426,7 @@
     "solution_text": "Apágalo inmediatamente. No uses secador. Mételo en un recipiente hermético con bolsas de sílice (las que vienen con zapatos) o arroz durante 48h.",
     "risk_level": "Medio",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Movil+Arroz",
+    "image_url": "images/trucos/silice.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=kit+secado+movil",
     "affiliate_url_secondary": null,
     "price": null
@@ -438,7 +438,7 @@
     "solution_text": "Usa un filtro de papel de cafetera para limpiar la pantalla. Limpia perfectamente y no raya el cristal.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Pantalla+Filtro",
+    "image_url": "images/trucos/filtro.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=toallitas+pantalla",
     "affiliate_url_secondary": null,
     "price": null
@@ -450,7 +450,7 @@
     "solution_text": "Usa un cepillo de dientes viejo con pasta de dientes para frotar las esquinas difíciles de la goma. Luego limpia con trapo húmedo.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Nevera+Cepillo",
+    "image_url": "images/trucos/nevera.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=blanqueador+juntas",
     "affiliate_url_secondary": null,
     "price": null
@@ -462,7 +462,7 @@
     "solution_text": "Aplica un poco de spray multiusos tipo WD-40 o acetona suave en un trapo y frota suavemente. Si es transferencia de pintura, saldrá enseguida.",
     "risk_level": "Medio",
     "difficulty": 3,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Rayon+Coche",
+    "image_url": "images/trucos/rayon.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=quita+arañazos+coche",
     "affiliate_url_secondary": null,
     "price": null
@@ -474,7 +474,7 @@
     "solution_text": "No tires. Frota la zona con abundante aceite de cocina, mantequilla o vaselina. La grasa deshace el pegamento poco a poco.",
     "risk_level": "Bajo",
     "difficulty": 1,
-    "image_url": "https://placehold.co/600x400/e2e8f0/475569?text=Pegamento+Dedos",
+    "image_url": "images/trucos/pegamento.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=disolvente+pegamento",
     "affiliate_url_secondary": null,
     "price": null
