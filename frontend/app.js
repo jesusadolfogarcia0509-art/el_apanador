@@ -10,26 +10,34 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCategory = 'all';
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
+    // OBSERVADOR DE ANIMACIONES
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if(entry.isIntersecting) entry.target.classList.add('visible');
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
         });
     }, { threshold: 0.1 });
 
+    // REGISTRO PWA
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(console.log);
     }
 
-    fetch('./data/solutions.json')
+    // --- CAMBIO REALIZADO AQUÍ ---
+    // 1. Cargar datos (Ahora lee el archivo local para Vercel)
+    fetch('./data/solutions.json') 
         .then(res => res.json())
         .then(data => {
             allSolutions = data;
             renderSolutions(data);
         })
-        .catch(err => console.error('Error:', err));
+        .catch(err => console.error('Error cargando JSON:', err));
 
+    // Buscador
     searchInput.addEventListener('input', (e) => filterData(e.target.value, currentCategory));
 
+    // Categorías
     catButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             catButtons.forEach(b => b.classList.remove('active'));
