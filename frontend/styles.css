@@ -153,7 +153,7 @@ input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
     border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 20;
 }
 
-/* CAJAS DE TEXTO MARKETING (Frase y Vídeo) */
+/* CAJAS DE TEXTO MARKETING */
 .marketing-box, .video-marketing-box {
     padding: 12px;
     border-radius: 10px;
@@ -165,19 +165,21 @@ input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Estilo Frase Amazon */
+/* Estilo Frase Amazon (Superior) */
 .marketing-box {
     background: linear-gradient(45deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2));
 }
 .marketing-box p { margin: 0; font-size: 0.9rem; font-weight: 500; color: #f1f5f9; font-style: italic; }
 
-/* Estilo Frase Video (NUEVO) */
+/* Estilo Frase Video (Inferior - MÁS OSCURO) */
 .video-marketing-box {
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(200, 200, 200, 0.05));
+    /* Fondo mucho más oscuro para resaltar el texto blanco */
+    background: linear-gradient(45deg, rgba(15, 23, 42, 0.85), rgba(30, 58, 138, 0.85));
     margin-top: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border-color: rgba(255, 255, 255, 0.15);
 }
-.video-marketing-box p { margin: 0; font-size: 0.9rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; }
+.video-marketing-box p { margin: 0; font-size: 0.95rem; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 0.5px; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
 
 /* Herramientas */
 .tools-section { margin-bottom: 20px; }
@@ -194,7 +196,7 @@ input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
 .tool-name { font-size: 1rem; color: #e2e8f0; font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
 .tool-actions { display: flex; gap: 8px; width: 100%; }
 
-/* BOTONES TIENDA CORREGIDOS (Colores Sólidos) */
+/* BOTONES TIENDA (Estructura) */
 .store-btn {
     flex: 1;
     height: 40px; 
@@ -203,18 +205,23 @@ input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
     display: flex; justify-content: center; align-items: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     transition: transform 0.1s, box-shadow 0.2s;
-    background: white; /* Fondo por defecto */
+    /* background: white;  <-- ELIMINADO EL FONDO BLANCO POR DEFECTO */
 }
 .store-btn:active { transform: scale(0.95); }
 .store-btn img { 
-    height: 24px; /* Logo contenido */
+    height: 24px; 
     width: auto; 
     display: block; 
 }
 
-/* COLORES DE FONDO DE LOS BOTONES */
-.btn-amazon { background-color: #000000; } /* Negro para Amazon */
-.btn-ali { background-color: #FF4747; }   /* Rojo/Naranja para AliExpress */
+/* COLORES DE FONDO DE LOS BOTONES (Corregidos) */
+.btn-amazon { 
+    background-color: #000000; /* Negro sólido */
+} 
+.btn-ali { 
+    /* Degradado oficial de AliExpress */
+    background: linear-gradient(to right, #ff5000, #ff0000); 
+}
 
 /* Videos y WhatsApp */
 .video-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; }
@@ -233,7 +240,7 @@ input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
 .video-btn.youtube { background: #FF0000; color: white; border: none; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
 .tiktok-btn { background: #000000; color: white; border: 1px solid #333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
 
-/* --- RELACIONADOS CORREGIDOS (Tamaño Controlado) --- */
+/* Relacionados (Tamaño Controlado) */
 .related-section { 
     margin-top: 10px; border-top: 1px solid var(--card-border); padding-top: 20px; 
 }
@@ -246,12 +253,10 @@ input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
     padding: 10px; 
     display: flex; align-items: center; gap: 10px;
     cursor: pointer; transition: transform 0.2s; 
-    height: 80px; /* Altura fija controlada */
-    overflow: hidden; /* Evita que nada salga */
+    height: 80px; overflow: hidden; 
 }
 .related-img { 
-    width: 60px; height: 60px; /* Tamaño fijo */
-    min-width: 60px; /* Evita que se aplaste */
+    width: 60px; height: 60px; min-width: 60px; 
     border-radius: 8px; object-fit: cover; 
 }
 .related-text { 
