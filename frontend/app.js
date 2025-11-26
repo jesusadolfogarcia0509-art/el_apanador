@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', (e) => filterData(e.target.value, currentCategory));
 
     lensBtn.addEventListener('click', () => {
-        alert('📷 Función Escáner: Próximamente...\n(Aquí abriremos la cámara para detectar la herramienta automáticamente)');
+        alert('📷 Función Escáner: Próximamente...');
     });
 
     catButtons.forEach(btn => {
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
 
-        // 2. HERRAMIENTAS (Con LOGOS de Amazon y AliExpress)
+        // 2. HERRAMIENTAS (Con Logos y Colores Sólidos)
         let toolsHTML = '';
         if (sol.tools && sol.tools.length > 0) {
             let toolsListHTML = '';
@@ -145,10 +145,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="tool-info">
                             <div class="tool-name">${tool.name}</div>
                             <div class="tool-actions">
-                                <a href="${tool.amazon}" target="_blank" class="store-btn">
+                                <a href="${tool.amazon}" target="_blank" class="store-btn btn-amazon">
                                     <img src="images/amazon-logo.png" alt="Amazon">
                                 </a>
-                                <a href="${tool.aliexpress}" target="_blank" class="store-btn">
+                                <a href="${tool.aliexpress}" target="_blank" class="store-btn btn-ali">
                                     <img src="images/aliexpress-logo.png" alt="AliExpress">
                                 </a>
                             </div>
@@ -164,21 +164,21 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // 3. BOTONES PRINCIPALES (Si no hay herramientas)
+        // 3. BOTONES PRINCIPALES (Si no hay tools)
         let mainButtonsHTML = '';
         if (sol.affiliate_url_primary && (!sol.tools || sol.tools.length === 0)) {
             mainButtonsHTML = `
                 <div class="button-grid">
-                    <a href="${sol.affiliate_url_primary}" target="_blank" class="store-btn">
+                    <a href="${sol.affiliate_url_primary}" target="_blank" class="store-btn btn-amazon">
                         <img src="images/amazon-logo.png" alt="Amazon">
                     </a>
-                    ${sol.affiliate_url_secondary ? `<a href="${sol.affiliate_url_secondary}" target="_blank" class="store-btn"><img src="images/aliexpress-logo.png" alt="AliExpress"></a>` : ''}
+                    ${sol.affiliate_url_secondary ? `<a href="${sol.affiliate_url_secondary}" target="_blank" class="store-btn btn-ali"><img src="images/aliexpress-logo.png" alt="AliExpress"></a>` : ''}
                 </div>
                 ${marketingHTML}
             `;
         }
 
-        // 4. VIDEOS Y WHATSAPP
+        // 4. VIDEOS
         const ytUrl = sol.video_url || `https://www.youtube.com/results?search_query=${encodeURIComponent(sol.title + " truco casero")}`;
         const ytButton = `<a href="${ytUrl}" target="_blank" class="action-btn video-btn youtube">${ICONS.youtube} YouTube</a>`;
 
@@ -197,7 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
             related = randomRest;
         }
         related = related.slice(0, 2);
-
         let relatedHTML = '';
         if (related.length > 0) {
             relatedHTML = `<div class="related-section"><div class="related-title">Quizás te interese...</div><div class="related-grid">`;
@@ -212,7 +211,13 @@ document.addEventListener('DOMContentLoaded', () => {
             relatedHTML += `</div></div>`;
         }
 
-        // MONTAJE
+        // Título Vídeo con Diseño
+        const videoTitleHTML = `
+            <div class="video-marketing-box">
+                <p>📺 ¿No te queda claro? Mira el vídeo:</p>
+            </div>
+        `;
+
         modalBody.innerHTML = `
             <img src="${modalImageSrc}" alt="${sol.title}" class="modal-hero-img">
             <div style="padding:20px;">
@@ -223,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ${toolsHTML}
                 ${mainButtonsHTML}
 
-                <div class="section-label">📺 ¿No te queda claro? Mira el vídeo:</div>
+                ${videoTitleHTML}
                 <div class="video-actions">
                     ${ytButton}
                     ${tiktokButton}
