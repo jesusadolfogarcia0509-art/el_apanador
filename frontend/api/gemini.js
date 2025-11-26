@@ -1,14 +1,26 @@
 export default async function handler(req, res) {
-    // Solo permitimos que nos envíen datos (POST)
+    // Configurar CORS para permitir peticiones desde tu web
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+    res.setHeader(
+        'Access-Control-Allow-Headers',
+        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+    );
+
+    if (req.method === 'OPTIONS') {
+        res.status(200).end();
+        return;
+    }
+
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method Not Allowed' });
     }
 
     const { image } = req.body;
 
-    // Aquí leemos la clave secreta que guardaremos en Vercel
     if (!process.env.GEMINI_API_KEY) {
-        return res.status(500).json({ error: 'Falta la configuración de la API Key' });
+        return res.status(500).json({ error: 'Falta la API Key en Vercel' });
     }
 
     try {
@@ -41,7 +53,7 @@ export default async function handler(req, res) {
         res.status(200).json(JSON.parse(textResponse));
 
     } catch (error) {
-        console.error("Error servidor:", error);
+        console.error("Error IA:", error);
         res.status(500).json({ error: "Error analizando la imagen" });
     }
 }
