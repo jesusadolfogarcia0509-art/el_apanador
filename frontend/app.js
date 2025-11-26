@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCategory = 'all';
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-    // LOGOS SVG GIGANTES
     const ICONS = {
         amazon: '<svg viewBox="0 0 24 24"><path d="M15.93 17.09c-2.43 1.32-5.13 1.78-7.96.93.91-.62 1.73-1.33 2.2-2.63 2.6.9 5.27.56 5.76-.3 2.73-4.79-4.98-6.08-6.48-3.08-4.31-1.07-4.25 3.73-.53 4.59-.26 1.35-.37 2.85-1.72 2.72-.72-.07-1.4-.46-1.72-1.23-.23-.55-.16-1.22.15-1.68.49-.76 1.46-.83 2.24-.59.12.04.23-.12.17-.22-.46-.82-1.66-1.1-2.54-.71-1.04.46-1.53 1.73-1.21 2.79.29.96 1.12 1.64 2.07 1.91 1.59.46 3.34-.02 4.62-1.07.24.37.49.73.79 1.05.66.71 1.68 1.01 2.62.92 1.22-.11 2.37-.65 3.33-1.43-.12-.16-.24-.31-.36-.47zM9.5 9.82c1.5-.53 3.63.37 2.54 2.74-1.37.1-2.54-.65-2.54-2.74z"/></svg>',
         aliexpress: '<svg viewBox="0 0 24 24"><path d="M3.8 13.2h3.4c.2 0 .4-.1.5-.3l.7-3.2c.1-.4.4-.6.8-.6h1.7c.2 0 .4.2.4.4v.3c0 .2-.1.3-.2.4l-2.2 8.3c-.1.4.2.8.6.8h1.8c.4 0 .7-.3.8-.6l1.3-5.2c.1-.4.4-.6.8-.6h1.6c.2 0 .4.2.4.4 0 .1-.1.3-.1.3l-2.2 8.4c-.1.4.2.8.6.8h1.8c.4 0 .7-.3.8-.6l1.4-5.3c.1-.4.4-.6.8-.6h1.6c.4 0 .7.3.6.7l-2.1 7.9c-.2.8-1 1.4-1.9 1.4H9c-1.7 0-3.1-1.3-3.5-3l-1-3.8c-.1-.4-.4-.6-.8-.6H3c-.2 0-.4-.2-.4-.4v-1c0-.3.2-.5.4-.5h.8z"/></svg>',
@@ -124,23 +123,19 @@ document.addEventListener('DOMContentLoaded', () => {
         closeBtn.onclick = () => modal.style.display = "none";
         window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
 
-        const modalImageSrc = sol.image_url || 'https://placehold.co/600x300/e2e8f0/475569?text=Sin+Foto';
-
-        // 1. FRASE DE MARKETING (En su propia caja)
+        // 1. FRASE MARKETING (Encima de todo)
         const marketingHTML = `
             <div class="marketing-box">
                 <p>💡 El truco te salva hoy, pero equípate para mañana con las herramientas adecuadas.</p>
             </div>
         `;
 
-        // 2. HERRAMIENTAS ESPECÍFICAS (Nuevo Diseño Rectangular)
+        // 2. HERRAMIENTAS (Con Amazon y AliExpress)
         let toolsHTML = '';
         if (sol.tools && sol.tools.length > 0) {
             let toolsListHTML = '';
             sol.tools.forEach(tool => {
-                // Usamos la imagen del JSON. Si no hay, un placeholder genérico.
-                const toolImg = tool.image || 'https://placehold.co/100x100/white/black?text=Sin+Foto';
-                
+                const toolImg = tool.image || 'https://placehold.co/100x100/white/black?text=Tool';
                 toolsListHTML += `
                     <div class="tool-card">
                         <img src="${toolImg}" class="tool-img" alt="${tool.name}">
@@ -154,49 +149,34 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 `;
             });
-
             toolsHTML = `
                 <div class="tools-section">
                     <div class="tools-title">🛠️ Herramientas Profesionales</div>
-                    <div class="tools-grid">
-                        ${toolsListHTML}
-                    </div>
+                    <div class="tools-grid">${toolsListHTML}</div>
                 </div>
             `;
         }
 
-        // 3. Botones Principales (Solo si NO hay herramientas específicas)
-        let mainButtonsHTML = '';
-        if (sol.affiliate_url_primary && (!sol.tools || sol.tools.length === 0)) {
-            mainButtonsHTML = `
-                <div class="button-grid">
-                    <a href="${sol.affiliate_url_primary}" target="_blank" class="action-btn amazon-btn">${ICONS.amazon} Amazon</a>
-                    ${sol.affiliate_url_secondary ? `<a href="${sol.affiliate_url_secondary}" target="_blank" class="action-btn aliexpress-btn">${ICONS.aliexpress} AliExpress</a>` : ''}
-                </div>
-                ${marketingHTML} `;
-        }
-
-        // Videos (YouTube en ROJO)
+        // 3. VIDEOS
         const ytUrl = sol.video_url || `https://www.youtube.com/results?search_query=${encodeURIComponent(sol.title + " truco casero")}`;
-        // Añadimos la clase 'youtube'
         const ytButton = `<a href="${ytUrl}" target="_blank" class="action-btn video-btn youtube">${ICONS.youtube} YouTube</a>`;
 
         const tiktokUrl = sol.tiktok_url || `https://www.tiktok.com/search?q=${encodeURIComponent(sol.title + " hack")}`;
         const tiktokButton = `<a href="${tiktokUrl}" target="_blank" class="action-btn tiktok-btn">${ICONS.tiktok} TikTok</a>`;
 
-        // WhatsApp
+        // 4. WHATSAPP
         const shareText = `¡Mira este truco: ${sol.title}! 👉 https://el-apanador-jesus.onrender.com`;
         const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
         const whatsappButton = `<a href="${whatsappUrl}" target="_blank" class="action-btn whatsapp-btn">${ICONS.whatsapp} Compartir por WhatsApp</a>`;
 
-        // Relacionados
+        // 5. RELACIONADOS
+        const modalImageSrc = sol.image_url || 'https://placehold.co/600x300/e2e8f0/475569?text=Sin+Foto';
         let related = allSolutions.filter(s => s.category === sol.category && s.title !== sol.title);
         if (related.length < 2) {
             const randomRest = allSolutions.filter(s => s.title !== sol.title).sort(() => 0.5 - Math.random());
             related = randomRest;
         }
         related = related.slice(0, 2);
-
         let relatedHTML = '';
         if (related.length > 0) {
             relatedHTML = `<div class="related-section"><div class="related-title">Quizás te interese...</div><div class="related-grid">`;
@@ -211,16 +191,17 @@ document.addEventListener('DOMContentLoaded', () => {
             relatedHTML += `</div></div>`;
         }
 
-        // ESTRUCTURA FINAL DEL MODAL
+        // MONTAJE FINAL (Orden cambiado: Texto -> Frase -> Tools -> Video Title -> Videos -> WhatsApp -> Related)
         modalBody.innerHTML = `
             <img src="${modalImageSrc}" alt="${sol.title}" class="modal-hero-img">
             <div style="padding:20px;">
                 <h2 style="margin-top:0">${sol.title}</h2>
                 <p style="font-size:1.1rem; line-height: 1.6; opacity: 0.9; margin-bottom: 25px;">${sol.solution_text}</p>
                 
-                ${sol.tools && sol.tools.length > 0 ? marketingHTML : ''} ${toolsHTML}
-                ${mainButtonsHTML}
+                ${sol.tools && sol.tools.length > 0 ? marketingHTML : ''}
+                ${toolsHTML}
 
+                <div class="section-label">📺 ¿No te queda claro? Mira el vídeo:</div>
                 <div class="video-actions">
                     ${ytButton}
                     ${tiktokButton}
