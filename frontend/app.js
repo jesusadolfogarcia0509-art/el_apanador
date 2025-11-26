@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const list = document.getElementById('solutionsList');
     const searchInput = document.getElementById('searchInput');
+    const lensBtn = document.getElementById('lensBtn'); // NUEVO BOTÓN
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     const closeBtn = document.querySelector('.close-btn');
@@ -37,6 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(err => console.error('Error cargando JSON:', err));
 
     searchInput.addEventListener('input', (e) => filterData(e.target.value, currentCategory));
+
+    // EVENTO BOTÓN LENS
+    lensBtn.addEventListener('click', () => {
+        alert('📷 Función Escáner: Próximamente...\n(Aquí abriremos la cámara para detectar la herramienta automáticamente)');
+    });
 
     catButtons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -123,14 +129,14 @@ document.addEventListener('DOMContentLoaded', () => {
         closeBtn.onclick = () => modal.style.display = "none";
         window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
 
-        // 1. FRASE MARKETING (Encima de todo)
+        // 1. FRASE MARKETING
         const marketingHTML = `
             <div class="marketing-box">
                 <p>💡 El truco te salva hoy, pero equípate para mañana con las herramientas adecuadas.</p>
             </div>
         `;
 
-        // 2. HERRAMIENTAS (Con Amazon y AliExpress)
+        // 2. HERRAMIENTAS
         let toolsHTML = '';
         if (sol.tools && sol.tools.length > 0) {
             let toolsListHTML = '';
@@ -177,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
             related = randomRest;
         }
         related = related.slice(0, 2);
+
         let relatedHTML = '';
         if (related.length > 0) {
             relatedHTML = `<div class="related-section"><div class="related-title">Quizás te interese...</div><div class="related-grid">`;
@@ -191,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
             relatedHTML += `</div></div>`;
         }
 
-        // MONTAJE FINAL (Orden cambiado: Texto -> Frase -> Tools -> Video Title -> Videos -> WhatsApp -> Related)
         modalBody.innerHTML = `
             <img src="${modalImageSrc}" alt="${sol.title}" class="modal-hero-img">
             <div style="padding:20px;">
