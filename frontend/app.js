@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentCategory = 'all';
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
+    // ---------------------------------------------------------
+    // ⚠️ ZONA DE LA LLAVE MAESTRA
+    // Borra el texto de abajo y pega tu clave AIza... entre las comillas
+    // ---------------------------------------------------------
+    const GEMINI_API_KEY = "AIzaSyAZr-OmiN9zz2_9FvAy6RjmfGGKuzkJz74"; 
+    // ---------------------------------------------------------
+
     const ICONS = {
         amazon: '<svg viewBox="0 0 24 24"><path d="M15.93 17.09c-2.43 1.32-5.13 1.78-7.96.93.91-.62 1.73-1.33 2.2-2.63 2.6.9 5.27.56 5.76-.3 2.73-4.79-4.98-6.08-6.48-3.08-4.31-1.07-4.25 3.73-.53 4.59-.26 1.35-.37 2.85-1.72 2.72-.72-.07-1.4-.46-1.72-1.23-.23-.55-.16-1.22.15-1.68.49-.76 1.46-.83 2.24-.59.12.04.23-.12.17-.22-.46-.82-1.66-1.1-2.54-.71-1.04.46-1.53 1.73-1.21 2.79.29.96 1.12 1.64 2.07 1.91 1.59.46 3.34-.02 4.62-1.07.24.37.49.73.79 1.05.66.71 1.68 1.01 2.62.92 1.22-.11 2.37-.65 3.33-1.43-.12-.16-.24-.31-.36-.47zM9.5 9.82c1.5-.53 3.63.37 2.54 2.74-1.37.1-2.54-.65-2.54-2.74z"/></svg>',
         aliexpress: '<svg viewBox="0 0 24 24"><path d="M3.8 13.2h3.4c.2 0 .4-.1.5-.3l.7-3.2c.1-.4.4-.6.8-.6h1.7c.2 0 .4.2.4.4v.3c0 .2-.1.3-.2.4l-2.2 8.3c-.1.4.2.8.6.8h1.8c.4 0 .7-.3.8-.6l1.3-5.2c.1-.4.4-.6.8-.6h1.6c.2 0 .4.2.4.4 0 .1-.1.3-.1.3l-2.2 8.4c-.1.4.2.8.6.8h1.8c.4 0 .7-.3.8-.6l1.4-5.3c.1-.4.4-.6.8-.6h1.6c.4 0 .7.3.6.7l-2.1 7.9c-.2.8-1 1.4-1.9 1.4H9c-1.7 0-3.1-1.3-3.5-3l-1-3.8c-.1-.4-.4-.6-.8-.6H3c-.2 0-.4-.2-.4-.4v-1c0-.3.2-.5.4-.5h.8z"/></svg>',
@@ -20,16 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
         whatsapp: '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>'
     };
 
+    // OBSERVER ANIMACIONES
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) entry.target.classList.add('visible');
         });
     }, { threshold: 0.1 });
 
+    // SERVICE WORKER
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(console.log);
     }
 
+    // CARGAR DATOS LOCALES
     fetch('./data/solutions.json')
         .then(res => res.json())
         .then(data => {
@@ -40,8 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchInput.addEventListener('input', (e) => filterData(e.target.value, currentCategory));
 
-    // BOTÓN DE CÁMARA (Llamada al Backend Seguro)
+    // --- LÓGICA CÁMARA IA (Conexión Directa) ---
     lensBtn.addEventListener('click', () => {
+        // Comprobación de seguridad para que te acuerdes de pegar la clave
+        if(GEMINI_API_KEY.includes("PEGAR_TU_CLAVE") || GEMINI_API_KEY === "") {
+            alert("⚠️ ¡Oye! Te falta pegar la Clave API en el código (línea 17).");
+            return;
+        }
         cameraInput.click();
     });
 
@@ -49,31 +64,23 @@ document.addEventListener('DOMContentLoaded', () => {
         const file = e.target.files[0];
         if (!file) return;
 
+        // Mostrar carga
         modal.style.display = "flex";
         modalBody.innerHTML = `
             <div class="ai-loading" style="text-align:center; padding:40px; color:white;">
                 <div style="font-size:3rem; animation:bounce 1s infinite;">🧠</div>
-                <h3 style="margin-top:20px;">Analizando con IA...</h3>
-                <p style="color:#cbd5e1; font-size:0.9rem;">Dame unos segundos.</p>
+                <h3 style="margin-top:20px;">Pensando...</h3>
+                <p style="color:#cbd5e1; font-size:0.9rem;">Analizando tu foto.</p>
             </div>
         `;
 
         try {
             const base64Image = await fileToBase64(file);
+            const result = await analyzeWithGemini(base64Image);
 
-            // LLAMADA AL BACKEND (API/GEMINI.JS)
-            const response = await fetch('/api/gemini', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ image: base64Image })
-            });
-
-            if (!response.ok) throw new Error("Error al conectar con la IA");
-
-            const result = await response.json();
-
+            // Mostrar resultado
             openModal({
-                title: result.title || "Herramienta Detectada",
+                title: result.title || "Objeto Detectado",
                 solution_text: result.text || "Aquí tienes información útil.",
                 image_url: URL.createObjectURL(file),
                 category: "IA Detectada",
@@ -89,13 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error(error);
             modalBody.innerHTML = `
                 <div style="text-align:center; padding:30px; color:white;">
-                    <h3 style="color:#ef4444;">😓 Ups, error</h3>
+                    <h3 style="color:#ef4444;">Error de Análisis</h3>
                     <p>${error.message}</p>
                     <button onclick="document.getElementById('detailModal').style.display='none'" class="action-btn" style="background:#333; margin-top:20px;">Cerrar</button>
                 </div>
             `;
         }
-        cameraInput.value = '';
+        cameraInput.value = ''; // Limpiar para poder usar de nuevo
     });
 
     function fileToBase64(file) {
@@ -106,6 +113,42 @@ document.addEventListener('DOMContentLoaded', () => {
             reader.onerror = error => reject(error);
         });
     }
+
+    // FUNCIÓN QUE HABLA CON GOOGLE DIRECTAMENTE
+    async function analyzeWithGemini(base64Image) {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+        
+        const prompt = "Analiza esta imagen. Identifica qué herramienta u objeto de bricolaje es. Responde SOLO con un JSON válido (sin markdown ```json) con estos campos: { \"title\": \"Nombre corto\", \"keyword\": \"Palabra clave para comprarlo\", \"text\": \"Explica para qué sirve y un consejo de uso.\" }";
+
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                contents: [{
+                    parts: [
+                        { text: prompt },
+                        { inline_data: { mime_type: "image/jpeg", data: base64Image } }
+                    ]
+                }]
+            })
+        });
+
+        const data = await response.json();
+        
+        // Si hay error en la respuesta de Google
+        if (data.error) throw new Error(data.error.message);
+        if (!data.candidates || !data.candidates[0].content) throw new Error("No pude identificar la imagen.");
+        
+        let textResponse = data.candidates[0].content.parts[0].text;
+        // Limpieza de formato
+        textResponse = textResponse.replace(/```json/g, '').replace(/```/g, '').trim();
+        
+        return JSON.parse(textResponse);
+    }
+
+    // ---------------------------------------------------------
+    // RESTO DE LA LÓGICA (CATEGORÍAS, MODAL, ETC)
+    // ---------------------------------------------------------
 
     catButtons.forEach(btn => {
         btn.addEventListener('click', () => {
