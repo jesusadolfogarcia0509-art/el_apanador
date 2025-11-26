@@ -1,91 +1,842 @@
 [
-  { "title": "Aflojar tuerca con monedas", "category": "Herramientas", "problem": "No tengo llave inglesa del tamaño correcto", "solution_text": "Si la llave inglesa es demasiado grande para la tuerca, inserta una moneda entre la cara de la tuerca y la mandíbula de la llave para rellenar el hueco.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/tuerca.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=juego+llaves+inglesas" },
-  { "title": "Soporte de móvil con gafas", "category": "Tecnología", "problem": "Quiero ver un video pero el móvil se cae", "solution_text": "Dobla unas gafas de sol y colócalas boca abajo. El móvil se apoya perfectamente entre las patillas.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/gafas.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=soporte+movil+mesa" },
-  { "title": "Arreglar cremallera", "category": "Ropa", "problem": "El tirador de la cremallera se ha roto", "solution_text": "Usa una anilla de llavero vieja. Pásala por el agujero del deslizador. Es más resistente que el original.", "risk_level": "Bajo", "difficulty": 2, "image_url": "images/trucos/cremallera.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=kit+reparacion+cremalleras" },
-  { "title": "Amplificador casero", "category": "Tecnología", "problem": "El móvil suena muy bajo", "solution_text": "Corta una ranura en un rollo de papel higiénico e inserta el móvil. Pon dos vasos en los extremos para amplificar.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/altavoz.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=altavoz+bluetooth" },
-  { "title": "Tornillo barrido", "category": "Herramientas", "problem": "El destornillador resbala", "solution_text": "Coloca una banda elástica ancha sobre la cabeza del tornillo. Presiona fuerte con el destornillador para ganar agarre.", "risk_level": "Medio", "difficulty": 3, "image_url": "images/trucos/tornillo.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=extractor+tornillos" },
-  { "title": "Enfriar portátil", "category": "Tecnología", "problem": "El portátil se sobrecalienta", "solution_text": "Elévalo sobre cartones de huevos vacíos. La forma irregular permite que el aire circule por debajo.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/portatil.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=base+refrigeradora+portatil" },
-  { "title": "Organizar cables", "category": "Tecnología", "problem": "Cables caídos tras la mesa", "solution_text": "Engancha clips de papelería en el borde de la mesa y pasa los cables por sus anillas metálicas.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/cables.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=organizador+cables" },
-  { "title": "Pulir faros", "category": "Coche", "problem": "Faros opacos y amarillentos", "solution_text": "Frota pasta de dientes blanca sobre el faro con un trapo en círculos. Enjuaga y verás la diferencia.", "risk_level": "Bajo", "difficulty": 2, "image_url": "images/trucos/faros.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=pulimento+faros" },
-  { "title": "Mesa coja", "category": "Hogar", "problem": "La mesa baila", "solution_text": "Corta una rodaja de corcho de botella y pégala bajo la pata corta. Absorbe vibraciones y no resbala.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/mesa.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=niveladores+muebles" },
-  { "title": "Abolladura coche", "category": "Coche", "problem": "Golpe en parachoques plástico", "solution_text": "Vierte agua hirviendo sobre el golpe para ablandar el plástico y empuja desde atrás para sacarlo.", "risk_level": "Medio", "difficulty": 4, "image_url": "images/trucos/abolladura.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=kit+reparacion+abolladuras" },
-  { "title": "Afilar cuchillo", "category": "Hogar", "problem": "Cuchillo no corta", "solution_text": "Usa la base sin esmaltar de una taza de cerámica como piedra de afilar. Pasa la hoja en ángulo de 20º.", "risk_level": "Medio", "difficulty": 2, "image_url": "images/trucos/cuchillo.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=afilador+cuchillos" },
-  { "title": "Cable pelado", "category": "Tecnología", "problem": "Sin cinta aislante", "solution_text": "Para bajo voltaje, aplica varias capas de esmalte de uñas transparente sobre la zona pelada.", "risk_level": "Alto", "difficulty": 2, "image_url": "images/trucos/cinta.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=cinta+aislante" },
-  { "title": "Desatascar tubería", "category": "Hogar", "problem": "Agua no traga", "solution_text": "Bicarbonato + Vinagre. Tapa 15 min. Luego agua hirviendo. La reacción disuelve la grasa.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/fregadero.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=desatascador+muelle" },
-  { "title": "Quitar pegatinas", "category": "Hogar", "problem": "Queda pegamento", "solution_text": "Calienta con secador de pelo 30 seg. El adhesivo se ablanda y sale de una pieza.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/pegatina.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=quita+adhesivos" },
-  { "title": "Afilar tijeras", "category": "Hogar", "problem": "Tijeras no cortan", "solution_text": "Corta varias veces una hoja de papel de aluminio doblada. La fricción afila las hojas.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/tijeras.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=afilador+tijeras" },
-  { "title": "Polvo taladro", "category": "Herramientas", "problem": "Mancho al taladrar", "solution_text": "Pega un Post-it doblado justo debajo del agujero para recoger el polvo que cae.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/taladro.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=colector+polvo+taladro" },
-  { "title": "Abrir botes", "category": "Hogar", "problem": "Tapa atascada", "solution_text": "Usa guantes de goma para mejorar el agarre o pon una goma elástica alrededor de la tapa.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/bote.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=abrebotes" },
-  { "title": "Adaptar pilas", "category": "Tecnología", "problem": "Necesito pilas grandes", "solution_text": "Usa una pila pequeña y rellena el hueco del polo negativo con una bola de papel de aluminio.", "risk_level": "Medio", "difficulty": 2, "image_url": "images/trucos/pilas.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=adaptador+pilas" },
-  { "title": "Limpiar teclado", "category": "Tecnología", "problem": "Suciedad entre teclas", "solution_text": "Pasa la parte adhesiva de un Post-it entre las filas para recoger migas.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/teclado.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=gel+limpiador+teclado" },
-  { "title": "Golpe en madera", "category": "Hogar", "problem": "Mesa abollada", "solution_text": "Trapo húmedo sobre el golpe + Plancha caliente. El vapor hincha la madera y recupera la forma.", "risk_level": "Medio", "difficulty": 3, "image_url": "images/trucos/madera.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=cera+reparar+madera" },
-  { "title": "Puerta que chirría", "category": "Hogar", "problem": "La bisagra hace ruido", "solution_text": "Frota la mina de un lápiz (grafito) sobre la bisagra. Es un lubricante seco excelente.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/puerta.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=lubricante+grafito" },
-  { "title": "Cables doblados", "category": "Tecnología", "problem": "El cargador se rompe", "solution_text": "Saca el muelle de un boli viejo y enróscalo en el extremo del cable para protegerlo.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/muelle.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=protector+cables" },
-  { "title": "Limpiar puerto carga", "category": "Tecnología", "problem": "Móvil no carga bien", "solution_text": "Usa un palillo de madera para sacar suavemente la pelusa del puerto. Nunca uses metal.", "risk_level": "Medio", "difficulty": 2, "image_url": "images/trucos/puerto.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=kit+limpieza+movil" },
-  { "title": "Zapatos aprietan", "category": "Ropa", "problem": "Calzado nuevo duele", "solution_text": "Ponte calcetines gordos y aplica calor con secador en las zonas que aprietan.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/zapatos.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=dilatador+calzado" },
-  { "title": "Olor en el coche", "category": "Coche", "problem": "Mal olor o humedad", "solution_text": "Deja un vaso con granos de café o bicarbonato bajo el asiento toda la noche.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/olor.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=absorbe+olores+coche" },
-  { "title": "Tornillo oxidado", "category": "Herramientas", "problem": "No gira por óxido", "solution_text": "Echa unas gotas de Coca-Cola o vinagre y espera 20 min. El ácido come el óxido.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/oxido.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=wd40" },
-  { "title": "Chicle en ropa", "category": "Ropa", "problem": "Chicle pegado", "solution_text": "Aplica hielo hasta que se congele duro. Luego raspa y saldrá entero.", "risk_level": "Bajo", "difficulty": 2, "image_url": "images/trucos/chicle.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=quita+chicles" },
-  { "title": "Taladro en azulejo", "category": "Hogar", "problem": "La broca resbala", "solution_text": "Pega cinta de carrocero donde vas a taladrar para que la broca agarre.", "risk_level": "Medio", "difficulty": 2, "image_url": "images/trucos/azulejo.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=cinta+carrocero" },
-  { "title": "Clavo flojo", "category": "Hogar", "problem": "Agujero dado de sí", "solution_text": "Rellena con palillos de dientes y cola, corta lo que sobra y atornilla de nuevo.", "risk_level": "Bajo", "difficulty": 2, "image_url": "images/trucos/clavo.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=masilla+pared" },
-  { "title": "Botón suelto", "category": "Ropa", "problem": "Hilo a punto de romperse", "solution_text": "Aplica esmalte de uñas transparente sobre el hilo central para fijarlo.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/boton.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=costurero+viaje" },
-  { "title": "Tuerca difícil", "category": "Herramientas", "problem": "Se cae al colocarla", "solution_text": "Pega la tuerca a tu dedo con un poco de pegamento de barra para llevarla al sitio.", "risk_level": "Bajo", "difficulty": 2, "image_url": "images/trucos/tuerca_dificil.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=herramienta+imantada" },
-  { "title": "Pelusas en ropa", "category": "Ropa",
-    "problem": "Jersey con bolas", "solution_text": "Pasa una cuchilla de afeitar con mucho cuidado para rasurar las bolas.", "risk_level": "Medio", "difficulty": 3, "image_url": "images/trucos/pelusas.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=quitapelusas" },
-  { "title": "Mancha blanca madera", "category": "Hogar",
-    "problem": "Marca de vaso", "solution_text": "Aplica pasta de dientes blanca, deja 5 min y frota suave.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/mancha.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+madera" },
-  { "title": "Espejo empañado", "category": "Hogar",
-    "problem": "Vaho en el baño", "solution_text": "Limpia el espejo con espuma de afeitar. Crea una capa anti-vaho.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/vaho.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=spray+antivaho" },
-  { "title": "Llave rota", "category": "Hogar",
-    "problem": "Fragmento en cerradura", "solution_text": "Usa una barra de silicona caliente, pégala a la llave y tira.", "risk_level": "Alto", "difficulty": 4, "image_url": "images/trucos/llave.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=extractor+llaves" },
-  { "title": "Móvil mojado", "category": "Tecnología",
-    "problem": "Caída al agua", "solution_text": "Apaga y mete en bolsas de sílice (o arroz) 48h. No uses calor.", "risk_level": "Medio", "difficulty": 1, "image_url": "images/trucos/silice.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=kit+secado+movil" },
-  { "title": "Pantalla sucia", "category": "Tecnología",
-    "problem": "Huellas y grasa", "solution_text": "Limpia con un filtro de café de papel. No raya y absorbe grasa.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/filtro.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+pantallas" },
-  { "title": "Goma nevera sucia", "category": "Hogar",
-    "problem": "Moho en juntas", "solution_text": "Cepillo de dientes viejo + pasta de dientes. Blanquea y limpia.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/nevera.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=blanqueador+juntas" },
-  { "title": "Rayón coche", "category": "Coche",
-    "problem": "Roce superficial", "solution_text": "Si es pintura transferida, sale frotando con WD-40 o acetona suave.", "risk_level": "Medio", "difficulty": 3, "image_url": "images/trucos/rayon.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+arañazos" },
-  { "title": "Pegamento en piel", "category": "Hogar",
-    "problem": "Dedos pegados", "solution_text": "Frota con aceite de cocina o mantequilla hasta que suelte.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/pegamento.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=disolvente+pegamento" },
-  { "title": "Salero húmedo", "category": "Hogar",
-    "problem": "La sal no sale", "solution_text": "Añade unos granos de arroz crudo dentro del salero. El arroz absorberá la humedad y la sal quedará suelta.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/salero.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=salero+antihumedad" },
-  { "title": "Limpiar plata", "category": "Hogar",
-    "problem": "Joyas ennegrecidas", "solution_text": "Sumerge la plata en ketchup durante 5-10 minutos. El ácido del tomate elimina el deslustre. Cepilla y enjuaga.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/plata.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+plata" },
-  { "title": "Juntas negras baño", "category": "Hogar",
-    "problem": "Moho en azulejos", "solution_text": "Empapa algodón en lejía y déjalo reposar sobre la junta sucia toda la noche. Por la mañana estará blanca.", "risk_level": "Medio", "difficulty": 2, "image_url": "images/trucos/juntas.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=blanqueador+juntas" },
-  { "title": "Enfriar bebida", "category": "Hogar",
-    "problem": "Cerveza caliente", "solution_text": "Envuelve la botella en papel de cocina mojado y métela al congelador. Se enfriará en 10-15 minutos.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/bebida.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=enfriador+bebidas" },
-  { "title": "Cajón atascado", "category": "Hogar",
-    "problem": "No desliza bien", "solution_text": "Frota una pastilla de jabón seca o una vela en los rieles de madera del cajón para lubricarlos.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/cajon.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=cera+muebles" },
-  { "title": "Pelos mascota sofá", "category": "Hogar",
-    "problem": "Pelos pegados en tela", "solution_text": "Ponte un guante de goma de fregar húmedo y pasa la mano por el sofá. La estática atrae todos los pelos.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/pelos_sofa.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=quita+pelos+mascota" },
-  { "title": "Abrir anilla llavero", "category": "Hogar",
-    "problem": "Anilla muy dura", "solution_text": "Usa un quitagrapas de oficina para separar las anillas del llavero y meter la llave sin romperte las uñas.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/llavero.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=llaveros+faciles" },
-  { "title": "Zapatos ante sucios", "category": "Ropa",
-    "problem": "Mancha en gamuza", "solution_text": "Usa una goma de borrar blanca escolar para frotar suavemente la mancha hasta que desaparezca.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/ante.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=kit+limpieza+ante" },
-  { "title": "Ropa resbala percha", "category": "Ropa",
-    "problem": "La ropa cae", "solution_text": "Enrolla una goma elástica gruesa en cada extremo de la percha. La goma hace de freno y sujeta la prenda.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/percha.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=perchas+antideslizantes" },
-  { "title": "Zapatos brillo", "category": "Ropa",
-    "problem": "Cuero sin brillo", "solution_text": "Frota el zapato con el interior de una cáscara de plátano y luego saca brillo con un paño suave.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/zapatos_platano.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=betun+zapatos" },
-  { "title": "Pantalla rayada", "category": "Tecnología",
-    "problem": "Arañazos ligeros", "solution_text": "Aplica un poco de pasta de dientes (no gel) en un bastoncillo y frota en círculos suaves sobre el arañazo.", "risk_level": "Bajo", "difficulty": 2, "image_url": "images/trucos/pantalla_rayada.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+pantalla+movil" },
-  { "title": "Resetear router", "category": "Tecnología",
-    "problem": "Botón reset inaccesible", "solution_text": "Desdobla un clip de papel para acceder a los botones de reinicio hundidos en aparatos electrónicos.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/reset.jpg", "affiliate_url_primary": null },
-  { "title": "Organizador cables cajón", "category": "Tecnología",
-    "problem": "Cajón de cables desastre", "solution_text": "Guarda cada cable dentro de un rollo de cartón de papel higiénico vacío. Escribe qué es por fuera.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/cables_wc.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=organizador+cables" },
-  { "title": "Soporte tablet", "category": "Tecnología",
-    "problem": "No se aguanta de pie", "solution_text": "Dobla una percha de alambre con unos alicates para crear un soporte resistente para tu tablet.", "risk_level": "Medio", "difficulty": 3, "image_url": "images/trucos/tablet_percha.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=soporte+tablet" },
-  { "title": "Limpiar brochas", "category": "Hogar",
-    "problem": "Pintura seca y dura", "solution_text": "Sumerge las brochas en vinagre caliente durante 30 minutos. La pintura se ablandará y saldrá sola.", "risk_level": "Medio", "difficulty": 2, "image_url": "images/trucos/brochas.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+brochas" },
-  { "title": "Óxido en cromados", "category": "Coche",
-    "problem": "Puntos de óxido en metal", "solution_text": "Moja una bola de papel de aluminio en agua y frota el cromado. La reacción química elimina el óxido y pule.", "risk_level": "Bajo", "difficulty": 2, "image_url": "images/trucos/cromados.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=pulimento+metales" },
-  { "title": "Sujetar clavo", "category": "Herramientas",
-    "problem": "Miedo a martillarse", "solution_text": "Sujeta el clavo con un peine de plástico o una pinza de la ropa para mantener los dedos lejos del martillo.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/peine.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=sujeta+clavos" },
-  { "title": "Limpiar escobillas", "category": "Coche",
-    "problem": "Limpian mal o hacen ruido", "solution_text": "Limpia la goma de la escobilla con un trapo empapado en alcohol hasta que no salga negro. Recuperan agarre.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/escobillas.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=limpia+parabrisas" },
-  { "title": "Cerradura congelada", "category": "Coche",
-    "problem": "Llave no entra por hielo", "solution_text": "Pon un poco de gel hidroalcohólico en la llave o la cerradura. El alcohol derrite el hielo al instante.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/cerradura_hielo.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=descongelante+cerraduras" },
-  { "title": "Gafas empañadas", "category": "Hogar",
-    "problem": "Vaho en cristales", "solution_text": "Frota una pastilla de jabón seca suavemente en los cristales y limpia con un paño. Crea una capa que repele el vaho.", "risk_level": "Bajo", "difficulty": 1, "image_url": "images/trucos/gafas_vaho.jpg", "affiliate_url_primary": "https://www.amazon.es/s?k=spray+antivaho" }
+  {
+    "title": "Aflojar tuerca con monedas",
+    "category": "Herramientas",
+    "problem": "No tengo llave inglesa del tamaño correcto",
+    "solution_text": "Si la llave inglesa es demasiado grande para la tuerca, inserta una moneda entre la cara de la tuerca y la mandíbula de la llave para rellenar el hueco.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/tuerca.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=juego+llaves+inglesas",
+    "tools": [
+      { "name": "Juego Llaves", "image": "https://placehold.co/100x100/333/white?text=Llaves", "amazon": "https://www.amazon.es/s?k=juego+llaves+ajustables", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=llave+inglesa" },
+      { "name": "WD-40", "image": "https://placehold.co/100x100/eab308/white?text=WD40", "amazon": "https://www.amazon.es/s?k=wd40", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wd40" }
+    ]
+  },
+  {
+    "title": "Soporte de móvil con gafas",
+    "category": "Tecnología",
+    "problem": "Quiero ver un video pero el móvil se cae",
+    "solution_text": "Dobla unas gafas de sol y colócalas boca abajo. El móvil se apoya perfectamente entre las patillas.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/gafas.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=soporte+movil+mesa",
+    "tools": [
+      { "name": "Soporte Mesa", "image": "https://placehold.co/100x100/333/white?text=Soporte", "amazon": "https://www.amazon.es/s?k=soporte+movil+mesa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=soporte+movil" },
+      { "name": "Gafas Polarizadas", "image": "https://placehold.co/100x100/333/white?text=Gafas", "amazon": "https://www.amazon.es/s?k=gafas+sol", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=gafas+sol" }
+    ]
+  },
+  {
+    "title": "Arreglar cremallera",
+    "category": "Ropa",
+    "problem": "El tirador de la cremallera se ha roto",
+    "solution_text": "Usa una anilla de llavero vieja. Pásala por el agujero del deslizador. Es más resistente que el original.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/cremallera.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+reparacion+cremalleras",
+    "tools": [
+      { "name": "Kit Cremalleras", "image": "https://placehold.co/100x100/333/white?text=Kit", "amazon": "https://www.amazon.es/s?k=kit+reparacion+cremalleras", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cremallera+kit" },
+      { "name": "Anillas Llavero", "image": "https://placehold.co/100x100/333/white?text=Anillas", "amazon": "https://www.amazon.es/s?k=anillas+llavero", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=anillas+llavero" }
+    ]
+  },
+  {
+    "title": "Amplificador casero",
+    "category": "Tecnología",
+    "problem": "El móvil suena muy bajo",
+    "solution_text": "Corta una ranura en un rollo de papel higiénico e inserta el móvil. Pon dos vasos en los extremos para amplificar.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/altavoz.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=altavoz+bluetooth",
+    "tools": [
+      { "name": "Altavoz JBL", "image": "https://placehold.co/100x100/333/white?text=JBL", "amazon": "https://www.amazon.es/s?k=altavoz+bluetooth+jbl", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=altavoz+bluetooth" },
+      { "name": "Vasos Cartón", "image": "https://placehold.co/100x100/333/white?text=Vasos", "amazon": "https://www.amazon.es/s?k=vasos+carton", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=vasos+fiesta" }
+    ]
+  },
+  {
+    "title": "Tornillo barrido",
+    "category": "Herramientas",
+    "problem": "El destornillador resbala",
+    "solution_text": "Coloca una banda elástica ancha sobre la cabeza del tornillo. Presiona fuerte con el destornillador para ganar agarre.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/tornillo.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=extractor+tornillos",
+    "tools": [
+      { "name": "Extractor Tornillos", "image": "https://placehold.co/100x100/333/white?text=Extractor", "amazon": "https://www.amazon.es/s?k=extractor+tornillos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=extractor+tornillos" },
+      { "name": "Gomas Elásticas", "image": "https://placehold.co/100x100/333/white?text=Gomas", "amazon": "https://www.amazon.es/s?k=gomas+elasticas+anchas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=gomas+elasticas" }
+    ]
+  },
+  {
+    "title": "Enfriar portátil",
+    "category": "Tecnología",
+    "problem": "El portátil se sobrecalienta",
+    "solution_text": "Elévalo sobre cartones de huevos vacíos. La forma irregular permite que el aire circule por debajo.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/portatil.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=base+refrigeradora+portatil",
+    "tools": [
+      { "name": "Base Refrigeradora", "image": "https://placehold.co/100x100/333/white?text=Base", "amazon": "https://www.amazon.es/s?k=base+refrigeradora+portatil", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cooler+laptop" },
+      { "name": "Pasta Térmica", "image": "https://placehold.co/100x100/333/white?text=Pasta", "amazon": "https://www.amazon.es/s?k=pasta+termica", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pasta+termica" }
+    ]
+  },
+  {
+    "title": "Organizar cables",
+    "category": "Tecnología",
+    "problem": "Cables caídos tras la mesa",
+    "solution_text": "Engancha clips de papelería en el borde de la mesa y pasa los cables por sus anillas metálicas.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/cables.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=organizador+cables",
+    "tools": [
+      { "name": "Organizador Velcro", "image": "https://placehold.co/100x100/333/white?text=Velcro", "amazon": "https://www.amazon.es/s?k=bridas+velcro", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=velcro+cables" },
+      { "name": "Clips Papelería", "image": "https://placehold.co/100x100/333/white?text=Clips", "amazon": "https://www.amazon.es/s?k=clips+papeleria+grandes", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=binder+clips" }
+    ]
+  },
+  {
+    "title": "Pulir faros",
+    "category": "Coche",
+    "problem": "Faros opacos y amarillentos",
+    "solution_text": "Frota pasta de dientes blanca sobre el faro con un trapo en círculos. Enjuaga y verás la diferencia.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/faros.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=pulimento+faros",
+    "tools": [
+      { "name": "Kit Pulido Faros", "image": "https://placehold.co/100x100/333/white?text=Pulimento", "amazon": "https://www.amazon.es/s?k=kit+restauracion+faros", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pulir+faros" },
+      { "name": "Paños Microfibra", "image": "https://placehold.co/100x100/333/white?text=Trapos", "amazon": "https://www.amazon.es/s?k=pack+microfibra+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=microfibra" }
+    ]
+  },
+  {
+    "title": "Mesa coja",
+    "category": "Hogar",
+    "problem": "La mesa baila",
+    "solution_text": "Corta una rodaja de corcho de botella y pégala bajo la pata corta. Absorbe vibraciones y no resbala.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/mesa.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=niveladores+muebles",
+    "tools": [
+      { "name": "Fieltro Adhesivo", "image": "https://placehold.co/100x100/333/white?text=Fieltro", "amazon": "https://www.amazon.es/s?k=fieltro+patas+sillas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=fieltro+muebles" },
+      { "name": "Niveladores", "image": "https://placehold.co/100x100/333/white?text=Nivel", "amazon": "https://www.amazon.es/s?k=pies+niveladores+muebles", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=patas+regulables" }
+    ]
+  },
+  {
+    "title": "Abolladura coche",
+    "category": "Coche",
+    "problem": "Golpe en parachoques plástico",
+    "solution_text": "Vierte agua hirviendo sobre el golpe para ablandar el plástico y empuja desde atrás para sacarlo.",
+    "risk_level": "Medio",
+    "difficulty": 4,
+    "image_url": "images/trucos/abolladura.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+reparacion+abolladuras",
+    "tools": [
+      { "name": "Kit Ventosas", "image": "https://placehold.co/100x100/333/white?text=Ventosas", "amazon": "https://www.amazon.es/s?k=kit+reparacion+abolladuras+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=dent+repair+kit" },
+      { "name": "Pistola Calor", "image": "https://placehold.co/100x100/333/white?text=Pistola", "amazon": "https://www.amazon.es/s?k=pistola+decapadora", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=heat+gun" }
+    ]
+  },
+  {
+    "title": "Afilar cuchillo",
+    "category": "Hogar",
+    "problem": "Cuchillo no corta",
+    "solution_text": "Usa la base sin esmaltar de una taza de cerámica como piedra de afilar. Pasa la hoja en ángulo de 20º.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/cuchillo.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=afilador+cuchillos",
+    "tools": [
+      { "name": "Afilador Pro", "image": "https://placehold.co/100x100/333/white?text=Afilador", "amazon": "https://www.amazon.es/s?k=afilador+cuchillos+profesional", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=knife+sharpener" },
+      { "name": "Piedra Afilar", "image": "https://placehold.co/100x100/333/white?text=Piedra", "amazon": "https://www.amazon.es/s?k=piedra+afilar+cuchillos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=whetstone" }
+    ]
+  },
+  {
+    "title": "Cable pelado",
+    "category": "Tecnología",
+    "problem": "Sin cinta aislante",
+    "solution_text": "Para bajo voltaje, aplica varias capas de esmalte de uñas transparente sobre la zona pelada.",
+    "risk_level": "Alto",
+    "difficulty": 2,
+    "image_url": "images/trucos/cinta.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=cinta+aislante",
+    "tools": [
+      { "name": "Cinta Aislante", "image": "https://placehold.co/100x100/333/white?text=Cinta", "amazon": "https://www.amazon.es/s?k=cinta+aislante+negra", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=electrical+tape" },
+      { "name": "Termorretráctil", "image": "https://placehold.co/100x100/333/white?text=Tubo", "amazon": "https://www.amazon.es/s?k=tubo+termoretractil", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=heat+shrink+tube" }
+    ]
+  },
+  {
+    "title": "Desatascar tubería",
+    "category": "Hogar",
+    "problem": "Agua no traga",
+    "solution_text": "Bicarbonato + Vinagre. Tapa 15 min. Luego agua hirviendo. La reacción disuelve la grasa.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/fregadero.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=desatascador+muelle",
+    "tools": [
+      { "name": "Desatascador Muelle", "image": "https://placehold.co/100x100/333/white?text=Muelle", "amazon": "https://www.amazon.es/s?k=desatascador+muelle", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=drain+cleaner" },
+      { "name": "Sosa Cáustica", "image": "https://placehold.co/100x100/333/white?text=Sosa", "amazon": "https://www.amazon.es/s?k=sosa+caustica+perlas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=drain+powder" }
+    ]
+  },
+  {
+    "title": "Quitar pegatinas",
+    "category": "Hogar",
+    "problem": "Queda pegamento",
+    "solution_text": "Calienta con secador de pelo 30 seg. El adhesivo se ablanda y sale de una pieza.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/pegatina.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=quita+adhesivos",
+    "tools": [
+      { "name": "Spray Quita Adhesivos", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+elimina+adhesivos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=adhesive+remover" },
+      { "name": "Rascador Vidrio", "image": "https://placehold.co/100x100/333/white?text=Rascador", "amazon": "https://www.amazon.es/s?k=rascador+vitroceramica", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=scraper" }
+    ]
+  },
+  {
+    "title": "Afilar tijeras",
+    "category": "Hogar",
+    "problem": "Tijeras no cortan",
+    "solution_text": "Corta varias veces una hoja de papel de aluminio doblada. La fricción afila las hojas.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/tijeras.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=afilador+tijeras",
+    "tools": [
+      { "name": "Afilador Universal", "image": "https://placehold.co/100x100/333/white?text=Afilador", "amazon": "https://www.amazon.es/s?k=afilador+tijeras+cuchillos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=scissors+sharpener" },
+      { "name": "Papel Aluminio", "image": "https://placehold.co/100x100/333/white?text=Aluminio", "amazon": "https://www.amazon.es/s?k=papel+aluminio+cocina", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=aluminum+foil" }
+    ]
+  },
+  {
+    "title": "Polvo taladro",
+    "category": "Herramientas",
+    "problem": "Mancho al taladrar",
+    "solution_text": "Pega un Post-it doblado justo debajo del agujero para recoger el polvo que cae.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/taladro.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=colector+polvo+taladro",
+    "tools": [
+      { "name": "Colector Polvo", "image": "https://placehold.co/100x100/333/white?text=Colector", "amazon": "https://www.amazon.es/s?k=colector+polvo+taladro", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=drill+dust+collector" },
+      { "name": "Cinta Pintor", "image": "https://placehold.co/100x100/333/white?text=Cinta", "amazon": "https://www.amazon.es/s?k=cinta+pintor", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=masking+tape" }
+    ]
+  },
+  {
+    "title": "Abrir botes",
+    "category": "Hogar",
+    "problem": "Tapa atascada",
+    "solution_text": "Usa guantes de goma para mejorar el agarre o pon una goma elástica alrededor de la tapa.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/bote.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=abrebotes",
+    "tools": [
+      { "name": "Abrebotes Universal", "image": "https://placehold.co/100x100/333/white?text=Abre", "amazon": "https://www.amazon.es/s?k=abrebotes+manual", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=jar+opener" },
+      { "name": "Guantes Goma", "image": "https://placehold.co/100x100/333/white?text=Guantes", "amazon": "https://www.amazon.es/s?k=guantes+limpieza", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=rubber+gloves" }
+    ]
+  },
+  {
+    "title": "Adaptar pilas",
+    "category": "Tecnología",
+    "problem": "Necesito pilas grandes",
+    "solution_text": "Usa una pila pequeña y rellena el hueco del polo negativo con una bola de papel de aluminio.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/pilas.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=adaptador+pilas",
+    "tools": [
+      { "name": "Adaptadores Pilas", "image": "https://placehold.co/100x100/333/white?text=Adaptador", "amazon": "https://www.amazon.es/s?k=adaptador+pilas+aa+a+c", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=battery+adapter" },
+      { "name": "Pilas Recargables", "image": "https://placehold.co/100x100/333/white?text=Pilas", "amazon": "https://www.amazon.es/s?k=pilas+recargables+aa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=rechargeable+batteries" }
+    ]
+  },
+  {
+    "title": "Limpiar teclado",
+    "category": "Tecnología",
+    "problem": "Suciedad entre teclas",
+    "solution_text": "Pasa la parte adhesiva de un Post-it entre las filas para recoger migas.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/teclado.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=gel+limpiador+teclado",
+    "tools": [
+      { "name": "Gel Limpiador", "image": "https://placehold.co/100x100/333/white?text=Gel", "amazon": "https://www.amazon.es/s?k=gel+limpiador+teclado", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=keyboard+cleaning+gel" },
+      { "name": "Aire Comprimido", "image": "https://placehold.co/100x100/333/white?text=Aire", "amazon": "https://www.amazon.es/s?k=aire+comprimido+limpieza", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=compressed+air" }
+    ]
+  },
+  {
+    "title": "Golpe en madera",
+    "category": "Hogar",
+    "problem": "Mesa abollada",
+    "solution_text": "Trapo húmedo sobre el golpe + Plancha caliente. El vapor hincha la madera y recupera la forma.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/madera.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=cera+reparar+madera",
+    "tools": [
+      { "name": "Cera Reparadora", "image": "https://placehold.co/100x100/333/white?text=Cera", "amazon": "https://www.amazon.es/s?k=cera+reparar+muebles", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wood+repair+wax" },
+      { "name": "Rotuladores Madera", "image": "https://placehold.co/100x100/333/white?text=Rotus", "amazon": "https://www.amazon.es/s?k=rotuladores+reparar+madera", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=furniture+markers" }
+    ]
+  },
+  {
+    "title": "Puerta que chirría",
+    "category": "Hogar",
+    "problem": "La bisagra hace ruido",
+    "solution_text": "Frota la mina de un lápiz (grafito) sobre la bisagra. Es un lubricante seco excelente.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/puerta.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=lubricante+grafito",
+    "tools": [
+      { "name": "Lubricante 3en1", "image": "https://placehold.co/100x100/333/white?text=Aceite", "amazon": "https://www.amazon.es/s?k=aceite+3+en+uno", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=lubricating+oil" },
+      { "name": "Grafito en Polvo", "image": "https://placehold.co/100x100/333/white?text=Grafito", "amazon": "https://www.amazon.es/s?k=grafito+polvo+cerraduras", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=graphite+powder" }
+    ]
+  },
+  {
+    "title": "Cables doblados",
+    "category": "Tecnología",
+    "problem": "El cargador se rompe",
+    "solution_text": "Saca el muelle de un boli viejo y enróscalo en el extremo del cable para protegerlo.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/muelle.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=protector+cables",
+    "tools": [
+      { "name": "Protector Espiral", "image": "https://placehold.co/100x100/333/white?text=Espiral", "amazon": "https://www.amazon.es/s?k=protector+cable+cargador", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cable+protector" },
+      { "name": "Cargador Reforzado", "image": "https://placehold.co/100x100/333/white?text=Cable", "amazon": "https://www.amazon.es/s?k=cable+cargador+trenzado", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=braided+cable" }
+    ]
+  },
+  {
+    "title": "Limpiar puerto carga",
+    "category": "Tecnología",
+    "problem": "Móvil no carga bien",
+    "solution_text": "Usa un palillo de madera para sacar suavemente la pelusa del puerto. Nunca uses metal.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/puerto.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+limpieza+movil",
+    "tools": [
+      { "name": "Kit Limpieza", "image": "https://placehold.co/100x100/333/white?text=Kit", "amazon": "https://www.amazon.es/s?k=kit+limpieza+puerto+movil", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=phone+cleaning+kit" },
+      { "name": "Aire Comprimido", "image": "https://placehold.co/100x100/333/white?text=Aire", "amazon": "https://www.amazon.es/s?k=aire+comprimido", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=air+duster" }
+    ]
+  },
+  {
+    "title": "Zapatos aprietan",
+    "category": "Ropa",
+    "problem": "Calzado nuevo duele",
+    "solution_text": "Ponte calcetines gordos y aplica calor con secador en las zonas que aprietan.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/zapatos.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=dilatador+calzado",
+    "tools": [
+      { "name": "Spray Dilatador", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+dilatador+calzado", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+stretcher+spray" },
+      { "name": "Horma Zapatos", "image": "https://placehold.co/100x100/333/white?text=Horma", "amazon": "https://www.amazon.es/s?k=horma+zapatos+ensanchar", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+tree" }
+    ]
+  },
+  {
+    "title": "Olor en el coche",
+    "category": "Coche",
+    "problem": "Mal olor o humedad",
+    "solution_text": "Deja un vaso con granos de café o bicarbonato bajo el asiento toda la noche.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/olor.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=absorbe+olores+coche",
+    "tools": [
+      { "name": "Bolsa Carbón", "image": "https://placehold.co/100x100/333/white?text=Carbon", "amazon": "https://www.amazon.es/s?k=bolsa+carbon+activado+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=charcoal+bag" },
+      { "name": "Ambientador Nuevo", "image": "https://placehold.co/100x100/333/white?text=Olor", "amazon": "https://www.amazon.es/s?k=ambientador+coche+nuevo", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=car+freshener" }
+    ]
+  },
+  {
+    "title": "Tornillo oxidado",
+    "category": "Herramientas",
+    "problem": "No gira por óxido",
+    "solution_text": "Echa unas gotas de Coca-Cola o vinagre y espera 20 min. El ácido come el óxido.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/oxido.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=wd40",
+    "tools": [
+      { "name": "Aflojatodo", "image": "https://placehold.co/100x100/333/white?text=WD40", "amazon": "https://www.amazon.es/s?k=wd40+spray", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=rust+remover" },
+      { "name": "Destornillador Impacto", "image": "https://placehold.co/100x100/333/white?text=Impacto", "amazon": "https://www.amazon.es/s?k=destornillador+impacto", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=impact+screwdriver" }
+    ]
+  },
+  {
+    "title": "Chicle en ropa",
+    "category": "Ropa",
+    "problem": "Chicle pegado",
+    "solution_text": "Aplica hielo hasta que se congele duro. Luego raspa y saldrá entero.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/chicle.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=quita+chicles",
+    "tools": [
+      { "name": "Spray Congelante", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+congelante+chicle", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=freeze+spray" },
+      { "name": "Quitamanchas", "image": "https://placehold.co/100x100/333/white?text=Limpia", "amazon": "https://www.amazon.es/s?k=quitamanchas+ropa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=stain+remover" }
+    ]
+  },
+  {
+    "title": "Taladro en azulejo",
+    "category": "Hogar",
+    "problem": "La broca resbala",
+    "solution_text": "Pega cinta de carrocero donde vas a taladrar para que la broca agarre.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/azulejo.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=cinta+carrocero",
+    "tools": [
+      { "name": "Broca Cerámica", "image": "https://placehold.co/100x100/333/white?text=Broca", "amazon": "https://www.amazon.es/s?k=brocas+azulejos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=tile+drill+bit" },
+      { "name": "Cinta Pintor", "image": "https://placehold.co/100x100/333/white?text=Cinta", "amazon": "https://www.amazon.es/s?k=cinta+carrocero", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=masking+tape" }
+    ]
+  },
+  {
+    "title": "Clavo flojo",
+    "category": "Hogar",
+    "problem": "Agujero dado de sí",
+    "solution_text": "Rellena con palillos de dientes y cola, corta lo que sobra y atornilla de nuevo.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/clavo.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=masilla+pared",
+    "tools": [
+      { "name": "Masilla Relleno", "image": "https://placehold.co/100x100/333/white?text=Masilla", "amazon": "https://www.amazon.es/s?k=masilla+reparar+pared", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wall+filler" },
+      { "name": "Tacos Pared", "image": "https://placehold.co/100x100/333/white?text=Tacos", "amazon": "https://www.amazon.es/s?k=tacos+pared", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wall+plugs" }
+    ]
+  },
+  {
+    "title": "Botón suelto",
+    "category": "Ropa",
+    "problem": "Hilo a punto de romperse",
+    "solution_text": "Aplica esmalte de uñas transparente sobre el hilo central para fijarlo.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/boton.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=costurero+viaje",
+    "tools": [
+      { "name": "Mini Costurero", "image": "https://placehold.co/100x100/333/white?text=Costura", "amazon": "https://www.amazon.es/s?k=kit+costura+viaje", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sewing+kit" },
+      { "name": "Pegamento Textil", "image": "https://placehold.co/100x100/333/white?text=Pegam.", "amazon": "https://www.amazon.es/s?k=pegamento+textil", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=fabric+glue" }
+    ]
+  },
+  {
+    "title": "Tuerca difícil",
+    "category": "Herramientas",
+    "problem": "Se cae al colocarla",
+    "solution_text": "Pega la tuerca a tu dedo con un poco de pegamento de barra para llevarla al sitio.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/tuerca_dificil.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=herramienta+imantada",
+    "tools": [
+      { "name": "Varilla Imantada", "image": "https://placehold.co/100x100/333/white?text=Iman", "amazon": "https://www.amazon.es/s?k=varilla+imantada+flexible", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=magnetic+pickup+tool" },
+      { "name": "Pinzas Precisión", "image": "https://placehold.co/100x100/333/white?text=Pinzas", "amazon": "https://www.amazon.es/s?k=pinzas+precision", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=tweezers" }
+    ]
+  },
+  {
+    "title": "Pelusas en ropa",
+    "category": "Ropa",
+    "problem": "Jersey con bolas",
+    "solution_text": "Pasa una cuchilla de afeitar con mucho cuidado para rasurar las bolas.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/pelusas.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=quitapelusas",
+    "tools": [
+      { "name": "Quitapelusas Eléc.", "image": "https://placehold.co/100x100/333/white?text=Maquina", "amazon": "https://www.amazon.es/s?k=quitapelusas+electrico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=lint+remover" },
+      { "name": "Rodillo Adhesivo", "image": "https://placehold.co/100x100/333/white?text=Rodillo", "amazon": "https://www.amazon.es/s?k=rodillo+quitapelusas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sticky+roller" }
+    ]
+  },
+  {
+    "title": "Mancha blanca madera",
+    "category": "Hogar",
+    "problem": "Marca de vaso",
+    "solution_text": "Aplica pasta de dientes blanca, deja 5 min y frota suave.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/mancha.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+madera",
+    "tools": [
+      { "name": "Rotulador Muebles", "image": "https://placehold.co/100x100/333/white?text=Rotus", "amazon": "https://www.amazon.es/s?k=rotuladores+reparar+madera", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=furniture+repair+kit" },
+      { "name": "Cera Abejas", "image": "https://placehold.co/100x100/333/white?text=Cera", "amazon": "https://www.amazon.es/s?k=cera+abejas+madera", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=beeswax+wood" }
+    ]
+  },
+  {
+    "title": "Espejo empañado",
+    "category": "Hogar",
+    "problem": "Vaho en el baño",
+    "solution_text": "Limpia el espejo con espuma de afeitar. Crea una capa anti-vaho.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/vaho.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=spray+antivaho",
+    "tools": [
+      { "name": "Spray Antivaho", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+antivaho+espejos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=anti+fog+spray" },
+      { "name": "Rasqueta Ducha", "image": "https://placehold.co/100x100/333/white?text=Goma", "amazon": "https://www.amazon.es/s?k=rasqueta+limpia+cristales", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=squeegee" }
+    ]
+  },
+  {
+    "title": "Llave rota",
+    "category": "Hogar",
+    "problem": "Fragmento en cerradura",
+    "solution_text": "Usa una barra de silicona caliente, pégala a la llave y tira.",
+    "risk_level": "Alto",
+    "difficulty": 4,
+    "image_url": "images/trucos/llave.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=extractor+llaves",
+    "tools": [
+      { "name": "Extractor Llaves", "image": "https://placehold.co/100x100/333/white?text=Extrac.", "amazon": "https://www.amazon.es/s?k=kit+extractor+llaves+rotas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=broken+key+extractor" },
+      { "name": "Pistola Silicona", "image": "https://placehold.co/100x100/333/white?text=Pistola", "amazon": "https://www.amazon.es/s?k=pistola+silicona", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=glue+gun" }
+    ]
+  },
+  {
+    "title": "Móvil mojado",
+    "category": "Tecnología",
+    "problem": "Caída al agua",
+    "solution_text": "Apaga y mete en bolsas de sílice (o arroz) 48h. No uses calor.",
+    "risk_level": "Medio",
+    "difficulty": 1,
+    "image_url": "images/trucos/silice.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+secado+movil",
+    "tools": [
+      { "name": "Bolsas Sílice", "image": "https://placehold.co/100x100/333/white?text=Silice", "amazon": "https://www.amazon.es/s?k=bolsas+gel+silice", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silica+gel" },
+      { "name": "Kit Emergencia", "image": "https://placehold.co/100x100/333/white?text=Kit", "amazon": "https://www.amazon.es/s?k=kit+reparacion+movil+mojado", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=phone+dry+bag" }
+    ]
+  },
+  {
+    "title": "Pantalla sucia",
+    "category": "Tecnología",
+    "problem": "Huellas y grasa",
+    "solution_text": "Limpia con un filtro de café de papel. No raya y absorbe grasa.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/filtro.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+pantallas",
+    "tools": [
+      { "name": "Spray Pantallas", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+limpia+pantallas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=screen+cleaner" },
+      { "name": "Paño Microfibra", "image": "https://placehold.co/100x100/333/white?text=Paño", "amazon": "https://www.amazon.es/s?k=paños+microfibra", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=microfiber+cloth" }
+    ]
+  },
+  {
+    "title": "Goma nevera sucia",
+    "category": "Hogar",
+    "problem": "Moho en juntas",
+    "solution_text": "Cepillo de dientes viejo + pasta de dientes. Blanquea y limpia.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/nevera.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=blanqueador+juntas",
+    "tools": [
+      { "name": "Cepillo Juntas", "image": "https://placehold.co/100x100/333/white?text=Cepillo", "amazon": "https://www.amazon.es/s?k=cepillo+limpieza+juntas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=gap+brush" },
+      { "name": "Antimoho", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+antimoho", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=mold+remover" }
+    ]
+  },
+  {
+    "title": "Rayón coche",
+    "category": "Coche",
+    "problem": "Roce superficial",
+    "solution_text": "Si es pintura transferida, sale frotando con WD-40 o acetona suave.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/rayon.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+arañazos",
+    "tools": [
+      { "name": "Quita Arañazos", "image": "https://placehold.co/100x100/333/white?text=Pasta", "amazon": "https://www.amazon.es/s?k=pulimento+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=car+scratch+remover" },
+      { "name": "Rotulador Pintura", "image": "https://placehold.co/100x100/333/white?text=Rotu", "amazon": "https://www.amazon.es/s?k=pincel+retoque+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=car+paint+pen" }
+    ]
+  },
+  {
+    "title": "Pegamento en piel",
+    "category": "Hogar",
+    "problem": "Dedos pegados",
+    "solution_text": "Frota con aceite de cocina o mantequilla hasta que suelte.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/pegamento.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=disolvente+pegamento",
+    "tools": [
+      { "name": "Disolvente", "image": "https://placehold.co/100x100/333/white?text=Bote", "amazon": "https://www.amazon.es/s?k=disolvente+cianoacrilato", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=glue+debonder" },
+      { "name": "Crema Manos", "image": "https://placehold.co/100x100/333/white?text=Crema", "amazon": "https://www.amazon.es/s?k=crema+manos+reparadora", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=hand+cream" }
+    ]
+  },
+  {
+    "title": "Salero húmedo",
+    "category": "Hogar",
+    "problem": "La sal no sale",
+    "solution_text": "Añade unos granos de arroz crudo dentro del salero. El arroz absorberá la humedad y la sal quedará suelta.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/salero.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=salero+antihumedad",
+    "tools": [
+      { "name": "Salero Cerámica", "image": "https://placehold.co/100x100/333/white?text=Salero", "amazon": "https://www.amazon.es/s?k=salero+cocina", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=salt+shaker" },
+      { "name": "Bolsitas Sílice", "image": "https://placehold.co/100x100/333/white?text=Bolsas", "amazon": "https://www.amazon.es/s?k=bolsas+silice+alimentos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silica+gel+food" }
+    ]
+  },
+  {
+    "title": "Limpiar plata",
+    "category": "Hogar",
+    "problem": "Joyas ennegrecidas",
+    "solution_text": "Sumerge la plata en ketchup durante 5-10 minutos. El ácido del tomate elimina el deslustre. Cepilla y enjuaga.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/plata.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+plata",
+    "tools": [
+      { "name": "Paño Plata", "image": "https://placehold.co/100x100/333/white?text=Paño", "amazon": "https://www.amazon.es/s?k=paño+limpieza+plata", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silver+cleaning+cloth" },
+      { "name": "Líquido Limpia", "image": "https://placehold.co/100x100/333/white?text=Bote", "amazon": "https://www.amazon.es/s?k=liquido+limpiar+plata", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silver+cleaner" }
+    ]
+  },
+  {
+    "title": "Juntas negras baño",
+    "category": "Hogar",
+    "problem": "Moho en azulejos",
+    "solution_text": "Empapa algodón en lejía y déjalo reposar sobre la junta sucia toda la noche. Por la mañana estará blanca.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/juntas.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=blanqueador+juntas",
+    "tools": [
+      { "name": "Rotulador Juntas", "image": "https://placehold.co/100x100/333/white?text=Rotu", "amazon": "https://www.amazon.es/s?k=rotulador+juntas+blanco", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=grout+pen" },
+      { "name": "Cepillo Eléc.", "image": "https://placehold.co/100x100/333/white?text=Cepillo", "amazon": "https://www.amazon.es/s?k=cepillo+limpieza+electrico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=electric+cleaning+brush" }
+    ]
+  },
+  {
+    "title": "Enfriar bebida",
+    "category": "Hogar",
+    "problem": "Cerveza caliente",
+    "solution_text": "Envuelve la botella en papel de cocina mojado y métela al congelador. Se enfriará en 10-15 minutos.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/bebida.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=enfriador+bebidas",
+    "tools": [
+      { "name": "Funda Enfriadora", "image": "https://placehold.co/100x100/333/white?text=Funda", "amazon": "https://www.amazon.es/s?k=funda+enfriadora+botellas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=bottle+cooler+sleeve" },
+      { "name": "Hielos Acero", "image": "https://placehold.co/100x100/333/white?text=Cubos", "amazon": "https://www.amazon.es/s?k=hielos+reutilizables", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=reusable+ice+cubes" }
+    ]
+  },
+  {
+    "title": "Cajón atascado",
+    "category": "Hogar",
+    "problem": "No desliza bien",
+    "solution_text": "Frota una pastilla de jabón seca o una vela en los rieles de madera del cajón para lubricarlos.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/cajon.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=cera+muebles",
+    "tools": [
+      { "name": "Cera Deslizante", "image": "https://placehold.co/100x100/333/white?text=Cera", "amazon": "https://www.amazon.es/s?k=cera+deslizante+madera", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wood+wax" },
+      { "name": "Lija Fina", "image": "https://placehold.co/100x100/333/white?text=Lija", "amazon": "https://www.amazon.es/s?k=papel+lija+fino", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sandpaper" }
+    ]
+  },
+  {
+    "title": "Pelos mascota sofá",
+    "category": "Hogar",
+    "problem": "Pelos pegados en tela",
+    "solution_text": "Ponte un guante de goma de fregar húmedo y pasa la mano por el sofá. La estática atrae todos los pelos.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/pelos_sofa.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=quita+pelos+mascota",
+    "tools": [
+      { "name": "Rodillo Pelos", "image": "https://placehold.co/100x100/333/white?text=Rodillo", "amazon": "https://www.amazon.es/s?k=rodillo+quita+pelos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pet+hair+roller" },
+      { "name": "Guante Mascota", "image": "https://placehold.co/100x100/333/white?text=Guante", "amazon": "https://www.amazon.es/s?k=guante+cepillo+gato", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pet+grooming+glove" }
+    ]
+  },
+  {
+    "title": "Abrir anilla llavero",
+    "category": "Hogar",
+    "problem": "Anilla muy dura",
+    "solution_text": "Usa un quitagrapas de oficina para separar las anillas del llavero y meter la llave sin romperte las uñas.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/llavero.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=llaveros+faciles",
+    "tools": [
+      { "name": "Llavero Mosquetón", "image": "https://placehold.co/100x100/333/white?text=Llavero", "amazon": "https://www.amazon.es/s?k=llavero+mosqueton", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=keychain+carabiner" },
+      { "name": "Organizador Llaves", "image": "https://placehold.co/100x100/333/white?text=Org.", "amazon": "https://www.amazon.es/s?k=organizador+llaves+inteligente", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=key+organizer" }
+    ]
+  },
+  {
+    "title": "Zapatos ante sucios",
+    "category": "Ropa",
+    "problem": "Mancha en gamuza",
+    "solution_text": "Usa una goma de borrar blanca escolar para frotar suavemente la mancha hasta que desaparezca.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/ante.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+limpieza+ante",
+    "tools": [
+      { "name": "Goma Ante", "image": "https://placehold.co/100x100/333/white?text=Goma", "amazon": "https://www.amazon.es/s?k=goma+borrar+ante", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=suede+eraser" },
+      { "name": "Spray Protector", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+impermeabilizante+zapatos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+protector+spray" }
+    ]
+  },
+  {
+    "title": "Ropa resbala percha",
+    "category": "Ropa",
+    "problem": "La ropa cae",
+    "solution_text": "Enrolla una goma elástica gruesa en cada extremo de la percha. La goma hace de freno y sujeta la prenda.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/percha.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=perchas+antideslizantes",
+    "tools": [
+      { "name": "Perchas Terciopelo", "image": "https://placehold.co/100x100/333/white?text=Percha", "amazon": "https://www.amazon.es/s?k=perchas+terciopelo", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=velvet+hangers" },
+      { "name": "Tiras Silicona", "image": "https://placehold.co/100x100/333/white?text=Tiras", "amazon": "https://www.amazon.es/s?k=tiras+antideslizantes+perchas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=hanger+grips" }
+    ]
+  },
+  {
+    "title": "Zapatos brillo",
+    "category": "Ropa",
+    "problem": "Cuero sin brillo",
+    "solution_text": "Frota el zapato con el interior de una cáscara de plátano y luego saca brillo con un paño suave.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/zapatos_platano.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=betun+zapatos",
+    "tools": [
+      { "name": "Esponja Brillo", "image": "https://placehold.co/100x100/333/white?text=Esponja", "amazon": "https://www.amazon.es/s?k=esponja+brillo+zapatos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+shine+sponge" },
+      { "name": "Grasa Caballo", "image": "https://placehold.co/100x100/333/white?text=Grasa", "amazon": "https://www.amazon.es/s?k=grasa+caballo+zapatos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=leather+grease" }
+    ]
+  },
+  {
+    "title": "Pantalla rayada",
+    "category": "Tecnología",
+    "problem": "Arañazos ligeros",
+    "solution_text": "Aplica un poco de pasta de dientes (no gel) en un bastoncillo y frota en círculos suaves sobre el arañazo.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/pantalla_rayada.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+pantalla+movil",
+    "tools": [
+      { "name": "Pulimento Pantalla", "image": "https://placehold.co/100x100/333/white?text=Pulim.", "amazon": "https://www.amazon.es/s?k=polywatch", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=polywatch" },
+      { "name": "Protector Cristal", "image": "https://placehold.co/100x100/333/white?text=Cristal", "amazon": "https://www.amazon.es/s?k=protector+pantalla+universal", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=screen+protector" }
+    ]
+  },
+  {
+    "title": "Resetear router",
+    "category": "Tecnología",
+    "problem": "Botón reset inaccesible",
+    "solution_text": "Desdobla un clip de papel para acceder a los botones de reinicio hundidos en aparatos electrónicos.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/reset.jpg",
+    "affiliate_url_primary": null,
+    "tools": [
+      { "name": "Clips Colores", "image": "https://placehold.co/100x100/333/white?text=Clips", "amazon": "https://www.amazon.es/s?k=clips+papeleria", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=paper+clips" },
+      { "name": "Herramienta SIM", "image": "https://placehold.co/100x100/333/white?text=Pincho", "amazon": "https://www.amazon.es/s?k=herramienta+expulsion+sim", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sim+eject+tool" }
+    ]
+  },
+  {
+    "title": "Organizador cables cajón",
+    "category": "Tecnología",
+    "problem": "Cajón de cables desastre",
+    "solution_text": "Guarda cada cable dentro de un rollo de cartón de papel higiénico vacío. Escribe qué es por fuera.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/cables_wc.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=organizador+cables",
+    "tools": [
+      { "name": "Velcros Cables", "image": "https://placehold.co/100x100/333/white?text=Velcro", "amazon": "https://www.amazon.es/s?k=tiras+velcro+cables", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cable+ties" },
+      { "name": "Caja Cables", "image": "https://placehold.co/100x100/333/white?text=Caja", "amazon": "https://www.amazon.es/s?k=caja+organizadora+cables", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cable+box" }
+    ]
+  },
+  {
+    "title": "Soporte tablet",
+    "category": "Tecnología",
+    "problem": "No se aguanta de pie",
+    "solution_text": "Dobla una percha de alambre con unos alicates para crear un soporte resistente para tu tablet.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/tablet_percha.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=soporte+tablet",
+    "tools": [
+      { "name": "Soporte Tablet", "image": "https://placehold.co/100x100/333/white?text=Atril", "amazon": "https://www.amazon.es/s?k=soporte+tablet+mesa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=tablet+stand" },
+      { "name": "Alicates", "image": "https://placehold.co/100x100/333/white?text=Alicate", "amazon": "https://www.amazon.es/s?k=alicates+universales", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pliers" }
+    ]
+  },
+  {
+    "title": "Limpiar brochas",
+    "category": "Hogar",
+    "problem": "Pintura seca y dura",
+    "solution_text": "Sumerge las brochas en vinagre caliente durante 30 minutos. La pintura se ablandará y saldrá sola.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/brochas.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+brochas",
+    "tools": [
+      { "name": "Peine Brochas", "image": "https://placehold.co/100x100/333/white?text=Peine", "amazon": "https://www.amazon.es/s?k=cepillo+limpiar+brochas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=brush+cleaner+comb" },
+      { "name": "Disolvente", "image": "https://placehold.co/100x100/333/white?text=Bote", "amazon": "https://www.amazon.es/s?k=aguarras", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=paint+thinner" }
+    ]
+  },
+  {
+    "title": "Óxido en cromados",
+    "category": "Coche",
+    "problem": "Puntos de óxido en metal",
+    "solution_text": "Moja una bola de papel de aluminio en agua y frota el cromado. La reacción química elimina el óxido y pule.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/cromados.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=pulimento+metales",
+    "tools": [
+      { "name": "Algodón Mágico", "image": "https://placehold.co/100x100/333/white?text=Aladdin", "amazon": "https://www.amazon.es/s?k=aladdin+algodon+magico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=metal+polish" },
+      { "name": "Papel Aluminio", "image": "https://placehold.co/100x100/333/white?text=Papel", "amazon": "https://www.amazon.es/s?k=papel+aluminio", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=aluminum+foil" }
+    ]
+  },
+  {
+    "title": "Sujetar clavo",
+    "category": "Herramientas",
+    "problem": "Miedo a martillarse",
+    "solution_text": "Sujeta el clavo con un peine de plástico o una pinza de la ropa para mantener los dedos lejos del martillo.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/peine.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=sujeta+clavos",
+    "tools": [
+      { "name": "Martillo Imán", "image": "https://placehold.co/100x100/333/white?text=Martillo", "amazon": "https://www.amazon.es/s?k=martillo+carpintero+iman", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=magnetic+hammer" },
+      { "name": "Alicates Punta", "image": "https://placehold.co/100x100/333/white?text=Alicate", "amazon": "https://www.amazon.es/s?k=alicates+punta+fina", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=needle+nose+pliers" }
+    ]
+  },
+  {
+    "title": "Limpiar escobillas",
+    "category": "Coche",
+    "problem": "Limpian mal o hacen ruido",
+    "solution_text": "Limpia la goma de la escobilla con un trapo empapado en alcohol hasta que no salga negro. Recuperan agarre.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/escobillas.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=limpia+parabrisas",
+    "tools": [
+      { "name": "Escobillas Bosch", "image": "https://placehold.co/100x100/333/white?text=Bosch", "amazon": "https://www.amazon.es/s?k=escobillas+limpiaparabrisas+bosch", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wiper+blades" },
+      { "name": "Alcohol Limpieza", "image": "https://placehold.co/100x100/333/white?text=Alcohol", "amazon": "https://www.amazon.es/s?k=alcohol+isopropilico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=isopropyl+alcohol" }
+    ]
+  },
+  {
+    "title": "Cerradura congelada",
+    "category": "Coche",
+    "problem": "Llave no entra por hielo",
+    "solution_text": "Pon un poco de gel hidroalcohólico en la llave o la cerradura. El alcohol derrite el hielo al instante.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/cerradura_hielo.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=descongelante+cerraduras",
+    "tools": [
+      { "name": "Spray Descongelante", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+descongelante+parabrisas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=deicer+spray" },
+      { "name": "Rasqueta Hielo", "image": "https://placehold.co/100x100/333/white?text=Rasqueta", "amazon": "https://www.amazon.es/s?k=rasqueta+hielo+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=ice+scraper" }
+    ]
+  },
+  {
+    "title": "Gafas empañadas",
+    "category": "Hogar",
+    "problem": "Vaho en cristales",
+    "solution_text": "Frota una pastilla de jabón seca suavemente en los cristales y limpia con un paño. Crea una capa que repele el vaho.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/gafas_vaho.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=spray+antivaho",
+    "tools": [
+      { "name": "Gamuza Antivaho", "image": "https://placehold.co/100x100/333/white?text=Gamuza", "amazon": "https://www.amazon.es/s?k=gamuza+antivaho+gafas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=anti+fog+cloth" },
+      { "name": "Spray Zeiss", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+antivaho+zeiss", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=lens+cleaner" }
+    ]
+  }
 ]
