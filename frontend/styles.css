@@ -210,4 +210,42 @@ input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
     font-size: 0.95rem;
 }
 .action-btn:active { transform: scale(0.98); }
-.action-btn svg { width: 24px; height: 24px
+.action-btn svg { width: 24px; height: 24px; fill: currentColor; }
+
+/* Colores */
+.whatsapp-btn { 
+    background: #25D366; color: white; margin-top: 10px; margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); 
+}
+.video-btn.youtube { background: #FF0000; color: white; border: none; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
+.video-btn.youtube:hover { background: #cc0000; }
+.tiktok-btn { background: #000000; color: white; border: 1px solid #333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+.tiktok-btn:hover { border-color: #fe2c55; }
+
+/* Herramientas */
+.tools-section { margin-bottom: 20px; }
+.tools-title {
+    font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 15px;
+    text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px;
+}
+.tools-grid { display: flex; flex-direction: column; gap: 12px; }
+.tool-card {
+    background: rgba(255, 255, 255, 0.07); border-radius: 12px; padding: 12px;
+    display: flex; flex-direction: row; align-items: center; text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1); gap: 15px;
+}
+.tool-img {
+    width: 80px; height: 80px; object-fit: contain; border-radius: 8px;
+    background: white; padding: 5px; flex-shrink: 0;
+}
+.tool-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+.tool-name { font-size: 1rem; color: #e2e8f0; font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
+.tool-actions { display: flex; gap: 8px; width: 100%; }
+.tool-btn {
+    flex: 1; padding: 10px 0; border-radius: 8px; font-size: 0.9rem; font-weight: 700;
+    text-decoration: none; color: white; display: flex; justify-content: center; align-items: center;
+    transition: transform 0.1s, box-shadow 0.2s;
+}
+.tool-btn svg { width: 24px; height: 24px; fill: currentColor; }
+.tool-amazon { background: linear-gradient(45deg, #FF9900, #ffb347); box-shadow: 0 2px 8px rgba(255, 153, 0, 0.3); }
+.tool-ali { background: linear-gradient(45deg, #ff4747, #ff2e2e); box-shadow: 0 2px 8px rgba(255, 71, 71, 0.3); }
