@@ -152,8 +152,31 @@ input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
     border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 20;
 }
 
+/* MARKETING BOX */
+.marketing-box {
+    background: linear-gradient(45deg, rgba(59, 130, 246, 0.15), rgba(147, 51, 234, 0.15));
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-style: italic;
+    color: #f1f5f9;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+.marketing-box::before {
+    content: '';
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+@keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+.marketing-box p { margin: 0; font-size: 1rem; font-weight: 500; position: relative; z-index: 1; }
+
 /* Relacionados */
-.related-section { margin-top: 35px; border-top: 1px solid var(--card-border); padding-top: 25px; }
+.related-section { margin-top: 25px; border-top: 1px solid var(--card-border); padding-top: 25px; }
 .related-title { font-size: 1rem; font-weight: 800; color: #94a3b8; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
 .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .related-card {
@@ -174,18 +197,16 @@ input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
 
 /* Botones Acción General */
 .action-btn {
-    display: flex; justify-content: center; align-items: center; gap: 8px;
+    display: flex; justify-content: center; align-items: center; gap: 10px;
     width: 100%; padding: 14px; border-radius: 12px;
     text-decoration: none; font-weight: bold;
-    box-sizing: border-box; transition: transform 0.2s;
-    font-size: 0.9rem;
+    box-sizing: border-box; transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 0.95rem;
 }
 .action-btn:active { transform: scale(0.98); }
 
-/* ICONOS SVG (Tamaño y Color) */
-.action-btn svg {
-    width: 20px; height: 20px; fill: currentColor;
-}
+/* ICONOS SVG (Tamaño Gigante) */
+.action-btn svg { width: 28px; height: 28px; fill: currentColor; }
 
 /* Colores Específicos */
 .amazon-btn { 
@@ -197,42 +218,74 @@ input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
     color: white; box-shadow: 0 4px 15px rgba(255, 71, 71, 0.3); 
 }
 .whatsapp-btn { 
-    background: #25D366; color: white; margin-top: 12px; 
+    background: #25D366; color: white; margin-top: 15px; 
     box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); 
 }
-.video-btn { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); }
+/* Botón YouTube ROJO */
+.video-btn.youtube { 
+    background: #FF0000; color: white; border: none;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+}
+.video-btn.youtube:hover { background: #cc0000; }
+
 .tiktok-btn { background: #000000; color: white; border: 1px solid #333; }
 .tiktok-btn:hover { border-color: #fe2c55; box-shadow: 0 0 10px rgba(254, 44, 85, 0.4); }
 
-/* Herramientas Específicas (Mini Cards) */
+/* Herramientas Específicas (NUEVO DISEÑO RECTANGULAR) */
 .tools-section {
-    margin-top: 25px; background: rgba(255, 255, 255, 0.05);
-    border-radius: 15px; padding: 15px; border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 25px; /* Espacio debajo */
 }
 .tools-title {
-    font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 12px;
+    font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 15px;
     text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px;
 }
-.tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tools-grid { display: flex; flex-direction: column; gap: 12px; } /* Lista vertical */
+
 .tool-card {
-    background: rgba(0, 0, 0, 0.3); border-radius: 10px; padding: 10px;
-    display: flex; flex-direction: column; align-items: center; text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: row; /* Horizontal */
+    align-items: center;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 15px;
 }
+
 .tool-img {
-    width: 60px; height: 60px; object-fit: contain; margin-bottom: 8px;
-    border-radius: 6px; background: white; padding: 4px;
+    width: 80px; height: 80px; /* Imagen más grande */
+    object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    padding: 5px;
+    flex-shrink: 0;
 }
+
+.tool-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .tool-name {
-    font-size: 0.85rem; color: #e2e8f0; font-weight: 600; margin-bottom: 10px;
-    line-height: 1.2; height: 32px; overflow: hidden;
+    font-size: 1rem; color: #e2e8f0; font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.2;
 }
-.tool-actions { display: flex; gap: 5px; width: 100%; }
+
+.tool-actions { display: flex; gap: 8px; width: 100%; }
 .tool-btn {
-    flex: 1; padding: 6px 0; border-radius: 6px; font-size: 0.75rem; font-weight: 700;
-    text-decoration: none; color: white; display: flex; justify-content: center; align-items: center;
-    transition: transform 0.1s;
+    flex: 1; padding: 10px 0; border-radius: 8px;
+    font-size: 0.9rem; font-weight: 700;
+    text-decoration: none; color: white;
+    display: flex; justify-content: center; align-items: center;
+    transition: transform 0.1s, box-shadow 0.2s;
 }
-.tool-btn svg { width: 14px; height: 14px; fill: currentColor; }
-.tool-amazon { background: #FF9900; }
-.tool-ali { background: #ff4747; }
+.tool-btn:active { transform: scale(0.98); }
+/* Iconos en botones de herramientas */
+.tool-btn svg { width: 24px; height: 24px; fill: currentColor; }
+
+.tool-amazon { background: linear-gradient(45deg, #FF9900, #ffb347); box-shadow: 0 2px 8px rgba(255, 153, 0, 0.3); }
+.tool-ali { background: linear-gradient(45deg, #ff4747, #ff2e2e); box-shadow: 0 2px 8px rgba(255, 71, 71, 0.3); }
