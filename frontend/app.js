@@ -6,8 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     const closeBtn = document.querySelector('.close-btn');
-    // Convertimos los botones a una lista real para poder saber el índice (0, 1, 2...)
-    const catButtons = Array.from(document.querySelectorAll('.cat-btn'));
+    const catButtons = document.querySelectorAll('.cat-btn');
     
     let allSolutions = [];
     let currentCategory = 'all';
@@ -63,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalBody.innerHTML = `
             <div class="ai-loading" style="text-align:center; padding:40px; color:white;">
                 <div style="font-size:3rem; animation:bounce 1s infinite;">🧠</div>
-                <h3 style="margin-top:20px;">Analizando tu foto...</h3>
+                <h3 style="margin-top:20px;">Analizando con IA...</h3>
                 <p style="color:#cbd5e1; font-size:0.9rem;">Dame unos segundos.</p>
             </div>
         `;
@@ -82,14 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 affiliate_url_primary: `https://www.amazon.es/s?k=${encodeURIComponent(result.keyword)}`,
                 affiliate_url_secondary: `https://es.aliexpress.com/wholesale?SearchText=${encodeURIComponent(result.keyword)}`,
                 video_url: `https://www.youtube.com/results?search_query=${encodeURIComponent(result.keyword + " tutorial")}`,
-                tiktok_url: `https://www.tiktok.com/search?q=${encodeURIComponent(result.keyword + " hack")}`
+                tiktok_url: `https://www.tiktok.com/search/video?q=${encodeURIComponent(result.keyword + " hack")}` // BÚSQUEDA DIRECTA EN VIDEOS
             });
 
         } catch (error) {
             console.error(error);
             modalBody.innerHTML = `
                 <div style="text-align:center; padding:30px; color:white;">
-                    <h3 style="color:#ef4444;">😓 Ups, error de conexión</h3>
+                    <h3 style="color:#ef4444;">😓 Ups, error</h3>
                     <p>${error.message}</p>
                     <button onclick="document.getElementById('detailModal').style.display='none'" class="action-btn" style="background:#333; margin-top:20px;">Cerrar</button>
                 </div>
@@ -125,54 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return JSON.parse(textResponse);
     }
 
-    // --- LÓGICA DE DESLIZAMIENTO (SWIPE) ---
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    document.addEventListener('touchstart', e => {
-        // Evitar swipe si tocamos dentro de la barra de categorías
-        if (e.target.closest('.category-scroll')) return;
-        touchStartX = e.changedTouches[0].screenX;
-    }, {passive: false});
-
-    document.addEventListener('touchend', e => {
-        if (e.target.closest('.category-scroll')) return;
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }, {passive: false});
-
-    function handleSwipe() {
-        const swipeThreshold = 50; // Mínimo 50px para considerar swipe
-        const diff = touchStartX - touchEndX;
-
-        // Encuentra el índice de la categoría actual
-        const currentIndex = catButtons.findIndex(btn => btn.classList.contains('active'));
-
-        if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-                // Deslizar izquierda -> Siguiente categoría
-                changeCategory(currentIndex + 1);
-            } else {
-                // Deslizar derecha -> Categoría anterior
-                changeCategory(currentIndex - 1);
-            }
-        }
-    }
-
-    function changeCategory(index) {
-        if (index >= 0 && index < catButtons.length) {
-            // Simulamos clic en el botón correspondiente
-            catButtons[index].click();
-        }
-    }
-    // --- FIN SWIPE ---
-
     catButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             catButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            // Scroll suave automático para centrar el botón
-            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             currentCategory = btn.getAttribute('data-cat');
             filterData(searchInput.value, currentCategory);
         });
@@ -264,8 +219,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="tool-info">
                             <div class="tool-name">${tool.name}</div>
                             <div class="tool-actions">
-                                <a href="${tool.amazon}" target="_blank" class="store-btn btn-amazon"><img src="images/amazon-logo.png" alt="Amazon"></a>
-                                <a href="${tool.aliexpress}" target="_blank" class="store-btn btn-ali"><img src="images/aliexpress-logo.png" alt="AliExpress"></a>
+                                <a href="${tool.amazon}" target="_blank" class="store-btn btn-amazon">
+                                    <img src="images/amazon-logo.png" alt="Amazon">
+                                </a>
+                                <a href="${tool.aliexpress}" target="_blank" class="store-btn btn-ali">
+                                    <img src="images/aliexpress-logo.png" alt="AliExpress">
+                                </a>
                             </div>
                         </div>
                     </div>`;
@@ -277,19 +236,27 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sol.affiliate_url_primary && (!sol.tools || sol.tools.length === 0)) {
             mainButtonsHTML = `
                 <div class="button-grid">
-                    <a href="${sol.affiliate_url_primary}" target="_blank" class="store-btn btn-amazon"><img src="images/amazon-logo.png" alt="Amazon"></a>
+                    <a href="${sol.affiliate_url_primary}" target="_blank" class="store-btn btn-amazon">
+                        <img src="images/amazon-logo.png" alt="Amazon">
+                    </a>
                     ${sol.affiliate_url_secondary ? `<a href="${sol.affiliate_url_secondary}" target="_blank" class="store-btn btn-ali"><img src="images/aliexpress-logo.png" alt="AliExpress"></a>` : ''}
                 </div>
                 ${marketingHTML}`;
         }
 
+        // --- CORRECCIÓN TIKTOK ---
+        // 1. Usamos el enlace específico si existe en el JSON
+        // 2. Si no, buscamos en la pestaña de VÍDEOS de TikTok (/search/video?q=...)
+        const tiktokLink = sol.tiktok_url || `https://www.tiktok.com/search/video?q=${encodeURIComponent(sol.title + " hack")}`;
+        const tiktokButton = `<a href="${tiktokLink}" target="_blank" class="action-btn tiktok-btn">${ICONS.tiktok} TikTok</a>`;
+
         const ytUrl = sol.video_url || `https://www.youtube.com/results?search_query=${encodeURIComponent(sol.title + " truco casero")}`;
         const ytButton = `<a href="${ytUrl}" target="_blank" class="action-btn video-btn youtube">${ICONS.youtube} YouTube</a>`;
-        const tiktokUrl = sol.tiktok_url || `https://www.tiktok.com/search?q=${encodeURIComponent(sol.title + " hack")}`;
-        const tiktokButton = `<a href="${tiktokUrl}" target="_blank" class="action-btn tiktok-btn">${ICONS.tiktok} TikTok</a>`;
+        
         const shareText = `¡Mira este truco: ${sol.title}! 👉 https://el-apanador-jesus.onrender.com`;
         const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
         const modalImageSrc = sol.image_url || '[https://placehold.co/600x300/e2e8f0/475569?text=Sin+Foto](https://placehold.co/600x300/e2e8f0/475569?text=Sin+Foto)';
+        
         const videoTitleHTML = `<div class="video-marketing-box"><p>📺 ¿No te queda claro? Mira el vídeo:</p></div>`;
 
         let related = allSolutions.filter(s => s.category === sol.category && s.title !== sol.title);
