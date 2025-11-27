@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     const closeBtn = document.querySelector('.close-btn');
-    const catButtons = document.querySelectorAll('.cat-btn');
+    
+    // CORRECCIÓN CLAVE: Convertimos a Array real para que funcione .findIndex()
+    const catButtons = Array.from(document.querySelectorAll('.cat-btn'));
     
     let allSolutions = [];
     let currentCategory = 'all';
@@ -46,8 +48,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchInput.addEventListener('input', (e) => filterData(e.target.value, currentCategory));
 
+    // --- LÓGICA DE DESLIZAMIENTO (SWIPE) MEJORADA ---
+    let touchStartX = 0;
+    let touchStartY = 0;
+
+    document.addEventListener('touchstart', e => {
+        if (e.target.closest('.category-scroll')) return; // Si tocas la barra, no cuenta
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+    }, {passive: false});
+
+    document.addEventListener('touchend', e => {
+        if (e.target.closest('.category-scroll')) return;
+        const touchEndX = e.changedTouches[0].screenX;
+        const touchEndY = e.changedTouches[0].screenY;
+        handleSwipe(touchStartX, touchStartY, touchEndX, touchEndY);
+    }, {passive: false});
+
+    function handleSwipe(startX, startY, endX, endY) {
+        const diffX = startX - endX;
+        const diffY = startY - endY;
+
+        // Solo activamos si el movimiento es horizontal (>50px) y más fuerte que el vertical
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+            const currentIndex = catButtons.findIndex(btn => btn.classList.contains('active'));
+            if (currentIndex === -1) return;
+
+            if (diffX > 0) {
+                // Deslizar izquierda -> Siguiente
+                changeCategory(currentIndex + 1);
+            } else {
+                // Deslizar derecha -> Anterior
+                changeCategory(currentIndex - 1);
+            }
+        }
+    }
+
+    function changeCategory(index) {
+        if (index >= 0 && index < catButtons.length) {
+            catButtons[index].click();
+        }
+    }
+    // --- FIN SWIPE ---
+
+    // LÓGICA IA
     lensBtn.addEventListener('click', () => {
-        if(GEMINI_API_KEY === "PEGAR_TU_CLAVE_AQUI" || GEMINI_API_KEY === "") {
+        if(GEMINI_API_KEY.includes("PEGAR_TU_CLAVE") || GEMINI_API_KEY === "") {
             alert("⚠️ Falta configurar la API Key de Google Gemini en app.js");
             return;
         }
@@ -62,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalBody.innerHTML = `
             <div class="ai-loading" style="text-align:center; padding:40px; color:white;">
                 <div style="font-size:3rem; animation:bounce 1s infinite;">🧠</div>
-                <h3 style="margin-top:20px;">Analizando con IA...</h3>
+                <h3 style="margin-top:20px;">Analizando tu foto...</h3>
                 <p style="color:#cbd5e1; font-size:0.9rem;">Dame unos segundos.</p>
             </div>
         `;
@@ -81,14 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 affiliate_url_primary: `https://www.amazon.es/s?k=${encodeURIComponent(result.keyword)}`,
                 affiliate_url_secondary: `https://es.aliexpress.com/wholesale?SearchText=${encodeURIComponent(result.keyword)}`,
                 video_url: `https://www.youtube.com/results?search_query=${encodeURIComponent(result.keyword + " tutorial")}`,
-                tiktok_url: `https://www.tiktok.com/search/video?q=${encodeURIComponent(result.keyword + " hack")}` // BÚSQUEDA DIRECTA EN VIDEOS
+                tiktok_url: `https://www.tiktok.com/search?q=${encodeURIComponent(result.keyword + " hack")}`
             });
 
         } catch (error) {
             console.error(error);
             modalBody.innerHTML = `
                 <div style="text-align:center; padding:30px; color:white;">
-                    <h3 style="color:#ef4444;">😓 Ups, error</h3>
+                    <h3 style="color:#ef4444;">😓 Ups, error de conexión</h3>
                     <p>${error.message}</p>
                     <button onclick="document.getElementById('detailModal').style.display='none'" class="action-btn" style="background:#333; margin-top:20px;">Cerrar</button>
                 </div>
@@ -101,7 +147,27 @@ document.addEventListener('DOMContentLoaded', () => {
         return new Promise((resolve, reject) => {
             const reader = new FileReader();
             reader.readAsDataURL(file);
-            reader.onload = () => resolve(reader.result.split(',')[1]);
+            reader.onload = (event) => {
+                // COMPRESIÓN DE IMAGEN ANTES DE ENVIAR
+                const img = new Image();
+                img.src = event.target.result;
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    const maxWidth = 800; // Reducimos a 800px
+                    let width = img.width;
+                    let height = img.height;
+
+                    if (width > maxWidth) {
+                        height *= maxWidth / width;
+                        width = maxWidth;
+                    }
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+                    resolve(canvas.toDataURL('image/jpeg', 0.7)); // Calidad 70%
+                };
+            };
             reader.onerror = error => reject(error);
         });
     }
@@ -110,24 +176,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
         const prompt = "Analiza esta imagen. Identifica qué herramienta u objeto de bricolaje es. Responde SOLO con un JSON válido (sin markdown ```json) con estos campos: { \"title\": \"Nombre corto\", \"keyword\": \"Palabra clave para comprarlo\", \"text\": \"Explica para qué sirve y un consejo de uso.\" }";
 
+        // Enviamos solo la parte base64 pura, sin el encabezado
+        const cleanBase64 = base64Image.split(',')[1];
+
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: "image/jpeg", data: base64Image } }] }]
+                contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: "image/jpeg", data: cleanBase64 } }] }]
             })
         });
 
         const data = await response.json();
+        if (!data.candidates || !data.candidates[0].content) throw new Error("No pude identificar la imagen.");
+        
         let textResponse = data.candidates[0].content.parts[0].text;
         textResponse = textResponse.replace(/```json/g, '').replace(/```/g, '').trim();
         return JSON.parse(textResponse);
     }
 
-    catButtons.forEach(btn => {
+    // EVENTOS CATEGORÍAS
+    catButtons.forEach((btn, index) => {
         btn.addEventListener('click', () => {
             catButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             currentCategory = btn.getAttribute('data-cat');
             filterData(searchInput.value, currentCategory);
         });
@@ -177,7 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
             list.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:rgba(255,255,255,0.7); margin-top:30px;">${msg}</div>`;
             return;
         }
-
         solutions.forEach(sol => {
             const card = document.createElement('div');
             const imageSrc = sol.image_url || '[https://placehold.co/100x100/e2e8f0/475569?text=Sin+Foto](https://placehold.co/100x100/e2e8f0/475569?text=Sin+Foto)';
@@ -219,12 +291,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="tool-info">
                             <div class="tool-name">${tool.name}</div>
                             <div class="tool-actions">
-                                <a href="${tool.amazon}" target="_blank" class="store-btn btn-amazon">
-                                    <img src="images/amazon-logo.png" alt="Amazon">
-                                </a>
-                                <a href="${tool.aliexpress}" target="_blank" class="store-btn btn-ali">
-                                    <img src="images/aliexpress-logo.png" alt="AliExpress">
-                                </a>
+                                <a href="${tool.amazon}" target="_blank" class="store-btn btn-amazon"><img src="images/amazon-logo.png" alt="Amazon"></a>
+                                <a href="${tool.aliexpress}" target="_blank" class="store-btn btn-ali"><img src="images/aliexpress-logo.png" alt="AliExpress"></a>
                             </div>
                         </div>
                     </div>`;
@@ -236,27 +304,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sol.affiliate_url_primary && (!sol.tools || sol.tools.length === 0)) {
             mainButtonsHTML = `
                 <div class="button-grid">
-                    <a href="${sol.affiliate_url_primary}" target="_blank" class="store-btn btn-amazon">
-                        <img src="images/amazon-logo.png" alt="Amazon">
-                    </a>
+                    <a href="${sol.affiliate_url_primary}" target="_blank" class="store-btn btn-amazon"><img src="images/amazon-logo.png" alt="Amazon"></a>
                     ${sol.affiliate_url_secondary ? `<a href="${sol.affiliate_url_secondary}" target="_blank" class="store-btn btn-ali"><img src="images/aliexpress-logo.png" alt="AliExpress"></a>` : ''}
                 </div>
                 ${marketingHTML}`;
         }
 
-        // --- CORRECCIÓN TIKTOK ---
-        // 1. Usamos el enlace específico si existe en el JSON
-        // 2. Si no, buscamos en la pestaña de VÍDEOS de TikTok (/search/video?q=...)
-        const tiktokLink = sol.tiktok_url || `https://www.tiktok.com/search/video?q=${encodeURIComponent(sol.title + " hack")}`;
-        const tiktokButton = `<a href="${tiktokLink}" target="_blank" class="action-btn tiktok-btn">${ICONS.tiktok} TikTok</a>`;
-
         const ytUrl = sol.video_url || `https://www.youtube.com/results?search_query=${encodeURIComponent(sol.title + " truco casero")}`;
         const ytButton = `<a href="${ytUrl}" target="_blank" class="action-btn video-btn youtube">${ICONS.youtube} YouTube</a>`;
-        
+        const tiktokUrl = sol.tiktok_url || `https://www.tiktok.com/search?q=${encodeURIComponent(sol.title + " hack")}`;
+        const tiktokButton = `<a href="${tiktokUrl}" target="_blank" class="action-btn tiktok-btn">${ICONS.tiktok} TikTok</a>`;
         const shareText = `¡Mira este truco: ${sol.title}! 👉 https://el-apanador-jesus.onrender.com`;
         const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
         const modalImageSrc = sol.image_url || '[https://placehold.co/600x300/e2e8f0/475569?text=Sin+Foto](https://placehold.co/600x300/e2e8f0/475569?text=Sin+Foto)';
-        
         const videoTitleHTML = `<div class="video-marketing-box"><p>📺 ¿No te queda claro? Mira el vídeo:</p></div>`;
 
         let related = allSolutions.filter(s => s.category === sol.category && s.title !== sol.title);
