@@ -6,14 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
     const closeBtn = document.querySelector('.close-btn');
-    
-    // ARRAYS DE BOTONES
     const catButtons = Array.from(document.querySelectorAll('.cat-btn'));
-    const diffButtons = Array.from(document.querySelectorAll('.diff-btn')); // NUEVO
+    const diffButtons = Array.from(document.querySelectorAll('.diff-btn'));
     
     let allSolutions = [];
     let currentCategory = 'all';
-    let currentDifficulty = 'all'; // NUEVO
+    let currentDifficulty = 'all';
     let currentCatIndex = 0;
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
@@ -49,7 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => console.error('Error cargando JSON:', err));
 
-    // --- FILTRADO PRINCIPAL (CATEGORÍA + DIFICULTAD + TEXTO) ---
+    // -------------------
+    // LÓGICA FILTRADO Y SWIPE
+    // -------------------
     function applyFilters() {
         const term = searchInput.value.toLowerCase();
         const filtered = allSolutions.filter(sol => {
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchInput.addEventListener('input', applyFilters);
 
-    // EVENTOS CATEGORÍAS
+    // Categorías
     catButtons.forEach((btn, index) => {
         btn.addEventListener('click', () => {
             currentCatIndex = index;
@@ -77,117 +77,21 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
             btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
             currentCategory = btn.getAttribute('data-cat');
-            applyFilters(); // Aplicar filtros
+            applyFilters();
         });
     });
 
-    // EVENTOS DIFICULTAD (NUEVO)
-    const diffButtons = document.querySelectorAll('.diff-btn');
+    // Dificultad
     diffButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             diffButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             currentDifficulty = btn.getAttribute('data-diff');
-            applyFilters(); // Aplicar filtros
+            applyFilters();
         });
     });
 
-    // LÓGICA IA
-    lensBtn.addEventListener('click', () => {
-        if(GEMINI_API_KEY.includes("PEGAR_TU_CLAVE") || GEMINI_API_KEY === "") {
-            alert("⚠️ Falta configurar la API Key de Google Gemini en app.js");
-            return;
-        }
-        cameraInput.click();
-    });
-
-    cameraInput.addEventListener('change', async (e) => {
-        const file = e.target.files[0];
-        if (!file) return;
-
-        modal.style.display = "flex";
-        modalBody.innerHTML = `
-            <div class="ai-loading" style="text-align:center; padding:40px; color:white;">
-                <div style="font-size:3rem; animation:bounce 1s infinite;">🧠</div>
-                <h3 style="margin-top:20px;">Analizando con IA...</h3>
-                <p style="color:#cbd5e1; font-size:0.9rem;">Dame unos segundos.</p>
-            </div>
-        `;
-
-        try {
-            const base64Image = await fileToBase64(file);
-            const result = await analyzeWithGemini(base64Image);
-
-            openModal({
-                title: result.title || "Objeto Detectado",
-                solution_text: result.text || "Aquí tienes información útil.",
-                image_url: URL.createObjectURL(file),
-                category: "IA Detectada",
-                risk_level: "Bajo",
-                difficulty: 1,
-                affiliate_url_primary: `https://www.amazon.es/s?k=${encodeURIComponent(result.keyword)}`,
-                affiliate_url_secondary: `https://es.aliexpress.com/wholesale?SearchText=${encodeURIComponent(result.keyword)}`,
-                video_url: `https://www.youtube.com/results?search_query=${encodeURIComponent(result.keyword + " tutorial")}`,
-                tiktok_url: `https://www.tiktok.com/search?q=${encodeURIComponent(result.keyword + " hack")}`
-            });
-
-        } catch (error) {
-            console.error(error);
-            modalBody.innerHTML = `
-                <div style="text-align:center; padding:30px; color:white;">
-                    <h3 style="color:#ef4444;">😓 Ups, error de conexión</h3>
-                    <p>${error.message}</p>
-                    <button onclick="document.getElementById('detailModal').style.display='none'" class="action-btn" style="background:#333; margin-top:20px;">Cerrar</button>
-                </div>
-            `;
-        }
-        cameraInput.value = '';
-    });
-
-    function fileToBase64(file) {
-        return new Promise((resolve, reject) => {
-            const reader = new FileReader();
-            reader.readAsDataURL(file);
-            reader.onload = (event) => {
-                const img = new Image();
-                img.src = event.target.result;
-                img.onload = () => {
-                    const canvas = document.createElement('canvas');
-                    const maxWidth = 800;
-                    let width = img.width;
-                    let height = img.height;
-                    if (width > maxWidth) {
-                        height *= maxWidth / width;
-                        width = maxWidth;
-                    }
-                    canvas.width = width;
-                    canvas.height = height;
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0, width, height);
-                    resolve(canvas.toDataURL('image/jpeg', 0.7));
-                };
-            };
-            reader.onerror = error => reject(error);
-        });
-    }
-
-    async function analyzeWithGemini(base64Image) {
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
-        const prompt = "Analiza esta imagen. Identifica qué herramienta u objeto de bricolaje es. Responde SOLO con un JSON válido (sin markdown ```json) con estos campos: { \"title\": \"Nombre corto\", \"keyword\": \"Palabra clave para comprarlo\", \"text\": \"Explica para qué sirve y un consejo de uso.\" }";
-        const response = await fetch(url, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: "image/jpeg", data: base64Image.split(',')[1] } }] }]
-            })
-        });
-        const data = await response.json();
-        let textResponse = data.candidates[0].content.parts[0].text;
-        textResponse = textResponse.replace(/```json/g, '').replace(/```/g, '').trim();
-        return JSON.parse(textResponse);
-    }
-
-    // SWIPE
+    // Swipe
     let touchStartX = 0;
     let touchStartY = 0;
     document.addEventListener('touchstart', e => {
@@ -210,9 +114,85 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     function changeCategory(index) {
-        if (index >= 0 && index < catButtons.length) catButtons[index].click();
+        if (index >= 0 && index < catButtons.length) {
+            catButtons[index].click();
+        }
     }
 
+    // -------------------
+    // LÓGICA IA CÁMARA
+    // -------------------
+    lensBtn.addEventListener('click', () => {
+        if(GEMINI_API_KEY.includes("PEGAR_TU_CLAVE") || GEMINI_API_KEY === "") {
+            alert("⚠️ Configura la API Key de Google Gemini en app.js");
+            return;
+        }
+        cameraInput.click();
+    });
+
+    cameraInput.addEventListener('change', async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        modal.style.display = "flex";
+        modalBody.innerHTML = `<div class="ai-loading" style="text-align:center; padding:40px; color:white;"><div style="font-size:3rem; animation:bounce 1s infinite;">🧠</div><h3 style="margin-top:20px;">Analizando...</h3><p style="color:#cbd5e1; font-size:0.9rem;">Dame unos segundos.</p></div>`;
+        try {
+            const base64Image = await fileToBase64(file); // Comprime y convierte
+            const result = await analyzeWithGemini(base64Image);
+            openModal({
+                title: result.title || "Detectado", solution_text: result.text, image_url: URL.createObjectURL(file), category: "IA Detectada", risk_level: "Bajo", difficulty: 1,
+                affiliate_url_primary: `https://www.amazon.es/s?k=${encodeURIComponent(result.keyword)}`,
+                affiliate_url_secondary: `https://es.aliexpress.com/wholesale?SearchText=${encodeURIComponent(result.keyword)}`,
+                video_url: `https://www.youtube.com/results?search_query=${encodeURIComponent(result.keyword + " tutorial")}`,
+                tiktok_url: `https://www.tiktok.com/search/video?q=${encodeURIComponent(result.keyword + " hack")}`
+            });
+        } catch (error) {
+            modalBody.innerHTML = `<div style="text-align:center; padding:30px; color:white;"><h3 style="color:#ef4444;">Error</h3><p>${error.message}</p><button onclick="document.getElementById('detailModal').style.display='none'" class="action-btn" style="background:#333; margin-top:20px;">Cerrar</button></div>`;
+        }
+        cameraInput.value = '';
+    });
+
+    // FUNCIÓN CLAVE: COMPRESIÓN DE IMAGEN
+    function fileToBase64(file) {
+        return new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = (event) => {
+                const img = new Image();
+                img.src = event.target.result;
+                img.onload = () => {
+                    const canvas = document.createElement('canvas');
+                    const maxWidth = 800; // Reducimos a 800px
+                    let width = img.width;
+                    let height = img.height;
+                    if (width > maxWidth) { height *= maxWidth / width; width = maxWidth; }
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+                    resolve(canvas.toDataURL('image/jpeg', 0.7)); // Calidad 70%
+                };
+            };
+            reader.onerror = error => reject(error);
+        });
+    }
+
+    async function analyzeWithGemini(base64Image) {
+        const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+        const prompt = "Analiza esta imagen. Identifica qué herramienta u objeto de bricolaje es. Responde SOLO con un JSON válido (sin markdown ```json) con estos campos: { \"title\": \"Nombre corto\", \"keyword\": \"Palabra clave para comprarlo\", \"text\": \"Explica para qué sirve y un consejo de uso.\" }";
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: "image/jpeg", data: base64Image.split(',')[1] } }] }] })
+        });
+        const data = await response.json();
+        let textResponse = data.candidates[0].content.parts[0].text;
+        textResponse = textResponse.replace(/```json/g, '').replace(/```/g, '').trim();
+        return JSON.parse(textResponse);
+    }
+
+    // -------------------
+    // RENDER Y MODAL
+    // -------------------
     function toggleFavorite(e, title) {
         e.stopPropagation();
         if (favorites.includes(title)) favorites = favorites.filter(t => t !== title);
@@ -240,9 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderSolutions(solutions) {
         list.innerHTML = '';
         if(solutions.length === 0) {
-            let msg = 'No hay resultados 🤷‍♂️';
-            if(currentCategory === 'favorites') msg = 'Aún no tienes favoritos ❤️<br><small>Dale al corazón en los trucos que te gusten.</small>';
-            list.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:rgba(255,255,255,0.7); margin-top:30px;">${msg}</div>`;
+            list.innerHTML = '<div style="grid-column: 1/-1; text-align:center; color:rgba(255,255,255,0.7); margin-top:30px;">No hay resultados 🤷‍♂️</div>';
             return;
         }
         solutions.forEach(sol => {
@@ -250,17 +228,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const imageSrc = sol.image_url || '[https://placehold.co/100x100/e2e8f0/475569?text=Sin+Foto](https://placehold.co/100x100/e2e8f0/475569?text=Sin+Foto)';
             const isFav = favorites.includes(sol.title);
             const dots = generateDots(sol.difficulty || 1);
-
             card.className = `solution-card`;
             card.innerHTML = `
                 <div class="fav-icon ${isFav ? 'is-fav' : ''}">${isFav ? '❤️' : '🤍'}</div>
-                <div class="card-image-container">
-                    <img src="${imageSrc}" alt="${sol.title}" class="card-img">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">${sol.title}</h3>
-                    ${dots}
-                </div>
+                <div class="card-image-container"><img src="${imageSrc}" alt="${sol.title}" class="card-img"></div>
+                <div class="card-content"><h3 class="card-title">${sol.title}</h3>${dots}</div>
             `;
             card.querySelector('.fav-icon').addEventListener('click', (e) => toggleFavorite(e, sol.title));
             card.addEventListener('click', (e) => { if(!e.target.classList.contains('fav-icon')) openModal(sol); });
@@ -299,16 +271,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sol.affiliate_url_primary && (!sol.tools || sol.tools.length === 0)) {
             mainButtonsHTML = `
                 <div class="button-grid">
-                    <a href="${sol.affiliate_url_primary}" target="_blank" class="store-btn btn-amazon"><img src="images/amazon-logo.png" alt="Amazon"> <span>Amazon</span></a>
-                    ${sol.affiliate_url_secondary ? `<a href="${sol.affiliate_url_secondary}" target="_blank" class="store-btn btn-ali"><img src="images/aliexpress-logo.png" alt="Ali"> <span>AliExpress</span></a>` : ''}
+                    <a href="${sol.affiliate_url_primary}" target="_blank" class="store-btn btn-amazon"><img src="images/amazon-logo.png" alt="Amazon"></a>
+                    ${sol.affiliate_url_secondary ? `<a href="${sol.affiliate_url_secondary}" target="_blank" class="store-btn btn-ali"><img src="images/aliexpress-logo.png" alt="AliExpress"></a>` : ''}
                 </div>
                 ${marketingHTML}`;
         }
 
         const ytUrl = sol.video_url || `https://www.youtube.com/results?search_query=${encodeURIComponent(sol.title + " truco casero")}`;
         const ytButton = `<a href="${ytUrl}" target="_blank" class="action-btn video-btn youtube">${ICONS.youtube} YouTube</a>`;
-        const tiktokUrl = sol.tiktok_url || `https://www.tiktok.com/search?q=${encodeURIComponent(sol.title + " hack")}`;
-        const tiktokButton = `<a href="${tiktokUrl}" target="_blank" class="action-btn tiktok-btn">${ICONS.tiktok} TikTok</a>`;
+        const tiktokLink = sol.tiktok_url || `https://www.tiktok.com/search/video?q=${encodeURIComponent(sol.title + " hack")}`;
+        const tiktokButton = `<a href="${tiktokLink}" target="_blank" class="action-btn tiktok-btn">${ICONS.tiktok} TikTok</a>`;
         const shareText = `¡Mira este truco: ${sol.title}! 👉 https://el-apanador-jesus.onrender.com`;
         const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
         const modalImageSrc = sol.image_url || '[https://placehold.co/600x300/e2e8f0/475569?text=Sin+Foto](https://placehold.co/600x300/e2e8f0/475569?text=Sin+Foto)';
