@@ -14,17 +14,17 @@
     ]
   },
   {
-    "title": "Cambiar enchufe de pared",
+    "title": "Fuga en radiador",
     "category": "Hogar",
-    "problem": "El enchufe está quemado o no funciona",
-    "solution_text": "Corta la luz general. Desatornilla la carcasa. Suelta los 3 cables (Fase-Marrón, Neutro-Azul, Tierra-Amarillo). Conéctalos al mecanismo nuevo en el mismo orden. Atornilla.",
-    "risk_level": "Alto",
-    "difficulty": 4,
-    "image_url": "images/trucos/cambiar_enchufe.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=enchufe+pared+simon",
+    "problem": "Gotea agua por la llave",
+    "solution_text": "Cierra la llave de paso general. Desenrosca la tuerca que gotea, retira la estopa vieja y aplica 5-6 vueltas de cinta de teflón en el sentido de las agujas del reloj. Vuelve a enroscar fuerte.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/radiador.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=cinta+teflon+fontaneria",
     "tools": [
-      { "name": "Destornillador Aislado", "image": "https://placehold.co/100x100/333/white?text=Destor", "amazon": "https://www.amazon.es/s?k=destornillador+electricista", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=insulated+screwdriver" },
-      { "name": "Buscapolos", "image": "https://placehold.co/100x100/333/white?text=Test", "amazon": "https://www.amazon.es/s?k=buscapolos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=voltage+tester" }
+        { "name": "Cinta Teflón", "image": "https://placehold.co/100x100/333/white?text=Teflon", "amazon": "https://www.amazon.es/s?k=cinta+teflon", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=teflon+tape" },
+        { "name": "Llave Inglesa", "image": "https://placehold.co/100x100/333/white?text=Llave", "amazon": "https://www.amazon.es/s?k=llave+inglesa+ajustable", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=adjustable+wrench" }
     ]
   },
   {
@@ -42,17 +42,17 @@
     ]
   },
   {
-    "title": "Purgar radiadores",
+    "title": "Cambiar enchufe de pared",
     "category": "Hogar",
-    "problem": "El radiador no calienta por arriba",
-    "solution_text": "Con la calefacción apagada, gira el tornillo de purga lateral con un destornillador plano hasta que salga solo agua (sin aire). Pon un vaso debajo.",
-    "risk_level": "Medio",
-    "difficulty": 2,
-    "image_url": "images/trucos/purgar_radiador.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=llave+purgar+radiador",
+    "problem": "El enchufe está quemado o no funciona",
+    "solution_text": "Corta la luz general. Desatornilla la carcasa. Suelta los 3 cables (Fase-Marrón, Neutro-Azul, Tierra-Amarillo). Conéctalos al mecanismo nuevo en el mismo orden. Atornilla.",
+    "risk_level": "Alto",
+    "difficulty": 4,
+    "image_url": "images/trucos/cambiar_enchufe.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=enchufe+pared+simon",
     "tools": [
-      { "name": "Llave Purga", "image": "https://placehold.co/100x100/333/white?text=Llave", "amazon": "https://www.amazon.es/s?k=llave+radiador", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=radiator+key" },
-      { "name": "Destornillador Plano", "image": "https://placehold.co/100x100/333/white?text=Plano", "amazon": "https://www.amazon.es/s?k=destornillador+plano", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=flathead+screwdriver" }
+      { "name": "Destornillador Aislado", "image": "https://placehold.co/100x100/333/white?text=Destor", "amazon": "https://www.amazon.es/s?k=destornillador+electricista", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=insulated+screwdriver" },
+      { "name": "Buscapolos", "image": "https://placehold.co/100x100/333/white?text=Test", "amazon": "https://www.amazon.es/s?k=buscapolos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=voltage+tester" }
     ]
   },
   {
@@ -70,17 +70,17 @@
     ]
   },
   {
-    "title": "Reparar fuga tubería PVC",
+    "title": "Renovar silicona bañera",
     "category": "Hogar",
-    "problem": "Goteo en desagüe de cocina",
-    "solution_text": "Lija la zona de la grieta. Limpia con alcohol. Aplica adhesivo específico para PVC rígido y, si es posible, pega un parche del mismo material encima.",
-    "risk_level": "Alto",
-    "difficulty": 4,
-    "image_url": "images/trucos/fuga_pvc.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=pegamento+pvc+presion",
+    "problem": "Juntas negras o mohosas",
+    "solution_text": "Retira la silicona vieja con un rascador o cúter. Limpia bien con alcohol. Aplica un cordón continuo de silicona antimoho y alísalo con el dedo mojado en agua con jabón.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/silicona.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=silicona+baño+antimoho",
     "tools": [
-        { "name": "Pegamento PVC", "image": "https://placehold.co/100x100/333/white?text=Pegam", "amazon": "https://www.amazon.es/s?k=pegamento+tuberias+pvc", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pvc+glue" },
-        { "name": "Lija Grano Medio", "image": "https://placehold.co/100x100/333/white?text=Lija", "amazon": "https://www.amazon.es/s?k=papel+lija", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sandpaper" }
+        { "name": "Pistola Silicona", "image": "https://placehold.co/100x100/333/white?text=Pistola", "amazon": "https://www.amazon.es/s?k=pistola+silicona", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=caulking+gun" },
+        { "name": "Rascador", "image": "https://placehold.co/100x100/333/white?text=Rascador", "amazon": "https://www.amazon.es/s?k=rascador+silicona", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silicone+scraper" }
     ]
   },
   {
@@ -98,17 +98,17 @@
     ]
   },
   {
-    "title": "Restaurar faros coche (Pro)",
-    "category": "Coche",
-    "problem": "Faros amarillos que no pasan ITV",
-    "solution_text": "Lija al agua con granos 800, 1200 y 2000. Seca bien. Aplica polímero líquido vaporizado o laca transparente específica para policarbonato.",
-    "risk_level": "Alto",
-    "difficulty": 5,
-    "image_url": "images/trucos/faros_pro.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+polimero+faros",
+    "title": "Grifo que gotea",
+    "category": "Hogar",
+    "problem": "Pérdida constante de agua",
+    "solution_text": "Desmonta el mando del grifo (suele tener un tornillo oculto bajo el indicador rojo/azul). Desenrosca el cartucho cerámico o la montura y sustituye la junta de goma desgastada.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/grifo.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=juntas+toricas+fontaneria",
     "tools": [
-        { "name": "Kit Polímero", "image": "https://placehold.co/100x100/333/white?text=Kit", "amazon": "https://www.amazon.es/s?k=kit+restauracion+faros+polimero", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=headlight+restoration+kit" },
-        { "name": "Lijas Agua", "image": "https://placehold.co/100x100/333/white?text=Lijas", "amazon": "https://www.amazon.es/s?k=pack+lijas+agua", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sandpaper+wet+dry" }
+        { "name": "Kit Juntas", "image": "https://placehold.co/100x100/333/white?text=Juntas", "amazon": "https://www.amazon.es/s?k=caja+juntas+toricas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=o+ring+kit" },
+        { "name": "Llave Pico Loro", "image": "https://placehold.co/100x100/333/white?text=Pico", "amazon": "https://www.amazon.es/s?k=llave+pico+loro", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=plumbing+pliers" }
     ]
   },
   {
@@ -126,17 +126,17 @@
     ]
   },
   {
-    "title": "Cambiar grifo lavabo",
+    "title": "Purgar radiadores",
     "category": "Hogar",
-    "problem": "Grifo viejo o roto",
-    "solution_text": "Cierra llaves de paso. Desconecta latiguillos. Desenrosca la tuerca grande inferior con llave de tubo. Retira grifo viejo. Pon juntas nuevas y monta el nuevo.",
-    "risk_level": "Alto",
-    "difficulty": 4,
-    "image_url": "images/trucos/cambiar_grifo.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=grifo+lavabo+roca",
+    "problem": "El radiador no calienta por arriba",
+    "solution_text": "Con la calefacción apagada, gira el tornillo de purga lateral con un destornillador plano hasta que salga solo agua (sin aire). Pon un vaso debajo.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/purgar_radiador.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=llave+purgar+radiador",
     "tools": [
-        { "name": "Llave Tubo", "image": "https://placehold.co/100x100/333/white?text=Llave", "amazon": "https://www.amazon.es/s?k=llave+tubo+grifo", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=basin+wrench" },
-        { "name": "Grifo Nuevo", "image": "https://placehold.co/100x100/333/white?text=Grifo", "amazon": "https://www.amazon.es/s?k=grifo+baño", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=bathroom+faucet" }
+      { "name": "Llave Purga", "image": "https://placehold.co/100x100/333/white?text=Llave", "amazon": "https://www.amazon.es/s?k=llave+radiador", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=radiator+key" },
+      { "name": "Destornillador Plano", "image": "https://placehold.co/100x100/333/white?text=Plano", "amazon": "https://www.amazon.es/s?k=destornillador+plano", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=flathead+screwdriver" }
     ]
   },
   {
@@ -154,17 +154,17 @@
     ]
   },
   {
-    "title": "Reparar pinchazo bici",
-    "category": "Herramientas",
-    "problem": "Rueda bicicleta pinchada",
-    "solution_text": "Desmonta la cubierta con desmontables. Saca la cámara. Localiza el agujero en agua. Lija, pon pegamento vulcanizante y aplica el parche presionando.",
-    "risk_level": "Medio",
-    "difficulty": 3,
-    "image_url": "images/trucos/bici_pinchazo.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+reparacion+bicicleta",
+    "title": "Cisterna pierde agua",
+    "category": "Hogar",
+    "problem": "Ruido de agua constante",
+    "solution_text": "Abre la tapa. Si el agua rebosa, ajusta el tornillo de la boya para que cierre antes. Si el agua se escapa por abajo, cambia la junta del descargador.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/cisterna.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=mecanismo+cisterna+universal",
     "tools": [
-        { "name": "Kit Parches", "image": "https://placehold.co/100x100/333/white?text=Parches", "amazon": "https://www.amazon.es/s?k=parches+bicicleta", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=bike+puncture+kit" },
-        { "name": "Desmontables", "image": "https://placehold.co/100x100/333/white?text=Palancas", "amazon": "https://www.amazon.es/s?k=desmontables+bicicleta", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=tire+levers" }
+        { "name": "Mecanismo Univ.", "image": "https://placehold.co/100x100/333/white?text=Boya", "amazon": "https://www.amazon.es/s?k=flotador+cisterna", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=toilet+flush+valve" },
+        { "name": "Juntas Goma", "image": "https://placehold.co/100x100/333/white?text=Juntas", "amazon": "https://www.amazon.es/s?k=junta+cisterna", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=rubber+seal" }
     ]
   },
   {
@@ -182,17 +182,17 @@
     ]
   },
   {
-    "title": "Restaurar cuero agrietado",
+    "title": "Sifón atascado",
     "category": "Hogar",
-    "problem": "Sofá o sillón de piel viejo",
-    "solution_text": "Limpia bien. Aplica cuero líquido del color exacto en las grietas con una espátula. Deja secar y lija suavemente. Aplica tinte y bálsamo.",
-    "risk_level": "Alto",
-    "difficulty": 4,
-    "image_url": "images/trucos/cuero_liquido.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=cuero+liquido+reparacion",
+    "problem": "Mal olor o no traga",
+    "solution_text": "Coloca un cubo debajo. Desenrosca el tapón inferior del sifón (curva) con la mano. Saca la suciedad acumulada con un alambre, limpia y vuelve a enroscar.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/sifon.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=desatascador+tuberias",
     "tools": [
-        { "name": "Cuero Líquido", "image": "https://placehold.co/100x100/333/white?text=Cuero", "amazon": "https://www.amazon.es/s?k=cuero+liquido", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=liquid+leather" },
-        { "name": "Espátula Goma", "image": "https://placehold.co/100x100/333/white?text=Espatula", "amazon": "https://www.amazon.es/s?k=espatula+goma", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=rubber+spatula" }
+        { "name": "Guantes", "image": "https://placehold.co/100x100/333/white?text=Guantes", "amazon": "https://www.amazon.es/s?k=guantes+latex+resistentes", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=rubber+gloves" },
+        { "name": "Cubo Flex", "image": "https://placehold.co/100x100/333/white?text=Cubo", "amazon": "https://www.amazon.es/s?k=cubo+flexible", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=bucket" }
     ]
   },
   {
@@ -210,17 +210,17 @@
     ]
   },
   {
-    "title": "Fuga manguera jardín",
-    "category": "Hogar",
-    "problem": "Agujero en manguera",
-    "solution_text": "Corta la parte dañada con un cúter. Inserta un empalme reparador de latón o plástico entre los dos extremos cortados y aprieta las roscas.",
+    "title": "Agujero en pared",
+    "category": "Herramientas",
+    "problem": "Agujero de taco antiguo",
+    "solution_text": "Limpia el polvo del agujero. Aplica masilla reparadora con una espátula. Si es profundo, mete un poco de papel o malla antes. Alisa, deja secar y lija.",
     "risk_level": "Bajo",
     "difficulty": 2,
-    "image_url": "images/trucos/manguera_jardin.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+manguera",
+    "image_url": "images/trucos/agujero_pared.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=masilla+pared",
     "tools": [
-        { "name": "Empalme", "image": "https://placehold.co/100x100/333/white?text=Union", "amazon": "https://www.amazon.es/s?k=conector+manguera+reparacion", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=hose+connector" },
-        { "name": "Cúter", "image": "https://placehold.co/100x100/333/white?text=Cuter", "amazon": "https://www.amazon.es/s?k=cutter+profesional", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=utility+knife" }
+        { "name": "Masilla Tubo", "image": "https://placehold.co/100x100/333/white?text=Masilla", "amazon": "https://www.amazon.es/s?k=masilla+relleno+pared", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wall+repair+cream" },
+        { "name": "Espátula", "image": "https://placehold.co/100x100/333/white?text=Espatula", "amazon": "https://www.amazon.es/s?k=espatula+masilla", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=putty+knife" }
     ]
   },
   {
@@ -238,17 +238,17 @@
     ]
   },
   {
-    "title": "Cambiar cartucho grifo",
-    "category": "Hogar",
-    "problem": "Grifo monomando duro o gotea",
-    "solution_text": "Saca el mando. Desenrosca el embellecedor y la tuerca de latón grande. Saca el cartucho viejo y pon el nuevo (asegúrate que sea del mismo diámetro, 35mm o 40mm).",
+    "title": "Taladrar metal",
+    "category": "Herramientas",
+    "problem": "La broca se quema",
+    "solution_text": "Marca el punto con un granete o clavo. Usa una broca HSS (acero rápido). Taladra a baja velocidad y echa una gota de aceite cada pocos segundos para enfriar.",
     "risk_level": "Alto",
     "difficulty": 4,
-    "image_url": "images/trucos/cartucho_grifo.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=cartucho+ceramico+grifo",
+    "image_url": "images/trucos/taladro_metal.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=brocas+metal+cobalto",
     "tools": [
-        { "name": "Cartucho 40mm", "image": "https://placehold.co/100x100/333/white?text=40mm", "amazon": "https://www.amazon.es/s?k=cartucho+grifo+40mm", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=faucet+cartridge" },
-        { "name": "Llave Inglesa", "image": "https://placehold.co/100x100/333/white?text=Llave", "amazon": "https://www.amazon.es/s?k=llave+inglesa+grande", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=adjustable+wrench" }
+        { "name": "Brocas HSS", "image": "https://placehold.co/100x100/333/white?text=Brocas", "amazon": "https://www.amazon.es/s?k=juego+brocas+metal", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=drill+bits+metal" },
+        { "name": "Aceite Corte", "image": "https://placehold.co/100x100/333/white?text=Aceite", "amazon": "https://www.amazon.es/s?k=aceite+corte+taladro", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cutting+oil" }
     ]
   },
   {
@@ -266,17 +266,17 @@
     ]
   },
   {
-    "title": "Pintar azulejos cocina",
+    "title": "Pegar rodapié",
     "category": "Hogar",
-    "problem": "Cocina anticuada",
-    "solution_text": "Limpia con disolvente. Aplica una imprimación si es necesario. Usa pintura específica para azulejos con rodillo de espuma. Da dos capas finas.",
-    "risk_level": "Medio",
-    "difficulty": 3,
-    "image_url": "images/trucos/pintar_azulejos.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=pintura+azulejos+cocina",
+    "problem": "Se ha despegado de la pared",
+    "solution_text": "Limpia bien la pared y la madera. Aplica adhesivo de montaje 'agarre total' en zig-zag. Presiona contra la pared y golpea suavemente con el puño.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/rodapie.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=adhesivo+montaje",
     "tools": [
-        { "name": "Pintura Azulejos", "image": "https://placehold.co/100x100/333/white?text=Pintura", "amazon": "https://www.amazon.es/s?k=esmalte+azulejos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=tile+paint" },
-        { "name": "Rodillo Espuma", "image": "https://placehold.co/100x100/333/white?text=Rodillo", "amazon": "https://www.amazon.es/s?k=rodillo+espuma", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=foam+roller" }
+        { "name": "No Más Clavos", "image": "https://placehold.co/100x100/333/white?text=Pegam.", "amazon": "https://www.amazon.es/s?k=pattex+no+mas+clavos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=construction+adhesive" },
+        { "name": "Pistola", "image": "https://placehold.co/100x100/333/white?text=Pistola", "amazon": "https://www.amazon.es/s?k=pistola+silicona+robusta", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=caulking+gun" }
     ]
   },
   {
@@ -294,17 +294,17 @@
     ]
   },
   {
-    "title": "Sellar ventanas frío",
+    "title": "Anclaje en techo",
     "category": "Hogar",
-    "problem": "Entra aire por la ventana",
-    "solution_text": "Limpia el marco. Pega burlete de caucho (perfil E, P o D según la holgura) en todo el perímetro donde cierra la hoja. Ahorra mucha calefacción.",
-    "risk_level": "Bajo",
-    "difficulty": 1,
-    "image_url": "images/trucos/burlete_ventana.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=burlete+ventana",
+    "problem": "Colgar lámpara en pladur/yeso",
+    "solution_text": "No uses tacos normales, se caerá. Usa tacos de vuelco (paraguas) o de balancín. Taladra, introduce el taco plegado y deja que se abra dentro del falso techo.",
+    "risk_level": "Alto",
+    "difficulty": 4,
+    "image_url": "images/trucos/taco_techo.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=tacos+vuelco+techo",
     "tools": [
-        { "name": "Burlete Goma", "image": "https://placehold.co/100x100/333/white?text=Burlete", "amazon": "https://www.amazon.es/s?k=burlete+caucho+ventana", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=weather+stripping" },
-        { "name": "Silicona", "image": "https://placehold.co/100x100/333/white?text=Sella", "amazon": "https://www.amazon.es/s?k=silicona+neutra", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silicone+sealant" }
+        { "name": "Tacos Vuelco", "image": "https://placehold.co/100x100/333/white?text=Tacos", "amazon": "https://www.amazon.es/s?k=tacos+pladur+techo", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=toggle+bolts" },
+        { "name": "Taladro", "image": "https://placehold.co/100x100/333/white?text=Taladro", "amazon": "https://www.amazon.es/s?k=taladro+percutor", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=electric+drill" }
     ]
   },
   {
@@ -322,17 +322,17 @@
     ]
   },
   {
-    "title": "Cambiar batería coche",
-    "category": "Coche",
-    "problem": "El coche no arranca",
-    "solution_text": "Quita primero el borne NEGATIVO (negro), luego el POSITIVO (rojo). Saca la batería. Pon la nueva. Conecta primero el POSITIVO y luego el NEGATIVO.",
-    "risk_level": "Alto",
-    "difficulty": 3,
-    "image_url": "images/trucos/cambiar_bateria.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=bateria+coche",
+    "title": "Bisagra cocina floja",
+    "category": "Hogar",
+    "problem": "La puerta del armario cuelga",
+    "solution_text": "Las bisagras tienen 2 tornillos de ajuste. El de fondo regula la separación, el frontal regula la inclinación. Apriétalos o aflójalos poco a poco hasta alinear.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/bisagra_cocina.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=destornillador+estrella",
     "tools": [
-        { "name": "Arrancador", "image": "https://placehold.co/100x100/333/white?text=Booster", "amazon": "https://www.amazon.es/s?k=arrancador+baterias+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=jump+starter" },
-        { "name": "Llave 10mm", "image": "https://placehold.co/100x100/333/white?text=Llave", "amazon": "https://www.amazon.es/s?k=llave+fija+10mm", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=10mm+wrench" }
+        { "name": "Destornillador", "image": "https://placehold.co/100x100/333/white?text=Destor.", "amazon": "https://www.amazon.es/s?k=juego+destornilladores", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=screwdriver+set" },
+        { "name": "Bisagras", "image": "https://placehold.co/100x100/333/white?text=Bisagra", "amazon": "https://www.amazon.es/s?k=bisagras+cazoleta", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cabinet+hinges" }
     ]
   },
   {
@@ -350,6 +350,20 @@
     ]
   },
   {
+    "title": "Cambio aceite coche",
+    "category": "Coche",
+    "problem": "Mantenimiento básico",
+    "solution_text": "Levanta el coche seguro. Quita el tapón del cárter y deja vaciar en una bandeja. Cambia el filtro de aceite. Pon el tapón nuevo y rellena con aceite sintético.",
+    "risk_level": "Alto",
+    "difficulty": 4,
+    "image_url": "images/trucos/aceite_coche.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=aceite+coche+5w30",
+    "tools": [
+        { "name": "Llave Filtro", "image": "https://placehold.co/100x100/333/white?text=Llave", "amazon": "https://www.amazon.es/s?k=llave+filtro+aceite", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=oil+filter+wrench" },
+        { "name": "Bandeja", "image": "https://placehold.co/100x100/333/white?text=Bandeja", "amazon": "https://www.amazon.es/s?k=bandeja+drenaje+aceite", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=oil+drain+pan" }
+    ]
+  },
+  {
     "title": "Quitar pegatinas",
     "category": "Hogar",
     "problem": "Queda pegamento",
@@ -364,17 +378,17 @@
     ]
   },
   {
-    "title": "Reparar mando TV",
-    "category": "Tecnología",
-    "problem": "Botones no funcionan bien",
-    "solution_text": "Abre el mando. Limpia la placa y la goma con alcohol isopropílico. Si el grafito de los botones está gastado, pega un trocito de papel de aluminio o pinta con lápiz.",
+    "title": "Pulir faros (Pro)",
+    "category": "Coche",
+    "problem": "Faros muy quemados",
+    "solution_text": "Usa un kit de restauración. Primero lija con grano 800, luego 1200 y 2000 al agua. Finalmente aplica el pulimento y el barniz protector UV.",
     "risk_level": "Medio",
     "difficulty": 3,
-    "image_url": "images/trucos/mando_tv.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+reparacion+mando+distancia",
+    "image_url": "images/trucos/pulir_coche.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+polimero+faros",
     "tools": [
-        { "name": "Pintura Conduc.", "image": "https://placehold.co/100x100/333/white?text=Pintura", "amazon": "https://www.amazon.es/s?k=pintura+conductiva+grafito", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=conductive+paint" },
-        { "name": "Alcohol ISO", "image": "https://placehold.co/100x100/333/white?text=Alcohol", "amazon": "https://www.amazon.es/s?k=alcohol+isopropilico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=isopropyl+alcohol" }
+        { "name": "Kit Faros", "image": "https://placehold.co/100x100/333/white?text=Kit", "amazon": "https://www.amazon.es/s?k=kit+restauracion+faros+polimero", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=headlight+restoration+kit" },
+        { "name": "Lijas Agua", "image": "https://placehold.co/100x100/333/white?text=Lijas", "amazon": "https://www.amazon.es/s?k=pack+lijas+agua", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sandpaper+wet+dry" }
     ]
   },
   {
@@ -392,6 +406,20 @@
     ]
   },
   {
+    "title": "Reparar pinchazo",
+    "category": "Coche",
+    "problem": "Clavo en la rueda",
+    "solution_text": "Localiza el clavo. Sácalo con alicates. Usa el punzón para limar el agujero. Introduce la mecha de caucho con pegamento usando la aguja y corta el sobrante.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/pinchazo.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+reparacion+pinchazos",
+    "tools": [
+        { "name": "Kit Mechas", "image": "https://placehold.co/100x100/333/white?text=Mechas", "amazon": "https://www.amazon.es/s?k=kit+reparacion+neumaticos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=tire+repair+kit" },
+        { "name": "Compresor", "image": "https://placehold.co/100x100/333/white?text=Aire", "amazon": "https://www.amazon.es/s?k=compresor+aire+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=car+air+compressor" }
+    ]
+  },
+  {
     "title": "Polvo taladro",
     "category": "Herramientas",
     "problem": "Mancho al taladrar",
@@ -403,6 +431,20 @@
     "tools": [
       { "name": "Colector Polvo", "image": "https://placehold.co/100x100/333/white?text=Colector", "amazon": "https://www.amazon.es/s?k=colector+polvo+taladro", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=drill+dust" },
       { "name": "Cinta Pintor", "image": "https://placehold.co/100x100/333/white?text=Cinta", "amazon": "https://www.amazon.es/s?k=cinta+carrocero", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=masking+tape" }
+    ]
+  },
+  {
+    "title": "Limpiar tapicería",
+    "category": "Coche",
+    "problem": "Manchas en asientos",
+    "solution_text": "Aplica espuma limpiadora específica. Frota fuerte con un cepillo de cerdas duras. Retira la suciedad con una microfibra húmeda o un aspirador de líquidos.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/tapiceria.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+tapiceria+coche",
+    "tools": [
+        { "name": "Espuma", "image": "https://placehold.co/100x100/333/white?text=Espuma", "amazon": "https://www.amazon.es/s?k=espuma+limpia+tapicerias", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=car+upholstery+cleaner" },
+        { "name": "Cepillo Taladro", "image": "https://placehold.co/100x100/333/white?text=Cepillo", "amazon": "https://www.amazon.es/s?k=cepillos+taladro+limpieza", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=drill+brush" }
     ]
   },
   {
@@ -420,17 +462,17 @@
     ]
   },
   {
-    "title": "Lijar madera rápido",
-    "category": "Herramientas",
-    "problem": "Lijar a mano cansa",
-    "solution_text": "Si tienes taladro, compra un plato adaptador con velcro. Pega discos de lija redondos y lija 10 veces más rápido.",
+    "title": "Restaurar plásticos",
+    "category": "Coche",
+    "problem": "Parachoques grisáceo",
+    "solution_text": "Limpia bien la zona. Aplica calor con una pistola de decapar (con cuidado) para que suban los aceites, o usa un restaurador de plásticos líquido con esponja.",
     "risk_level": "Medio",
     "difficulty": 2,
-    "image_url": "images/trucos/lijado_taladro.jpg",
-    "affiliate_url_primary": "https://www.amazon.es/s?k=plato+lija+taladro",
+    "image_url": "images/trucos/plasticos_coche.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=restaurador+plasticos+coche",
     "tools": [
-        { "name": "Plato Velcro", "image": "https://placehold.co/100x100/333/white?text=Plato", "amazon": "https://www.amazon.es/s?k=adaptador+lija+taladro", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=drill+sanding+pad" },
-        { "name": "Discos Lija", "image": "https://placehold.co/100x100/333/white?text=Discos", "amazon": "https://www.amazon.es/s?k=discos+lija+125", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sanding+discs" }
+        { "name": "Restaurador", "image": "https://placehold.co/100x100/333/white?text=Liquido", "amazon": "https://www.amazon.es/s?k=sisbrill+car", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=plastic+restorer" },
+        { "name": "Pistola Calor", "image": "https://placehold.co/100x100/333/white?text=Calor", "amazon": "https://www.amazon.es/s?k=pistola+decapadora", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=heat+gun" }
     ]
   },
   {
@@ -448,6 +490,20 @@
     ]
   },
   {
+    "title": "Soldar cables",
+    "category": "Tecnología",
+    "problem": "Cable partido",
+    "solution_text": "Pela los extremos. Entrelaza los hilos de cobre. Calienta con el soldador y aplica estaño hasta que cubra la unión brillante. Protege con termorretráctil.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/soldar.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+soldador+estaño",
+    "tools": [
+        { "name": "Soldador", "image": "https://placehold.co/100x100/333/white?text=Soldador", "amazon": "https://www.amazon.es/s?k=soldador+electrónica", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=soldering+iron" },
+        { "name": "Estaño", "image": "https://placehold.co/100x100/333/white?text=Estaño", "amazon": "https://www.amazon.es/s?k=hilo+estaño", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=solder+wire" }
+    ]
+  },
+  {
     "title": "Limpiar teclado",
     "category": "Tecnología",
     "problem": "Suciedad entre teclas",
@@ -459,6 +515,20 @@
     "tools": [
       { "name": "Gel Limpiador", "image": "https://placehold.co/100x100/333/white?text=Gel", "amazon": "https://www.amazon.es/s?k=gel+limpiador+teclado", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cleaning+gel" },
       { "name": "Aire Comp.", "image": "https://placehold.co/100x100/333/white?text=Aire", "amazon": "https://www.amazon.es/s?k=aire+comprimido+pc", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=air+duster" }
+    ]
+  },
+  {
+    "title": "Cambiar pasta térmica",
+    "category": "Tecnología",
+    "problem": "PC se calienta mucho",
+    "solution_text": "Desmonta el disipador. Limpia la pasta vieja con alcohol isopropílico y papel. Aplica una gota del tamaño de un guisante en el centro. Vuelve a montar.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/pasta_termica.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=pasta+termica+arctic",
+    "tools": [
+        { "name": "Pasta Térmica", "image": "https://placehold.co/100x100/333/white?text=Pasta", "amazon": "https://www.amazon.es/s?k=arctic+mx4", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=thermal+paste" },
+        { "name": "Alcohol ISO", "image": "https://placehold.co/100x100/333/white?text=Alcohol", "amazon": "https://www.amazon.es/s?k=alcohol+isopropilico+limpieza", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=isopropyl+alcohol" }
     ]
   },
   {
@@ -476,6 +546,20 @@
     ]
   },
   {
+    "title": "Crimpar cable red",
+    "category": "Tecnología",
+    "problem": "Hacer cable Ethernet a medida",
+    "solution_text": "Pela el cable. Ordena los hilos (Norma B: Naranja-Blanco, Naranja, Verde-Blanco, Azul, Azul-Blanco, Verde, Marrón-Blanco, Marrón). Mete en el conector y crimpa fuerte.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/crimpar.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+crimpadora+rj45",
+    "tools": [
+        { "name": "Crimpadora", "image": "https://placehold.co/100x100/333/white?text=Crimp", "amazon": "https://www.amazon.es/s?k=crimpadora+rj45", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=rj45+crimper" },
+        { "name": "Conectores", "image": "https://placehold.co/100x100/333/white?text=RJ45", "amazon": "https://www.amazon.es/s?k=conectores+rj45", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=rj45+connectors" }
+    ]
+  },
+  {
     "title": "Puerta que chirría",
     "category": "Hogar",
     "problem": "La bisagra hace ruido",
@@ -487,6 +571,20 @@
     "tools": [
       { "name": "Aceite 3en1", "image": "https://placehold.co/100x100/333/white?text=Aceite", "amazon": "https://www.amazon.es/s?k=aceite+3+en+uno", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=lubricant+oil" },
       { "name": "Grafito Polvo", "image": "https://placehold.co/100x100/333/white?text=Grafito", "amazon": "https://www.amazon.es/s?k=grafito+en+polvo", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=graphite+powder" }
+    ]
+  },
+  {
+    "title": "Protector pantalla",
+    "category": "Tecnología",
+    "problem": "Poner cristal sin burbujas",
+    "solution_text": "Limpia con la toallita húmeda. Seca bien. Usa la pegatina para quitar motas de polvo. Alinea y deja caer el cristal. Empuja las burbujas hacia fuera.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/protector_pantalla.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=cristal+templado+movil",
+    "tools": [
+        { "name": "Cristal", "image": "https://placehold.co/100x100/333/white?text=Cristal", "amazon": "https://www.amazon.es/s?k=protector+pantalla+universal", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=screen+protector" },
+        { "name": "Líquido", "image": "https://placehold.co/100x100/333/white?text=Liquido", "amazon": "https://www.amazon.es/s?k=liquido+reparador+bordes+pantalla", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=screen+repair+liquid" }
     ]
   },
   {
@@ -504,6 +602,20 @@
     ]
   },
   {
+    "title": "Comprobar pilas",
+    "category": "Tecnología",
+    "problem": "¿Tiene carga o no?",
+    "solution_text": "Pon el multímetro en 20V DC. Toca los extremos. Si marca más de 1.3V (en alcalinas) está bien. Menos de 1.1V está gastada.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/multimetro.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=multimetro+digital",
+    "tools": [
+        { "name": "Multímetro", "image": "https://placehold.co/100x100/333/white?text=Tester", "amazon": "https://www.amazon.es/s?k=multimetro+digital+barato", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=multimeter" },
+        { "name": "Probador", "image": "https://placehold.co/100x100/333/white?text=Test", "amazon": "https://www.amazon.es/s?k=comprobador+pilas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=battery+tester" }
+    ]
+  },
+  {
     "title": "Limpiar puerto carga",
     "category": "Tecnología",
     "problem": "Móvil no carga bien",
@@ -515,6 +627,20 @@
     "tools": [
       { "name": "Kit Limpieza", "image": "https://placehold.co/100x100/333/white?text=Kit", "amazon": "https://www.amazon.es/s?k=kit+limpieza+puerto", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=phone+cleaning+kit" },
       { "name": "Aire Spray", "image": "https://placehold.co/100x100/333/white?text=Aire", "amazon": "https://www.amazon.es/s?k=aire+comprimido", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=air+duster" }
+    ]
+  },
+  {
+    "title": "Pegar suela bota",
+    "category": "Ropa",
+    "problem": "Suela separada",
+    "solution_text": "Lija ambas superficies. Aplica pegamento de contacto en las dos partes. ESPERA 10 minutos a que seque al tacto. Une con fuerza y martillea.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/suela_bota.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=pegamento+zapatos+fuerte",
+    "tools": [
+        { "name": "Cola Zapatero", "image": "https://placehold.co/100x100/333/white?text=Cola", "amazon": "https://www.amazon.es/s?k=pegamento+impacto", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+glue" },
+        { "name": "Sargentos", "image": "https://placehold.co/100x100/333/white?text=Pinza", "amazon": "https://www.amazon.es/s?k=pinzas+sujecion", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=clamps" }
     ]
   },
   {
@@ -532,6 +658,20 @@
     ]
   },
   {
+    "title": "Impermeabilizar botas",
+    "category": "Ropa",
+    "problem": "Entra agua",
+    "solution_text": "Limpia y seca la bota. Aplica spray hidrofugante a 20cm de distancia. Deja secar 24h. El agua resbalará como perlas.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/spray_botas.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=spray+impermeabilizante+calzado",
+    "tools": [
+        { "name": "Spray Agua", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+repelente+agua", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=waterproof+spray" },
+        { "name": "Grasa Foca", "image": "https://placehold.co/100x100/333/white?text=Grasa", "amazon": "https://www.amazon.es/s?k=grasa+caballo+impermeabilizante", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=dubbin+wax" }
+    ]
+  },
+  {
     "title": "Olor en el coche",
     "category": "Coche",
     "problem": "Mal olor o humedad",
@@ -543,6 +683,20 @@
     "tools": [
       { "name": "Bolsa Carbón", "image": "https://placehold.co/100x100/333/white?text=Carbon", "amazon": "https://www.amazon.es/s?k=bolsa+carbon+activado+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=charcoal+bag" },
       { "name": "Ambientador", "image": "https://placehold.co/100x100/333/white?text=Olor", "amazon": "https://www.amazon.es/s?k=ambientador+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=car+freshener" }
+    ]
+  },
+  {
+    "title": "Teñir ropa vieja",
+    "category": "Ropa",
+    "problem": "Color apagado",
+    "solution_text": "Usa tinte para lavadora. Pon el envase abierto en el tambor junto con la ropa mojada. Ciclo largo a 40ºC. Luego otro lavado normal.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/teñir.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=tinte+ropa+lavadora",
+    "tools": [
+        { "name": "Tinte Negro", "image": "https://placehold.co/100x100/333/white?text=Tinte", "amazon": "https://www.amazon.es/s?k=tinte+iberia+negro", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=fabric+dye" },
+        { "name": "Sal Fijadora", "image": "https://placehold.co/100x100/333/white?text=Sal", "amazon": "https://www.amazon.es/s?k=sal+fijadora+tinte", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=dye+fixative" }
     ]
   },
   {
@@ -560,6 +714,20 @@
     ]
   },
   {
+    "title": "Limpiar zapatillas",
+    "category": "Ropa",
+    "problem": "Suelas amarillas",
+    "solution_text": "Mezcla agua oxigenada de 40 volúmenes con bicarbonato. Aplica en la goma, envuelve en film transparente y pon al sol 2 horas.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/zapatillas_blancas.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=blanqueador+suelas",
+    "tools": [
+        { "name": "Agua Oxig.", "image": "https://placehold.co/100x100/333/white?text=H2O2", "amazon": "https://www.amazon.es/s?k=crema+agua+oxigenada+40", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=peroxide+cream" },
+        { "name": "Cepillos", "image": "https://placehold.co/100x100/333/white?text=Cepillo", "amazon": "https://www.amazon.es/s?k=cepillo+limpieza+zapatillas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+brush" }
+    ]
+  },
+  {
     "title": "Chicle en ropa",
     "category": "Ropa",
     "problem": "Chicle pegado",
@@ -571,6 +739,20 @@
     "tools": [
       { "name": "Spray Frío", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+congelante", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=freeze+spray" },
       { "name": "Quitamanchas", "image": "https://placehold.co/100x100/333/white?text=Jabon", "amazon": "https://www.amazon.es/s?k=quitamanchas+ropa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=stain+remover" }
+    ]
+  },
+  {
+    "title": "Costura cuero",
+    "category": "Ropa",
+    "problem": "Cinturón o bolso roto",
+    "solution_text": "Usa un punzón para abrir los agujeros primero. Cose con dos agujas cruzadas (punto guarnicionero) y hilo encerado fuerte.",
+    "risk_level": "Alto",
+    "difficulty": 4,
+    "image_url": "images/trucos/costura_cuero.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=kit+costura+cuero",
+    "tools": [
+        { "name": "Kit Cuero", "image": "https://placehold.co/100x100/333/white?text=Kit", "amazon": "https://www.amazon.es/s?k=herramientas+cuero", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=leather+craft+tools" },
+        { "name": "Hilo Encerado", "image": "https://placehold.co/100x100/333/white?text=Hilo", "amazon": "https://www.amazon.es/s?k=hilo+encerado+cuero", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=waxed+thread" }
     ]
   },
   {
@@ -588,6 +770,20 @@
     ]
   },
   {
+    "title": "Afilar tijeras podar",
+    "category": "Hogar",
+    "problem": "No cortan ramas",
+    "solution_text": "Desmonta la tijera si puedes. Pasa una lima de diamante solo por el lado del bisel (el que corta), manteniendo el ángulo original.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/tijeras_podar.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=afilador+tijeras+podar",
+    "tools": [
+        { "name": "Lima Diamante", "image": "https://placehold.co/100x100/333/white?text=Lima", "amazon": "https://www.amazon.es/s?k=lima+diamante", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=diamond+file" },
+        { "name": "Aceite", "image": "https://placehold.co/100x100/333/white?text=Aceite", "amazon": "https://www.amazon.es/s?k=aceite+maquinaria", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=machine+oil" }
+    ]
+  },
+  {
     "title": "Clavo flojo",
     "category": "Hogar",
     "problem": "Agujero dado de sí",
@@ -599,6 +795,20 @@
     "tools": [
       { "name": "Masilla", "image": "https://placehold.co/100x100/333/white?text=Masilla", "amazon": "https://www.amazon.es/s?k=masilla+reparadora+pared", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wall+filler" },
       { "name": "Tacos", "image": "https://placehold.co/100x100/333/white?text=Tacos", "amazon": "https://www.amazon.es/s?k=tacos+pared", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wall+plugs" }
+    ]
+  },
+  {
+    "title": "Arreglar manguera",
+    "category": "Hogar",
+    "problem": "Pinchazo o corte",
+    "solution_text": "Corta la parte dañada con un cúter. Introduce un conector reparador de plástico o latón entre los dos extremos y aprieta las roscas.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/manguera.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+manguera",
+    "tools": [
+        { "name": "Conector", "image": "https://placehold.co/100x100/333/white?text=Union", "amazon": "https://www.amazon.es/s?k=conector+manguera+reparacion", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=hose+repair+connector" },
+        { "name": "Abrazaderas", "image": "https://placehold.co/100x100/333/white?text=Abraz.", "amazon": "https://www.amazon.es/s?k=abrazaderas+metalicas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=hose+clamps" }
     ]
   },
   {
@@ -616,6 +826,20 @@
     ]
   },
   {
+    "title": "Limpiar barbacoa",
+    "category": "Hogar",
+    "problem": "Grasa quemada",
+    "solution_text": "Calienta la parrilla. Frota con medio limón y sal, o usa un cepillo de acero fuerte. Si está fría, usa limpiador de hornos potente.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/barbacoa.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=cepillo+barbacoa",
+    "tools": [
+        { "name": "Cepillo Acero", "image": "https://placehold.co/100x100/333/white?text=Cepillo", "amazon": "https://www.amazon.es/s?k=cepillo+limpieza+barbacoa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=bbq+brush" },
+        { "name": "Quitagrasas", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=limpiador+hornos+fuerte", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=oven+cleaner" }
+    ]
+  },
+  {
     "title": "Tuerca difícil",
     "category": "Herramientas",
     "problem": "Se cae al colocarla",
@@ -625,8 +849,22 @@
     "image_url": "images/trucos/tuerca_dificil.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=herramienta+imantada",
     "tools": [
-      { "name": "Imán Telescop.", "image": "https://placehold.co/100x100/333/white?text=Iman", "amazon": "https://www.amazon.es/s?k=iman+telescopico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=magnetic+pickup" },
-      { "name": "Pinzas", "image": "https://placehold.co/100x100/333/white?text=Pinzas", "amazon": "https://www.amazon.es/s?k=pinzas+precision", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=tweezers" }
+      { "name": "Varilla Imantada", "image": "https://placehold.co/100x100/333/white?text=Iman", "amazon": "https://www.amazon.es/s?k=varilla+imantada+flexible", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=magnetic+pickup+tool" },
+      { "name": "Pinzas Precisión", "image": "https://placehold.co/100x100/333/white?text=Pinzas", "amazon": "https://www.amazon.es/s?k=pinzas+precision", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=tweezers" }
+    ]
+  },
+  {
+    "title": "Reparar césped",
+    "category": "Hogar",
+    "problem": "Calvas en el jardín",
+    "solution_text": "Rastrilla la zona muerta. Esparce una mezcla de semillas 'repobladoras' con sustrato. Pisa suavemente y mantén húmedo 10 días.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/cesped.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=semillas+cesped+repoblador",
+    "tools": [
+        { "name": "Semillas", "image": "https://placehold.co/100x100/333/white?text=Semillas", "amazon": "https://www.amazon.es/s?k=cesped+repoblacion", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=grass+seeds" },
+        { "name": "Sustrato", "image": "https://placehold.co/100x100/333/white?text=Tierra", "amazon": "https://www.amazon.es/s?k=sustrato+universal", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=potting+soil" }
     ]
   },
   {
@@ -639,8 +877,22 @@
     "image_url": "images/trucos/pelusas.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=quitapelusas",
     "tools": [
-      { "name": "Quitapelusas", "image": "https://placehold.co/100x100/333/white?text=Maquina", "amazon": "https://www.amazon.es/s?k=quitapelusas+electrico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=lint+remover" },
-      { "name": "Rodillo", "image": "https://placehold.co/100x100/333/white?text=Rodillo", "amazon": "https://www.amazon.es/s?k=rodillo+ropa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=lint+roller" }
+      { "name": "Quitapelusas Eléc.", "image": "https://placehold.co/100x100/333/white?text=Maquina", "amazon": "https://www.amazon.es/s?k=quitapelusas+electrico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=lint+remover" },
+      { "name": "Rodillo Adhesivo", "image": "https://placehold.co/100x100/333/white?text=Rodillo", "amazon": "https://www.amazon.es/s?k=rodillo+quitapelusas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sticky+roller" }
+    ]
+  },
+  {
+    "title": "Limpiar Karcher",
+    "category": "Hogar",
+    "problem": "Suelo terraza sucio",
+    "solution_text": "Usa el accesorio 'T-Racer' para no salpicar. Aplica detergente para piedra primero. Avanza despacio para levantar el moho incrustado.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/karcher.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=hidrolimpiadora+karcher",
+    "tools": [
+        { "name": "Hidrolimpiadora", "image": "https://placehold.co/100x100/333/white?text=Karcher", "amazon": "https://www.amazon.es/s?k=karcher+k3", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pressure+washer" },
+        { "name": "Detergente", "image": "https://placehold.co/100x100/333/white?text=Jabon", "amazon": "https://www.amazon.es/s?k=detergente+karcher+piedra", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pressure+washer+soap" }
     ]
   },
   {
@@ -653,8 +905,8 @@
     "image_url": "images/trucos/mancha.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+madera",
     "tools": [
-      { "name": "Reparador", "image": "https://placehold.co/100x100/333/white?text=Aceite", "amazon": "https://www.amazon.es/s?k=reparador+muebles", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=furniture+polish" },
-      { "name": "Posavasos", "image": "https://placehold.co/100x100/333/white?text=Posavasos", "amazon": "https://www.amazon.es/s?k=posavasos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=coasters" }
+      { "name": "Rotulador Muebles", "image": "https://placehold.co/100x100/333/white?text=Rotus", "amazon": "https://www.amazon.es/s?k=rotuladores+reparar+madera", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=furniture+repair+kit" },
+      { "name": "Cera Abejas", "image": "https://placehold.co/100x100/333/white?text=Cera", "amazon": "https://www.amazon.es/s?k=cera+abejas+madera", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=beeswax+wood" }
     ]
   },
   {
@@ -668,7 +920,7 @@
     "affiliate_url_primary": "https://www.amazon.es/s?k=spray+antivaho",
     "tools": [
       { "name": "Spray Antivaho", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+antivaho+espejos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=anti+fog+spray" },
-      { "name": "Limpiacristales", "image": "https://placehold.co/100x100/333/white?text=Goma", "amazon": "https://www.amazon.es/s?k=rasqueta+limpiacristales", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=squeegee" }
+      { "name": "Rasqueta Ducha", "image": "https://placehold.co/100x100/333/white?text=Goma", "amazon": "https://www.amazon.es/s?k=rasqueta+limpia+cristales", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=squeegee" }
     ]
   },
   {
@@ -681,8 +933,8 @@
     "image_url": "images/trucos/llave.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=extractor+llaves",
     "tools": [
-      { "name": "Kit Extractor", "image": "https://placehold.co/100x100/333/white?text=Kit", "amazon": "https://www.amazon.es/s?k=extractor+llaves+rotas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=broken+key+extractor" },
-      { "name": "Pistola Silicona", "image": "https://placehold.co/100x100/333/white?text=Pistola", "amazon": "https://www.amazon.es/s?k=pistola+silicona+caliente", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=glue+gun" }
+      { "name": "Kit Extractor", "image": "https://placehold.co/100x100/333/white?text=Extrac.", "amazon": "https://www.amazon.es/s?k=kit+extractor+llaves+rotas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=broken+key+extractor" },
+      { "name": "Pistola Silicona", "image": "https://placehold.co/100x100/333/white?text=Pistola", "amazon": "https://www.amazon.es/s?k=pistola+silicona", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=glue+gun" }
     ]
   },
   {
@@ -696,7 +948,7 @@
     "affiliate_url_primary": "https://www.amazon.es/s?k=kit+secado+movil",
     "tools": [
       { "name": "Bolsas Sílice", "image": "https://placehold.co/100x100/333/white?text=Silice", "amazon": "https://www.amazon.es/s?k=bolsas+gel+silice", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silica+gel" },
-      { "name": "Bolsa Secado", "image": "https://placehold.co/100x100/333/white?text=Bolsa", "amazon": "https://www.amazon.es/s?k=bolsa+secado+movil", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=phone+drying+bag" }
+      { "name": "Kit Emergencia", "image": "https://placehold.co/100x100/333/white?text=Kit", "amazon": "https://www.amazon.es/s?k=kit+reparacion+movil+mojado", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=phone+dry+bag" }
     ]
   },
   {
@@ -709,8 +961,8 @@
     "image_url": "images/trucos/filtro.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+pantallas",
     "tools": [
-      { "name": "Spray Pantalla", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+limpia+pantallas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=screen+cleaner" },
-      { "name": "Paño Microfibra", "image": "https://placehold.co/100x100/333/white?text=Paño", "amazon": "https://www.amazon.es/s?k=paño+microfibra", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=microfiber+cloth" }
+      { "name": "Spray Pantallas", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+limpia+pantallas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=screen+cleaner" },
+      { "name": "Paño Microfibra", "image": "https://placehold.co/100x100/333/white?text=Paño", "amazon": "https://www.amazon.es/s?k=paños+microfibra", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=microfiber+cloth" }
     ]
   },
   {
@@ -737,8 +989,8 @@
     "image_url": "images/trucos/rayon.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+arañazos",
     "tools": [
-      { "name": "Quita Arañazos", "image": "https://placehold.co/100x100/333/white?text=Pasta", "amazon": "https://www.amazon.es/s?k=pulimento+arañazos+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=car+scratch+remover" },
-      { "name": "Rotulador", "image": "https://placehold.co/100x100/333/white?text=Rotu", "amazon": "https://www.amazon.es/s?k=pincel+retoque+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=paint+pen" }
+      { "name": "Quita Arañazos", "image": "https://placehold.co/100x100/333/white?text=Pasta", "amazon": "https://www.amazon.es/s?k=pulimento+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=car+scratch+remover" },
+      { "name": "Rotulador Pintura", "image": "https://placehold.co/100x100/333/white?text=Rotu", "amazon": "https://www.amazon.es/s?k=pincel+retoque+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=car+paint+pen" }
     ]
   },
   {
@@ -751,7 +1003,7 @@
     "image_url": "images/trucos/pegamento.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=disolvente+pegamento",
     "tools": [
-      { "name": "Disolvente", "image": "https://placehold.co/100x100/333/white?text=Bote", "amazon": "https://www.amazon.es/s?k=disolvente+superglue", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=glue+debonder" },
+      { "name": "Disolvente", "image": "https://placehold.co/100x100/333/white?text=Bote", "amazon": "https://www.amazon.es/s?k=disolvente+cianoacrilato", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=glue+debonder" },
       { "name": "Crema Manos", "image": "https://placehold.co/100x100/333/white?text=Crema", "amazon": "https://www.amazon.es/s?k=crema+manos+reparadora", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=hand+cream" }
     ]
   },
@@ -765,8 +1017,8 @@
     "image_url": "images/trucos/salero.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=salero+antihumedad",
     "tools": [
-      { "name": "Salero Cerámica", "image": "https://placehold.co/100x100/333/white?text=Salero", "amazon": "https://www.amazon.es/s?k=salero+con+tapa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=salt+shaker" },
-      { "name": "Bolsas Sílice", "image": "https://placehold.co/100x100/333/white?text=Bolsas", "amazon": "https://www.amazon.es/s?k=silice+alimentaria", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silica+gel+food" }
+      { "name": "Salero Cerámica", "image": "https://placehold.co/100x100/333/white?text=Salero", "amazon": "https://www.amazon.es/s?k=salero+cocina", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=salt+shaker" },
+      { "name": "Bolsitas Sílice", "image": "https://placehold.co/100x100/333/white?text=Bolsas", "amazon": "https://www.amazon.es/s?k=bolsas+silice+alimentos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silica+gel+food" }
     ]
   },
   {
@@ -779,8 +1031,8 @@
     "image_url": "images/trucos/plata.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+plata",
     "tools": [
-      { "name": "Paño Plata", "image": "https://placehold.co/100x100/333/white?text=Paño", "amazon": "https://www.amazon.es/s?k=paño+limpieza+plata", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silver+cloth" },
-      { "name": "Líquido", "image": "https://placehold.co/100x100/333/white?text=Bote", "amazon": "https://www.amazon.es/s?k=liquido+limpiar+plata", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silver+cleaner" }
+      { "name": "Paño Plata", "image": "https://placehold.co/100x100/333/white?text=Paño", "amazon": "https://www.amazon.es/s?k=paño+limpieza+plata", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silver+cleaning+cloth" },
+      { "name": "Líquido Limpia", "image": "https://placehold.co/100x100/333/white?text=Bote", "amazon": "https://www.amazon.es/s?k=liquido+limpiar+plata", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=silver+cleaner" }
     ]
   },
   {
@@ -793,8 +1045,8 @@
     "image_url": "images/trucos/juntas.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=blanqueador+juntas",
     "tools": [
-      { "name": "Rotulador", "image": "https://placehold.co/100x100/333/white?text=Rotu", "amazon": "https://www.amazon.es/s?k=rotulador+juntas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=grout+pen" },
-      { "name": "Cepillo", "image": "https://placehold.co/100x100/333/white?text=Cepillo", "amazon": "https://www.amazon.es/s?k=cepillo+juntas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=grout+brush" }
+      { "name": "Rotulador Juntas", "image": "https://placehold.co/100x100/333/white?text=Rotu", "amazon": "https://www.amazon.es/s?k=rotulador+juntas+blanco", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=grout+pen" },
+      { "name": "Cepillo Eléc.", "image": "https://placehold.co/100x100/333/white?text=Cepillo", "amazon": "https://www.amazon.es/s?k=cepillo+limpieza+electrico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=electric+cleaning+brush" }
     ]
   },
   {
@@ -807,8 +1059,8 @@
     "image_url": "images/trucos/bebida.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=enfriador+bebidas",
     "tools": [
-      { "name": "Funda Frío", "image": "https://placehold.co/100x100/333/white?text=Funda", "amazon": "https://www.amazon.es/s?k=funda+enfriadora+botella", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cooler+sleeve" },
-      { "name": "Hielos Acero", "image": "https://placehold.co/100x100/333/white?text=Cubos", "amazon": "https://www.amazon.es/s?k=cubitos+acero+inoxidable", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=stainless+steel+ice" }
+      { "name": "Funda Enfriadora", "image": "https://placehold.co/100x100/333/white?text=Funda", "amazon": "https://www.amazon.es/s?k=funda+enfriadora+botellas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=bottle+cooler+sleeve" },
+      { "name": "Hielos Acero", "image": "https://placehold.co/100x100/333/white?text=Cubos", "amazon": "https://www.amazon.es/s?k=hielos+reutilizables", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=reusable+ice+cubes" }
     ]
   },
   {
@@ -821,8 +1073,8 @@
     "image_url": "images/trucos/cajon.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=cera+muebles",
     "tools": [
-      { "name": "Cera Abejas", "image": "https://placehold.co/100x100/333/white?text=Cera", "amazon": "https://www.amazon.es/s?k=cera+madera", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=beeswax" },
-      { "name": "Lija", "image": "https://placehold.co/100x100/333/white?text=Lija", "amazon": "https://www.amazon.es/s?k=papel+lija", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sandpaper" }
+      { "name": "Cera Deslizante", "image": "https://placehold.co/100x100/333/white?text=Cera", "amazon": "https://www.amazon.es/s?k=cera+deslizante+madera", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wood+wax" },
+      { "name": "Lija Fina", "image": "https://placehold.co/100x100/333/white?text=Lija", "amazon": "https://www.amazon.es/s?k=papel+lija+fino", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sandpaper" }
     ]
   },
   {
@@ -835,8 +1087,8 @@
     "image_url": "images/trucos/pelos_sofa.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=quita+pelos+mascota",
     "tools": [
-      { "name": "Rodillo", "image": "https://placehold.co/100x100/333/white?text=Rodillo", "amazon": "https://www.amazon.es/s?k=rodillo+pelos+mascota", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pet+hair+roller" },
-      { "name": "Guante", "image": "https://placehold.co/100x100/333/white?text=Guante", "amazon": "https://www.amazon.es/s?k=guante+cepillo+mascota", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pet+glove" }
+      { "name": "Rodillo Pelos", "image": "https://placehold.co/100x100/333/white?text=Rodillo", "amazon": "https://www.amazon.es/s?k=rodillo+quita+pelos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pet+hair+roller" },
+      { "name": "Guante Mascota", "image": "https://placehold.co/100x100/333/white?text=Guante", "amazon": "https://www.amazon.es/s?k=guante+cepillo+gato", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pet+grooming+glove" }
     ]
   },
   {
@@ -849,8 +1101,8 @@
     "image_url": "images/trucos/llavero.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=llaveros+faciles",
     "tools": [
-      { "name": "Mosquetón", "image": "https://placehold.co/100x100/333/white?text=Clip", "amazon": "https://www.amazon.es/s?k=mosqueton+llavero", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=carabiner" },
-      { "name": "Organizador", "image": "https://placehold.co/100x100/333/white?text=Org", "amazon": "https://www.amazon.es/s?k=organizador+llaves", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=key+organizer" }
+      { "name": "Llavero Mosquetón", "image": "https://placehold.co/100x100/333/white?text=Llavero", "amazon": "https://www.amazon.es/s?k=llavero+mosqueton", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=keychain+carabiner" },
+      { "name": "Organizador Llaves", "image": "https://placehold.co/100x100/333/white?text=Org.", "amazon": "https://www.amazon.es/s?k=organizador+llaves+inteligente", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=key+organizer" }
     ]
   },
   {
@@ -864,7 +1116,7 @@
     "affiliate_url_primary": "https://www.amazon.es/s?k=kit+limpieza+ante",
     "tools": [
       { "name": "Goma Ante", "image": "https://placehold.co/100x100/333/white?text=Goma", "amazon": "https://www.amazon.es/s?k=goma+borrar+ante", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=suede+eraser" },
-      { "name": "Spray", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+impermeabilizante", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=waterproof+spray" }
+      { "name": "Spray Protector", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+impermeabilizante+zapatos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+protector+spray" }
     ]
   },
   {
@@ -877,7 +1129,7 @@
     "image_url": "images/trucos/percha.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=perchas+antideslizantes",
     "tools": [
-      { "name": "Perchas", "image": "https://placehold.co/100x100/333/white?text=Percha", "amazon": "https://www.amazon.es/s?k=perchas+terciopelo", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=velvet+hangers" },
+      { "name": "Perchas Terciopelo", "image": "https://placehold.co/100x100/333/white?text=Percha", "amazon": "https://www.amazon.es/s?k=perchas+terciopelo", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=velvet+hangers" },
       { "name": "Tiras Silicona", "image": "https://placehold.co/100x100/333/white?text=Tiras", "amazon": "https://www.amazon.es/s?k=tiras+antideslizantes+perchas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=hanger+grips" }
     ]
   },
@@ -891,8 +1143,8 @@
     "image_url": "images/trucos/zapatos_platano.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=betun+zapatos",
     "tools": [
-      { "name": "Esponja", "image": "https://placehold.co/100x100/333/white?text=Esponja", "amazon": "https://www.amazon.es/s?k=esponja+brillo+zapatos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+shine+sponge" },
-      { "name": "Betún", "image": "https://placehold.co/100x100/333/white?text=Betun", "amazon": "https://www.amazon.es/s?k=betun+zapatos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+polish" }
+      { "name": "Esponja Brillo", "image": "https://placehold.co/100x100/333/white?text=Esponja", "amazon": "https://www.amazon.es/s?k=esponja+brillo+zapatos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+shine+sponge" },
+      { "name": "Grasa Caballo", "image": "https://placehold.co/100x100/333/white?text=Grasa", "amazon": "https://www.amazon.es/s?k=grasa+caballo+zapatos", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=leather+grease" }
     ]
   },
   {
@@ -905,8 +1157,8 @@
     "image_url": "images/trucos/pantalla_rayada.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=reparador+pantalla+movil",
     "tools": [
-      { "name": "Polywatch", "image": "https://placehold.co/100x100/333/white?text=Pasta", "amazon": "https://www.amazon.es/s?k=polywatch", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=polywatch" },
-      { "name": "Protector", "image": "https://placehold.co/100x100/333/white?text=Cristal", "amazon": "https://www.amazon.es/s?k=protector+pantalla", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=screen+protector" }
+      { "name": "Pulimento Pantalla", "image": "https://placehold.co/100x100/333/white?text=Pulim.", "amazon": "https://www.amazon.es/s?k=polywatch", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=polywatch" },
+      { "name": "Protector Cristal", "image": "https://placehold.co/100x100/333/white?text=Cristal", "amazon": "https://www.amazon.es/s?k=protector+pantalla+universal", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=screen+protector" }
     ]
   },
   {
@@ -919,8 +1171,8 @@
     "image_url": "images/trucos/reset.jpg",
     "affiliate_url_primary": null,
     "tools": [
-      { "name": "Clips", "image": "https://placehold.co/100x100/333/white?text=Clips", "amazon": "https://www.amazon.es/s?k=clips+papeleria", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=paper+clips" },
-      { "name": "Pincho SIM", "image": "https://placehold.co/100x100/333/white?text=Pincho", "amazon": "https://www.amazon.es/s?k=herramienta+sim", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sim+tool" }
+      { "name": "Clips Colores", "image": "https://placehold.co/100x100/333/white?text=Clips", "amazon": "https://www.amazon.es/s?k=clips+papeleria", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=paper+clips" },
+      { "name": "Herramienta SIM", "image": "https://placehold.co/100x100/333/white?text=Pincho", "amazon": "https://www.amazon.es/s?k=herramienta+expulsion+sim", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sim+eject+tool" }
     ]
   },
   {
@@ -933,8 +1185,8 @@
     "image_url": "images/trucos/cables_wc.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=organizador+cables",
     "tools": [
-      { "name": "Velcros", "image": "https://placehold.co/100x100/333/white?text=Velcro", "amazon": "https://www.amazon.es/s?k=bridas+velcro", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cable+ties" },
-      { "name": "Caja", "image": "https://placehold.co/100x100/333/white?text=Caja", "amazon": "https://www.amazon.es/s?k=caja+organizador+cables", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cable+box" }
+      { "name": "Velcros Cables", "image": "https://placehold.co/100x100/333/white?text=Velcro", "amazon": "https://www.amazon.es/s?k=tiras+velcro+cables", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cable+ties" },
+      { "name": "Caja Cables", "image": "https://placehold.co/100x100/333/white?text=Caja", "amazon": "https://www.amazon.es/s?k=caja+organizadora+cables", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cable+box" }
     ]
   },
   {
@@ -947,8 +1199,8 @@
     "image_url": "images/trucos/tablet_percha.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=soporte+tablet",
     "tools": [
-      { "name": "Soporte", "image": "https://placehold.co/100x100/333/white?text=Atril", "amazon": "https://www.amazon.es/s?k=soporte+tablet+mesa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=tablet+stand" },
-      { "name": "Alicates", "image": "https://placehold.co/100x100/333/white?text=Alicate", "amazon": "https://www.amazon.es/s?k=alicates", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pliers" }
+      { "name": "Soporte Tablet", "image": "https://placehold.co/100x100/333/white?text=Atril", "amazon": "https://www.amazon.es/s?k=soporte+tablet+mesa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=tablet+stand" },
+      { "name": "Alicates", "image": "https://placehold.co/100x100/333/white?text=Alicate", "amazon": "https://www.amazon.es/s?k=alicates+universales", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pliers" }
     ]
   },
   {
@@ -961,8 +1213,8 @@
     "image_url": "images/trucos/brochas.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+brochas",
     "tools": [
-      { "name": "Peine", "image": "https://placehold.co/100x100/333/white?text=Peine", "amazon": "https://www.amazon.es/s?k=peine+brochas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=brush+comb" },
-      { "name": "Aguarrás", "image": "https://placehold.co/100x100/333/white?text=Bote", "amazon": "https://www.amazon.es/s?k=aguarras", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=paint+thinner" }
+      { "name": "Peine Brochas", "image": "https://placehold.co/100x100/333/white?text=Peine", "amazon": "https://www.amazon.es/s?k=cepillo+limpiar+brochas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=brush+cleaner+comb" },
+      { "name": "Disolvente", "image": "https://placehold.co/100x100/333/white?text=Bote", "amazon": "https://www.amazon.es/s?k=aguarras", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=paint+thinner" }
     ]
   },
   {
@@ -976,7 +1228,7 @@
     "affiliate_url_primary": "https://www.amazon.es/s?k=pulimento+metales",
     "tools": [
       { "name": "Algodón Mágico", "image": "https://placehold.co/100x100/333/white?text=Aladdin", "amazon": "https://www.amazon.es/s?k=algodon+magico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=metal+polish" },
-      { "name": "Aluminio", "image": "https://placehold.co/100x100/333/white?text=Papel", "amazon": "https://www.amazon.es/s?k=papel+aluminio", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=aluminum+foil" }
+      { "name": "Papel Aluminio", "image": "https://placehold.co/100x100/333/white?text=Papel", "amazon": "https://www.amazon.es/s?k=papel+aluminio", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=aluminum+foil" }
     ]
   },
   {
@@ -989,8 +1241,8 @@
     "image_url": "images/trucos/peine.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=sujeta+clavos",
     "tools": [
-      { "name": "Martillo Imán", "image": "https://placehold.co/100x100/333/white?text=Martillo", "amazon": "https://www.amazon.es/s?k=martillo+iman", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=magnetic+hammer" },
-      { "name": "Alicates", "image": "https://placehold.co/100x100/333/white?text=Alicate", "amazon": "https://www.amazon.es/s?k=alicates+punta", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=pliers" }
+      { "name": "Martillo Imán", "image": "https://placehold.co/100x100/333/white?text=Martillo", "amazon": "https://www.amazon.es/s?k=martillo+carpintero+iman", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=magnetic+hammer" },
+      { "name": "Alicates Punta", "image": "https://placehold.co/100x100/333/white?text=Alicate", "amazon": "https://www.amazon.es/s?k=alicates+punta+fina", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=needle+nose+pliers" }
     ]
   },
   {
@@ -1003,8 +1255,8 @@
     "image_url": "images/trucos/escobillas.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=limpia+parabrisas",
     "tools": [
-      { "name": "Escobillas", "image": "https://placehold.co/100x100/333/white?text=Bosch", "amazon": "https://www.amazon.es/s?k=escobillas+limpiaparabrisas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wiper+blades" },
-      { "name": "Alcohol", "image": "https://placehold.co/100x100/333/white?text=Alcohol", "amazon": "https://www.amazon.es/s?k=alcohol+limpieza", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=isopropyl+alcohol" }
+      { "name": "Escobillas Bosch", "image": "https://placehold.co/100x100/333/white?text=Bosch", "amazon": "https://www.amazon.es/s?k=escobillas+limpiaparabrisas+bosch", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wiper+blades" },
+      { "name": "Alcohol Limpieza", "image": "https://placehold.co/100x100/333/white?text=Alcohol", "amazon": "https://www.amazon.es/s?k=alcohol+isopropilico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=isopropyl+alcohol" }
     ]
   },
   {
@@ -1017,8 +1269,8 @@
     "image_url": "images/trucos/cerradura_hielo.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=descongelante+cerraduras",
     "tools": [
-      { "name": "Spray Hielo", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+descongelante", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=deicer+spray" },
-      { "name": "Rasqueta", "image": "https://placehold.co/100x100/333/white?text=Rasqueta", "amazon": "https://www.amazon.es/s?k=rasqueta+hielo", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=ice+scraper" }
+      { "name": "Spray Descongelante", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+descongelante+parabrisas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=deicer+spray" },
+      { "name": "Rasqueta Hielo", "image": "https://placehold.co/100x100/333/white?text=Rasqueta", "amazon": "https://www.amazon.es/s?k=rasqueta+hielo+coche", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=ice+scraper" }
     ]
   },
   {
@@ -1031,8 +1283,8 @@
     "image_url": "images/trucos/gafas_vaho.jpg",
     "affiliate_url_primary": "https://www.amazon.es/s?k=spray+antivaho",
     "tools": [
-      { "name": "Gamuza", "image": "https://placehold.co/100x100/333/white?text=Gamuza", "amazon": "https://www.amazon.es/s?k=gamuza+antivaho", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=anti+fog+cloth" },
-      { "name": "Spray Zeiss", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+antivaho+gafas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=lens+cleaner" }
+      { "name": "Gamuza Antivaho", "image": "https://placehold.co/100x100/333/white?text=Gamuza", "amazon": "https://www.amazon.es/s?k=gamuza+antivaho+gafas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=anti+fog+cloth" },
+      { "name": "Spray Zeiss", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+antivaho+zeiss", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=lens+cleaner" }
     ]
   }
 ]
