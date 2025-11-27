@@ -7,12 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBody = document.getElementById('modalBody');
     const closeBtn = document.querySelector('.close-btn');
     
-    // Convertimos a Array para poder usar índices en el Swipe
+    // ARRAYS DE BOTONES
     const catButtons = Array.from(document.querySelectorAll('.cat-btn'));
+    const diffButtons = Array.from(document.querySelectorAll('.diff-btn')); // NUEVO
     
     let allSolutions = [];
     let currentCategory = 'all';
-    let currentCatIndex = 0; // Para saber dónde estamos
+    let currentDifficulty = 'all'; // NUEVO
+    let currentCatIndex = 0;
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     // ---------------------------------------------------------
@@ -29,19 +31,16 @@ document.addEventListener('DOMContentLoaded', () => {
         whatsapp: '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>'
     };
 
-    // OBSERVER ANIMACIONES
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) entry.target.classList.add('visible');
         });
     }, { threshold: 0.1 });
 
-    // SERVICE WORKER
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(console.log);
     }
 
-    // CARGAR DATOS
     fetch('./data/solutions.json')
         .then(res => res.json())
         .then(data => {
@@ -50,47 +49,48 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(err => console.error('Error cargando JSON:', err));
 
-    searchInput.addEventListener('input', (e) => filterData(e.target.value, currentCategory));
+    // --- FILTRADO PRINCIPAL (CATEGORÍA + DIFICULTAD + TEXTO) ---
+    function applyFilters() {
+        const term = searchInput.value.toLowerCase();
+        const filtered = allSolutions.filter(sol => {
+            const matchText = sol.title.toLowerCase().includes(term) || sol.problem.toLowerCase().includes(term);
+            
+            let matchCat = true;
+            if (currentCategory === 'favorites') matchCat = favorites.includes(sol.title);
+            else if (currentCategory !== 'all') matchCat = sol.category === currentCategory;
 
-    // --- 🚀 LÓGICA SWIPE (DESLIZAMIENTO) RECUPERADA ---
-    let touchStartX = 0;
-    let touchStartY = 0;
+            let matchDiff = true;
+            if (currentDifficulty !== 'all') matchDiff = sol.risk_level === currentDifficulty;
 
-    document.addEventListener('touchstart', e => {
-        if (e.target.closest('.category-scroll')) return; // Si tocas la barra, no cuenta
-        touchStartX = e.changedTouches[0].screenX;
-        touchStartY = e.changedTouches[0].screenY;
-    }, {passive: false});
-
-    document.addEventListener('touchend', e => {
-        if (e.target.closest('.category-scroll')) return;
-        const touchEndX = e.changedTouches[0].screenX;
-        const touchEndY = e.changedTouches[0].screenY;
-        handleSwipe(touchStartX, touchStartY, touchEndX, touchEndY);
-    }, {passive: false});
-
-    function handleSwipe(startX, startY, endX, endY) {
-        const diffX = startX - endX;
-        const diffY = startY - endY;
-
-        // Solo activamos si el movimiento es horizontal (>50px) y más fuerte que el vertical
-        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-            if (diffX > 0) {
-                // Deslizar izquierda -> Siguiente
-                changeCategory(currentCatIndex + 1);
-            } else {
-                // Deslizar derecha -> Anterior
-                changeCategory(currentCatIndex - 1);
-            }
-        }
+            return matchText && matchCat && matchDiff;
+        });
+        renderSolutions(filtered);
     }
 
-    function changeCategory(index) {
-        if (index >= 0 && index < catButtons.length) {
-            catButtons[index].click();
-        }
-    }
-    // --- FIN LÓGICA SWIPE ---
+    searchInput.addEventListener('input', applyFilters);
+
+    // EVENTOS CATEGORÍAS
+    catButtons.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            currentCatIndex = index;
+            catButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            currentCategory = btn.getAttribute('data-cat');
+            applyFilters(); // Aplicar filtros
+        });
+    });
+
+    // EVENTOS DIFICULTAD (NUEVO)
+    const diffButtons = document.querySelectorAll('.diff-btn');
+    diffButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            diffButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentDifficulty = btn.getAttribute('data-diff');
+            applyFilters(); // Aplicar filtros
+        });
+    });
 
     // LÓGICA IA
     lensBtn.addEventListener('click', () => {
@@ -174,7 +174,6 @@ document.addEventListener('DOMContentLoaded', () => {
     async function analyzeWithGemini(base64Image) {
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
         const prompt = "Analiza esta imagen. Identifica qué herramienta u objeto de bricolaje es. Responde SOLO con un JSON válido (sin markdown ```json) con estos campos: { \"title\": \"Nombre corto\", \"keyword\": \"Palabra clave para comprarlo\", \"text\": \"Explica para qué sirve y un consejo de uso.\" }";
-
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -182,35 +181,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: "image/jpeg", data: base64Image.split(',')[1] } }] }]
             })
         });
-
         const data = await response.json();
         let textResponse = data.candidates[0].content.parts[0].text;
         textResponse = textResponse.replace(/```json/g, '').replace(/```/g, '').trim();
         return JSON.parse(textResponse);
     }
 
-    // EVENTOS CATEGORÍAS
-    catButtons.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
-            currentCatIndex = index;
-            catButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-            currentCategory = btn.getAttribute('data-cat');
-            filterData(searchInput.value, currentCategory);
-        });
-    });
-
-    function filterData(searchTerm, category) {
-        const term = searchTerm.toLowerCase();
-        const filtered = allSolutions.filter(sol => {
-            const matchText = sol.title.toLowerCase().includes(term) || sol.problem.toLowerCase().includes(term);
-            let matchCat = true;
-            if (category === 'favorites') matchCat = favorites.includes(sol.title);
-            else if (category !== 'all') matchCat = sol.category === category;
-            return matchText && matchCat;
-        });
-        renderSolutions(filtered);
+    // SWIPE
+    let touchStartX = 0;
+    let touchStartY = 0;
+    document.addEventListener('touchstart', e => {
+        if (e.target.closest('.category-scroll') || e.target.closest('.difficulty-scroll')) return;
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+    }, {passive: false});
+    document.addEventListener('touchend', e => {
+        if (e.target.closest('.category-scroll') || e.target.closest('.difficulty-scroll')) return;
+        const touchEndX = e.changedTouches[0].screenX;
+        const touchEndY = e.changedTouches[0].screenY;
+        handleSwipe(touchStartX, touchStartY, touchEndX, touchEndY);
+    }, {passive: false});
+    function handleSwipe(startX, startY, endX, endY) {
+        const diffX = startX - endX;
+        const diffY = startY - endY;
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+            if (diffX > 0) changeCategory(currentCatIndex + 1);
+            else changeCategory(currentCatIndex - 1);
+        }
+    }
+    function changeCategory(index) {
+        if (index >= 0 && index < catButtons.length) catButtons[index].click();
     }
 
     function toggleFavorite(e, title) {
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (favorites.includes(title)) favorites = favorites.filter(t => t !== title);
         else favorites.push(title);
         localStorage.setItem('favorites', JSON.stringify(favorites));
-        if (currentCategory === 'favorites') filterData(searchInput.value, 'favorites');
+        if (currentCategory === 'favorites') applyFilters();
         else {
             const icon = e.target;
             icon.classList.toggle('is-fav');
@@ -245,7 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
             list.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:rgba(255,255,255,0.7); margin-top:30px;">${msg}</div>`;
             return;
         }
-
         solutions.forEach(sol => {
             const card = document.createElement('div');
             const imageSrc = sol.image_url || '[https://placehold.co/100x100/e2e8f0/475569?text=Sin+Foto](https://placehold.co/100x100/e2e8f0/475569?text=Sin+Foto)';
@@ -300,8 +299,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (sol.affiliate_url_primary && (!sol.tools || sol.tools.length === 0)) {
             mainButtonsHTML = `
                 <div class="button-grid">
-                    <a href="${sol.affiliate_url_primary}" target="_blank" class="store-btn btn-amazon"><img src="images/amazon-logo.png" alt="Amazon"></a>
-                    ${sol.affiliate_url_secondary ? `<a href="${sol.affiliate_url_secondary}" target="_blank" class="store-btn btn-ali"><img src="images/aliexpress-logo.png" alt="AliExpress"></a>` : ''}
+                    <a href="${sol.affiliate_url_primary}" target="_blank" class="store-btn btn-amazon"><img src="images/amazon-logo.png" alt="Amazon"> <span>Amazon</span></a>
+                    ${sol.affiliate_url_secondary ? `<a href="${sol.affiliate_url_secondary}" target="_blank" class="store-btn btn-ali"><img src="images/aliexpress-logo.png" alt="Ali"> <span>AliExpress</span></a>` : ''}
                 </div>
                 ${marketingHTML}`;
         }
