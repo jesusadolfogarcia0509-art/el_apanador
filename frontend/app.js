@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBody = document.getElementById('modalBody');
     const closeBtn = document.querySelector('.close-btn');
     
-    // CORRECCIÓN CLAVE: Convertimos a Array real para que funcione .findIndex()
+    // Convertimos a Array para poder usar índices en el Swipe
     const catButtons = Array.from(document.querySelectorAll('.cat-btn'));
     
     let allSolutions = [];
     let currentCategory = 'all';
+    let currentCatIndex = 0; // Para saber dónde estamos
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     // ---------------------------------------------------------
@@ -28,16 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
         whatsapp: '<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>'
     };
 
+    // OBSERVER ANIMACIONES
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if(entry.isIntersecting) entry.target.classList.add('visible');
         });
     }, { threshold: 0.1 });
 
+    // SERVICE WORKER
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js').catch(console.log);
     }
 
+    // CARGAR DATOS
     fetch('./data/solutions.json')
         .then(res => res.json())
         .then(data => {
@@ -48,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     searchInput.addEventListener('input', (e) => filterData(e.target.value, currentCategory));
 
-    // --- LÓGICA DE DESLIZAMIENTO (SWIPE) MEJORADA ---
+    // --- 🚀 LÓGICA SWIPE (DESLIZAMIENTO) RECUPERADA ---
     let touchStartX = 0;
     let touchStartY = 0;
 
@@ -71,15 +75,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Solo activamos si el movimiento es horizontal (>50px) y más fuerte que el vertical
         if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-            const currentIndex = catButtons.findIndex(btn => btn.classList.contains('active'));
-            if (currentIndex === -1) return;
-
             if (diffX > 0) {
                 // Deslizar izquierda -> Siguiente
-                changeCategory(currentIndex + 1);
+                changeCategory(currentCatIndex + 1);
             } else {
                 // Deslizar derecha -> Anterior
-                changeCategory(currentIndex - 1);
+                changeCategory(currentCatIndex - 1);
             }
         }
     }
@@ -89,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             catButtons[index].click();
         }
     }
-    // --- FIN SWIPE ---
+    // --- FIN LÓGICA SWIPE ---
 
     // LÓGICA IA
     lensBtn.addEventListener('click', () => {
@@ -108,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modalBody.innerHTML = `
             <div class="ai-loading" style="text-align:center; padding:40px; color:white;">
                 <div style="font-size:3rem; animation:bounce 1s infinite;">🧠</div>
-                <h3 style="margin-top:20px;">Analizando tu foto...</h3>
+                <h3 style="margin-top:20px;">Analizando con IA...</h3>
                 <p style="color:#cbd5e1; font-size:0.9rem;">Dame unos segundos.</p>
             </div>
         `;
@@ -148,15 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const reader = new FileReader();
             reader.readAsDataURL(file);
             reader.onload = (event) => {
-                // COMPRESIÓN DE IMAGEN ANTES DE ENVIAR
                 const img = new Image();
                 img.src = event.target.result;
                 img.onload = () => {
                     const canvas = document.createElement('canvas');
-                    const maxWidth = 800; // Reducimos a 800px
+                    const maxWidth = 800;
                     let width = img.width;
                     let height = img.height;
-
                     if (width > maxWidth) {
                         height *= maxWidth / width;
                         width = maxWidth;
@@ -165,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     canvas.height = height;
                     const ctx = canvas.getContext('2d');
                     ctx.drawImage(img, 0, 0, width, height);
-                    resolve(canvas.toDataURL('image/jpeg', 0.7)); // Calidad 70%
+                    resolve(canvas.toDataURL('image/jpeg', 0.7));
                 };
             };
             reader.onerror = error => reject(error);
@@ -176,20 +175,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${GEMINI_API_KEY}`;
         const prompt = "Analiza esta imagen. Identifica qué herramienta u objeto de bricolaje es. Responde SOLO con un JSON válido (sin markdown ```json) con estos campos: { \"title\": \"Nombre corto\", \"keyword\": \"Palabra clave para comprarlo\", \"text\": \"Explica para qué sirve y un consejo de uso.\" }";
 
-        // Enviamos solo la parte base64 pura, sin el encabezado
-        const cleanBase64 = base64Image.split(',')[1];
-
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: "image/jpeg", data: cleanBase64 } }] }]
+                contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: "image/jpeg", data: base64Image.split(',')[1] } }] }]
             })
         });
 
         const data = await response.json();
-        if (!data.candidates || !data.candidates[0].content) throw new Error("No pude identificar la imagen.");
-        
         let textResponse = data.candidates[0].content.parts[0].text;
         textResponse = textResponse.replace(/```json/g, '').replace(/```/g, '').trim();
         return JSON.parse(textResponse);
@@ -198,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // EVENTOS CATEGORÍAS
     catButtons.forEach((btn, index) => {
         btn.addEventListener('click', () => {
+            currentCatIndex = index;
             catButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
@@ -250,6 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
             list.innerHTML = `<div style="grid-column: 1/-1; text-align:center; color:rgba(255,255,255,0.7); margin-top:30px;">${msg}</div>`;
             return;
         }
+
         solutions.forEach(sol => {
             const card = document.createElement('div');
             const imageSrc = sol.image_url || '[https://placehold.co/100x100/e2e8f0/475569?text=Sin+Foto](https://placehold.co/100x100/e2e8f0/475569?text=Sin+Foto)';
