@@ -13,12 +13,12 @@ body {
     background: var(--bg-gradient);
     min-height: 100vh;
     background-attachment: fixed;
-    overscroll-behavior-x: none;
+    overscroll-behavior-x: none; /* Evita gestos del navegador */
 }
 
-/* Cabecera */
+/* --- CABECERA --- */
 header {
-    background: rgba(15, 23, 42, 0.85);
+    background: rgba(15, 23, 42, 0.9);
     padding: 1rem;
     position: sticky; top: 0; z-index: 100;
     backdrop-filter: blur(12px);
@@ -35,55 +35,30 @@ header {
 
 .logo-img { height: 60px; width: auto; filter: drop-shadow(0 0 10px rgba(255,255,255,0.3)); }
 
-/* --- BUSCADOR ESTILO GOOGLE LENS --- */
+/* --- BUSCADOR --- */
 .search-container { padding: 1.5rem 1rem 0.5rem 1rem; max-width: 900px; margin: 0 auto; }
-
-.search-wrapper {
-    position: relative; 
-    width: 100%;
-    margin-bottom: 15px;
-}
+.search-wrapper { position: relative; width: 100%; margin-bottom: 15px; }
 
 input#searchInput {
-    width: 100%; 
-    padding: 16px 50px 16px 16px; /* Espacio a la derecha para el botón */
+    width: 100%; padding: 16px 50px 16px 16px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid var(--card-border);
     border-radius: 15px;
     font-size: 16px; color: white;
     backdrop-filter: blur(5px);
     outline: none; box-sizing: border-box;
-    transition: all 0.3s;
 }
 input#searchInput::placeholder { color: rgba(255,255,255,0.6); }
-input#searchInput:focus {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: var(--primary);
-    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
-}
 
-/* Botón de Cámara dentro del input */
 .lens-btn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: rgba(255, 255, 255, 0.7);
-    cursor: pointer;
-    padding: 8px;
-    border-radius: 50%;
-    transition: color 0.2s, background 0.2s;
+    position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+    background: none; border: none; color: rgba(255, 255, 255, 0.7);
+    cursor: pointer; padding: 8px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-}
-.lens-btn:hover {
-    color: var(--primary);
-    background: rgba(255,255,255,0.1);
 }
 .lens-btn svg { width: 24px; height: 24px; }
 
-/* Categorías */
+/* --- CATEGORÍAS --- */
 .category-scroll {
     display: flex; gap: 10px; overflow-x: auto; 
     padding: 5px 0 15px 0; scrollbar-width: none; 
@@ -97,6 +72,7 @@ input#searchInput:focus {
     padding: 8px 16px; border-radius: 20px;
     font-size: 0.9rem; font-weight: 600; color: #e2e8f0;
     white-space: nowrap; cursor: pointer; transition: all 0.3s;
+    flex-shrink: 0;
 }
 .cat-btn.active {
     background: var(--primary); border-color: var(--primary);
@@ -105,8 +81,7 @@ input#searchInput:focus {
 .cat-btn.heart-filter { border-color: #ef4444; color: #fca5a5; }
 .cat-btn.heart-filter.active { background: #ef4444; color: white; box-shadow: 0 0 15px rgba(239, 68, 68, 0.6); }
 
-
-/* --- TARJETAS (PC) --- */
+/* --- TARJETAS PRINCIPALES (PC - Panorámicas) --- */
 #solutionsList {
     padding: 0 10px 60px 10px;
     max-width: 1000px; margin: 0 auto;
@@ -151,7 +126,7 @@ input#searchInput:focus {
 .dot.active.medium { background: #f59e0b; box-shadow: 0 0 5px #f59e0b; }
 .dot.active.hard { background: #ef4444; box-shadow: 0 0 5px #ef4444; }
 
-/* MÓVIL (2 Columnas) */
+/* --- MÓVIL (2 Columnas Rectangulares) --- */
 @media (max-width: 768px) {
     #solutionsList { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 8px 60px 8px; }
     .solution-card { flex-direction: column; height: auto; min-height: 130px; }
@@ -161,7 +136,7 @@ input#searchInput:focus {
     .card-desc { display: none; }
 }
 
-/* Modal */
+/* --- MODAL --- */
 .modal {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(0,0,0,0.9); display: flex; justify-content: center; align-items: end;
@@ -181,35 +156,38 @@ input#searchInput:focus {
     border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 20;
 }
 
-/* Marketing Boxes */
+/* --- MARKETING & AVISOS --- */
 .marketing-box, .video-marketing-box {
     padding: 12px; border-radius: 10px; text-align: center;
-    margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);
 }
+/* Frase Amazon */
 .marketing-box { background: linear-gradient(45deg, rgba(59, 130, 246, 0.2), rgba(147, 51, 234, 0.2)); }
 .marketing-box p { margin: 0; font-size: 0.9rem; font-weight: 500; color: #f1f5f9; font-style: italic; }
 
+/* Frase Video (OSCURO) */
 .video-marketing-box {
-    background: linear-gradient(45deg, #0f172a, #1e3a8a); 
-    margin-top: 25px; margin-bottom: 15px; border: 1px solid rgba(255,255,255,0.2);
+    background: #0f172a; /* Azul muy oscuro */
+    margin-top: 25px; margin-bottom: 10px; border: 1px solid rgba(255,255,255,0.2);
 }
-.video-marketing-box p { margin: 0; font-size: 0.95rem; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 0.5px; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
+.video-marketing-box p { margin: 0; font-size: 0.9rem; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; }
 
-/* Herramientas */
+/* --- HERRAMIENTAS (Tienda) --- */
 .tools-section { margin-bottom: 20px; }
 .tools-title { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; }
 .tools-grid { display: flex; flex-direction: column; gap: 12px; }
 .tool-card {
-    background: rgba(255, 255, 255, 0.07); border-radius: 12px; padding: 12px;
+    background: rgba(255, 255, 255, 0.07); border-radius: 12px; padding: 10px;
     display: flex; flex-direction: row; align-items: center; text-align: left;
     border: 1px solid rgba(255, 255, 255, 0.1); gap: 15px;
 }
-.tool-img { width: 80px; height: 80px; object-fit: contain; border-radius: 8px; background: white; padding: 5px; flex-shrink: 0; }
+.tool-img { width: 70px; height: 70px; object-fit: contain; border-radius: 8px; background: white; padding: 5px; flex-shrink: 0; }
 .tool-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
-.tool-name { font-size: 1rem; color: #e2e8f0; font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
+.tool-name { font-size: 0.95rem; color: #e2e8f0; font-weight: 700; margin-bottom: 8px; line-height: 1.2; }
 .tool-actions { display: flex; gap: 8px; width: 100%; }
 
+/* Botones Tienda (Logos) */
 .store-btn {
     flex: 1; height: 40px; border-radius: 8px; overflow: hidden;
     display: flex; justify-content: center; align-items: center;
@@ -217,10 +195,14 @@ input#searchInput:focus {
 }
 .store-btn:active { transform: scale(0.95); }
 .store-btn img { height: 24px; width: auto; display: block; }
-.btn-amazon { background-color: #000000; } 
-.btn-ali { background: linear-gradient(to right, #ff8c00, #ff0036); }
 
-/* Botones Acción */
+/* Colores Tiendas */
+.btn-amazon { background-color: #000000 !important; } 
+.btn-ali { background: linear-gradient(to right, #ff8c00, #ff0036) !important; }
+.tool-amazon { background-color: #000000 !important; }
+.tool-ali { background: linear-gradient(to right, #ff8c00, #ff0036) !important; }
+
+/* --- BOTONES ACCIÓN --- */
 .button-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
 .video-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 15px; }
 
@@ -236,18 +218,26 @@ input#searchInput:focus {
 .video-btn.youtube { background: #FF0000; color: white; border: none; box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3); }
 .tiktok-btn { background: #000000; color: white; border: 1px solid #333; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
 
-/* Relacionados */
+/* --- RELACIONADOS --- */
 .related-section { margin-top: 10px; border-top: 1px solid var(--card-border); padding-top: 20px; }
 .related-title { font-size: 1rem; font-weight: 800; color: #94a3b8; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
 .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .related-card {
     background: rgba(255,255,255,0.08); border: 1px solid var(--card-border);
-    border-radius: 12px; padding: 10px; display: flex; align-items: center; gap: 10px;
-    cursor: pointer; transition: transform 0.2s; height: 80px; overflow: hidden; 
+    border-radius: 12px; padding: 10px; 
+    display: flex; align-items: center; gap: 10px;
+    cursor: pointer; transition: transform 0.2s; 
+    height: 80px; overflow: hidden; 
 }
-.related-img { width: 60px; height: 60px; min-width: 60px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
-.related-text { font-size: 0.85rem; font-weight: 600; color: white; line-height: 1.2; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.related-img { 
+    width: 60px !important; height: 60px !important; min-width: 60px !important; 
+    border-radius: 8px; object-fit: cover; flex-shrink: 0; 
+}
+.related-text { 
+    font-size: 0.85rem; font-weight: 600; color: white; line-height: 1.2;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
 
-/* Loading IA */
+/* --- CARGA IA --- */
 .ai-loading { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
