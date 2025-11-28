@@ -1356,5 +1356,351 @@
       { "name": "Gamuza", "image": "https://placehold.co/100x100/333/white?text=Gamuza", "amazon": "https://www.amazon.es/s?k=gamuza+antivaho", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=anti+fog+cloth" },
       { "name": "Spray Zeiss", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+antivaho+gafas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=lens+cleaner" }
     ]
+  },
+  {
+    "title": "Mueble arañado",
+    "category": "Hogar",
+    "problem": "Arañazo visible en madera oscura",
+    "solution_text": "Frota una nuez pelada (la parte carnosa) directamente sobre el arañazo. El aceite de la nuez oscurecerá la madera y disimulará la marca.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/nuez.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=nueces+peladas",
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Nueces", "image": "https://placehold.co/100x100/333/white?text=Nuez", "amazon": "https://www.amazon.es/s?k=nueces+peladas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=walnuts" },
+      { "name": "Cera Reparadora", "image": "https://placehold.co/100x100/333/white?text=Cera", "amazon": "https://www.amazon.es/s?k=cera+reparadora+madera", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=wood+repair+wax" }
+    ]
+  },
+  {
+    "title": "Alfombra abollada",
+    "category": "Hogar",
+    "problem": "Marca de pata de silla/mesa",
+    "solution_text": "Coloca un cubito de hielo sobre la marca hundida. Deja que se derrita por completo. Las fibras de la alfombra absorberán el agua y se levantarán al secarse.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/hielo_alfombra.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Hielera", "image": "https://placehold.co/100x100/333/white?text=Hielo", "amazon": "https://www.amazon.es/s?k=cubitera+hielo", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=ice+cube+tray" },
+      { "name": "Cepillo", "image": "https://placehold.co/100x100/333/white?text=Cepillo", "amazon": "https://www.amazon.es/s?k=cepillo+alfombras", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=carpet+brush" }
+    ]
+  },
+  {
+    "title": "Limpiar microondas",
+    "category": "Hogar",
+    "problem": "Grasa incrustada y olores",
+    "solution_text": "Pon un bol con agua y rodajas de limón. Caliéntalo 5 minutos a máxima potencia. El vapor ablandará la grasa y el limón eliminará olores. Pasa un trapo y listo.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/limon_micro.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Bol Vidrio", "image": "https://placehold.co/100x100/333/white?text=Bol", "amazon": "https://www.amazon.es/s?k=bol+vidrio+microondas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=glass+bowl+microwave" },
+      { "name": "Bayeta", "image": "https://placehold.co/100x100/333/white?text=Trapo", "amazon": "https://www.amazon.es/s?k=bayeta+microfibra", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=microfiber+cloth" }
+    ]
+  },
+  {
+    "title": "Mancha tinta",
+    "category": "Ropa",
+    "problem": "Bolígrafo en camisa blanca",
+    "solution_text": "Coloca un papel absorbente debajo de la mancha. Aplica laca para el pelo o alcohol sobre la tinta. Presiona con otro algodón limpio hasta que la tinta se transfiera.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/tinta.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=alcohol+limpieza",
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Alcohol", "image": "https://placehold.co/100x100/333/white?text=Alcohol", "amazon": "https://www.amazon.es/s?k=alcohol+isopropilico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=isopropyl+alcohol" },
+      { "name": "Laca", "image": "https://placehold.co/100x100/333/white?text=Laca", "amazon": "https://www.amazon.es/s?k=laca+pelo+fuerte", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=hair+spray" }
+    ]
+  },
+  {
+    "title": "Aflojar tornillo duro",
+    "category": "Herramientas",
+    "problem": "Tornillo atascado o pegado",
+    "solution_text": "Calienta la punta de un destornillador (no el mango) y aplícalo sobre la cabeza del tornillo unos segundos. El calor dilatará el metal y romperá el óxido.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/tornillo_calor.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Soplete", "image": "https://placehold.co/100x100/333/white?text=Fuego", "amazon": "https://www.amazon.es/s?k=soplete+cocina", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=blow+torch" },
+      { "name": "Destornillador", "image": "https://placehold.co/100x100/333/white?text=Destor", "amazon": "https://www.amazon.es/s?k=destornillador+golpe", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=impact+screwdriver" }
+    ]
+  },
+  {
+    "title": "Cristales brillantes",
+    "category": "Hogar",
+    "problem": "Ventanas con marcas",
+    "solution_text": "Mezcla vinagre y agua. Pulveriza. Limpia frotando con papel de periódico arrugado en lugar de trapos. El periódico no deja pelusa y pule el cristal.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/periodico.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Vinagre", "image": "https://placehold.co/100x100/333/white?text=Vinagre", "amazon": "https://www.amazon.es/s?k=vinagre+limpieza", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=white+vinegar" },
+      { "name": "Pulverizador", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=botella+spray+vacia", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=spray+bottle" }
+    ]
+  },
+  {
+    "title": "Mal olor nevera",
+    "category": "Hogar",
+    "problem": "Olores mezclados",
+    "solution_text": "Coloca un bol pequeño con carbón activado o posos de café secos en el estante del medio. Absorben los olores fuertes en 24 horas.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/olor_nevera.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Carbón", "image": "https://placehold.co/100x100/333/white?text=Carbon", "amazon": "https://www.amazon.es/s?k=carbon+activado+olores", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=activated+charcoal" },
+      { "name": "Bicarbonato", "image": "https://placehold.co/100x100/333/white?text=Bicarb", "amazon": "https://www.amazon.es/s?k=bicarbonato+sodico+limpieza", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=baking+soda" }
+    ]
+  },
+  {
+    "title": "Suela resbaladiza",
+    "category": "Ropa",
+    "problem": "Zapatos nuevos patinan",
+    "solution_text": "Frota la suela nueva con una lija de grano medio o raspa con unas tijeras para crear textura y agarre. Evitarás resbalones.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/lija_zapato.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=papel+lija",
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Lija", "image": "https://placehold.co/100x100/333/white?text=Lija", "amazon": "https://www.amazon.es/s?k=papel+lija+grano+medio", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=sandpaper" },
+      { "name": "Antideslizante", "image": "https://placehold.co/100x100/333/white?text=Spray", "amazon": "https://www.amazon.es/s?k=spray+antideslizante+suelas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=anti+slip+spray" }
+    ]
+  },
+  {
+    "title": "Cremallera atascada",
+    "category": "Ropa",
+    "problem": "No sube ni baja",
+    "solution_text": "Frota la mina de un lápiz (grafito) sobre los dientes de la cremallera atascada. El grafito actúa como lubricante seco.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/cremallera_lapiz.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Lápiz", "image": "https://placehold.co/100x100/333/white?text=Lapiz", "amazon": "https://www.amazon.es/s?k=lapiz+grafito", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=graphite+pencil" },
+      { "name": "Lubricante", "image": "https://placehold.co/100x100/333/white?text=Cera", "amazon": "https://www.amazon.es/s?k=lubricante+cremalleras", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=zipper+lubricant" }
+    ]
+  },
+  {
+    "title": "Afilar rallador",
+    "category": "Hogar",
+    "problem": "Rallador de queso no corta",
+    "solution_text": "Haz una bola con papel de aluminio y rállala con el rallador. La fricción afilará los bordes de los agujeros de corte.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/afilar_rallador.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Papel Aluminio", "image": "https://placehold.co/100x100/333/white?text=Albal", "amazon": "https://www.amazon.es/s?k=papel+aluminio", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=aluminum+foil" },
+      { "name": "Rallador", "image": "https://placehold.co/100x100/333/white?text=Nuevo", "amazon": "https://www.amazon.es/s?k=rallador+cocina+acero", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=grater" }
+    ]
+  },
+  {
+    "title": "Tupper con grasa",
+    "category": "Hogar",
+    "problem": "Manchas rojas de tomate",
+    "solution_text": "Echa agua caliente, un poco de jabón y un trozo de papel de cocina dentro. Cierra y agita fuerte durante 30 segundos. La grasa se irá al papel.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/tupper.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Papel Cocina", "image": "https://placehold.co/100x100/333/white?text=Papel", "amazon": "https://www.amazon.es/s?k=papel+cocina", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=paper+towel" },
+      { "name": "Lavavajillas", "image": "https://placehold.co/100x100/333/white?text=Jabon", "amazon": "https://www.amazon.es/s?k=lavavajillas+mano", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=dish+soap" }
+    ]
+  },
+  {
+    "title": "Quitar chicle pelo",
+    "category": "Hogar",
+    "problem": "Chicle pegado en el cabello",
+    "solution_text": "No cortes el pelo. Impregna el chicle y el pelo con aceite de oliva o mantequilla de cacahuete. Masajea suavemente hasta que el chicle resbale.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/chicle_pelo.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Aceite", "image": "https://placehold.co/100x100/333/white?text=Aceite", "amazon": "https://www.amazon.es/s?k=aceite+oliva", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=olive+oil" },
+      { "name": "Peine Fino", "image": "https://placehold.co/100x100/333/white?text=Peine", "amazon": "https://www.amazon.es/s?k=peine+puas+finas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=fine+comb" }
+    ]
+  },
+  {
+    "title": "Limpiar persiana",
+    "category": "Hogar",
+    "problem": "Lamas sucias por fuera",
+    "solution_text": "Envuelve dos trapos de microfibra en los extremos de una pinza de cocina sujetados con gomas. Pasa la pinza por cada lama para limpiar ambos lados a la vez.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/persiana.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Pinza Cocina", "image": "https://placehold.co/100x100/333/white?text=Pinza", "amazon": "https://www.amazon.es/s?k=pinzas+cocina", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=kitchen+tongs" },
+      { "name": "Microfibra", "image": "https://placehold.co/100x100/333/white?text=Trapos", "amazon": "https://www.amazon.es/s?k=trapos+microfibra", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=microfiber+cloths" }
+    ]
+  },
+  {
+    "title": "Desatascar WC",
+    "category": "Hogar",
+    "problem": "Inodoro atascado sin desatascador",
+    "solution_text": "Mete una fregona en una bolsa de basura y átala al palo. Úsala como émbolo haciendo movimientos de bombeo en el hueco del inodoro.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/wc_fregona.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=desatascador+wc",
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Fregona", "image": "https://placehold.co/100x100/333/white?text=Fregona", "amazon": "https://www.amazon.es/s?k=fregona", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=mop" },
+      { "name": "Bolsas Basura", "image": "https://placehold.co/100x100/333/white?text=Bolsas", "amazon": "https://www.amazon.es/s?k=bolsas+basura+resistentes", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=trash+bags" }
+    ]
+  },
+  {
+    "title": "Colgar cuadro recto",
+    "category": "Hogar",
+    "problem": "No acierto con los agujeros",
+    "solution_text": "Pega cinta de carrocero en la parte trasera del cuadro sobre los enganches. Marca los puntos en la cinta. Pega la cinta en la pared y taladra sobre las marcas.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/cuadro_recto.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=cinta+carrocero",
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Cinta Pintor", "image": "https://placehold.co/100x100/333/white?text=Cinta", "amazon": "https://www.amazon.es/s?k=cinta+carrocero", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=masking+tape" },
+      { "name": "Nivel", "image": "https://placehold.co/100x100/333/white?text=Nivel", "amazon": "https://www.amazon.es/s?k=nivel+burbuja+pequeño", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=bubble+level" }
+    ]
+  },
+  {
+    "title": "Cable auriculares",
+    "category": "Tecnología",
+    "problem": "Siempre se enredan",
+    "solution_text": "Haz el gesto de los cuernos con la mano. Enrolla el cable haciendo ochos entre el índice y el meñique. El final enróllalo al centro y mete la clavija.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/nudo_cables.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Organizador", "image": "https://placehold.co/100x100/333/white?text=Clip", "amazon": "https://www.amazon.es/s?k=organizador+auriculares", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=earphone+holder" },
+      { "name": "Velcro", "image": "https://placehold.co/100x100/333/white?text=Velcro", "amazon": "https://www.amazon.es/s?k=bridas+velcro+pequeñas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=velcro+cable+ties" }
+    ]
+  },
+  {
+    "title": "Limpiar plancha",
+    "category": "Hogar",
+    "problem": "Base quemada o sucia",
+    "solution_text": "Esparce sal gorda sobre un papel de periódico o de horno. Pasa la plancha caliente (sin vapor) por encima varias veces hasta que quede limpia.",
+    "risk_level": "Medio",
+    "difficulty": 2,
+    "image_url": "images/trucos/limpiar_plancha.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Sal Gorda", "image": "https://placehold.co/100x100/333/white?text=Sal", "amazon": "https://www.amazon.es/s?k=sal+gorda", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=coarse+salt" },
+      { "name": "Stick Limpieza", "image": "https://placehold.co/100x100/333/white?text=Barra", "amazon": "https://www.amazon.es/s?k=barra+limpieza+plancha", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=iron+cleaner+stick" }
+    ]
+  },
+  {
+    "title": "Sacar anillo dedo",
+    "category": "Hogar",
+    "problem": "Dedo hinchado",
+    "solution_text": "Pasa un hilo dental por debajo del anillo. Enrolla el resto del hilo apretado hacia la punta del dedo. Tira del extremo que pasaste por debajo para desenrollar y sacar el anillo.",
+    "risk_level": "Medio",
+    "difficulty": 3,
+    "image_url": "images/trucos/anillo.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Hilo Dental", "image": "https://placehold.co/100x100/333/white?text=Hilo", "amazon": "https://www.amazon.es/s?k=hilo+dental", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=dental+floss" },
+      { "name": "Lubricante", "image": "https://placehold.co/100x100/333/white?text=Jabon", "amazon": "https://www.amazon.es/s?k=jabon+liquido", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=liquid+soap" }
+    ]
+  },
+  {
+    "title": "Cera en mantel",
+    "category": "Hogar",
+    "problem": "Mancha de vela",
+    "solution_text": "Deja que se seque. Rasca el exceso. Pon papel de cocina o estraza encima y debajo de la mancha. Pasa la plancha caliente. El papel absorberá la cera.",
+    "risk_level": "Bajo",
+    "difficulty": 2,
+    "image_url": "images/trucos/cera_mantel.jpg",
+    "affiliate_url_primary": null,
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Papel Cocina", "image": "https://placehold.co/100x100/333/white?text=Papel", "amazon": "https://www.amazon.es/s?k=papel+cocina", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=kitchen+paper" },
+      { "name": "Plancha", "image": "https://placehold.co/100x100/333/white?text=Plancha", "amazon": "https://www.amazon.es/s?k=plancha+ropa", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=iron" }
+    ]
+  },
+  {
+    "title": "Hormigas en casa",
+    "category": "Hogar",
+    "problem": "Entran por la puerta",
+    "solution_text": "Espolvorea polvos de talco, canela o pimienta de cayena en el umbral de la puerta o ventana. Odian el olor y la textura y no cruzarán.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/hormigas.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=trampa+hormigas",
+    "tiktok_url": null,
+    "tools": [
+      { "name": "Polvos Talco", "image": "https://placehold.co/100x100/333/white?text=Talco", "amazon": "https://www.amazon.es/s?k=polvos+talco", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=talcum+powder" },
+      { "name": "Canela", "image": "https://placehold.co/100x100/333/white?text=Canela", "amazon": "https://www.amazon.es/s?k=canela+polvo", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=cinnamon+powder" }
+    ]
+  },
+  {
+    "title": "Limpiar ducha cal",
+    "category": "Hogar",
+    "problem": "Mampara blanca",
+    "solution_text": "Corta un limón por la mitad. Pásalo por todo el cristal de la mampara apretando un poco. Deja actuar 10 min y aclara. El ácido cítrico disuelve la cal.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/limon_ducha.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=limpiador+baño+antical",
+    "tiktok_url": null,
+    "tools": [
+        { "name": "Vinagre", "image": "https://placehold.co/100x100/333/white?text=Vinagre", "amazon": "https://www.amazon.es/s?k=vinagre+limpieza", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=white+vinegar" },
+        { "name": "Limpiacristales", "image": "https://placehold.co/100x100/333/white?text=Goma", "amazon": "https://www.amazon.es/s?k=rasqueta+ducha", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shower+squeegee" }
+    ]
+  },
+  {
+    "title": "Evitar portazos",
+    "category": "Hogar",
+    "problem": "Puertas se cierran fuerte",
+    "solution_text": "Coloca una goma elástica gruesa entre los dos pomos (interior y exterior), cruzándola sobre el resbalón de la cerradura para que no haga 'clic' al cerrar.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/goma_puerta.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=topes+puerta",
+    "tiktok_url": null,
+    "tools": [
+        { "name": "Gomas", "image": "https://placehold.co/100x100/333/white?text=Gomas", "amazon": "https://www.amazon.es/s?k=gomas+elasticas+anchas", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=rubber+bands" },
+        { "name": "Tope Goma", "image": "https://placehold.co/100x100/333/white?text=Tope", "amazon": "https://www.amazon.es/s?k=tope+puerta+goma", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=door+stopper" }
+    ]
+  },
+  {
+    "title": "Secar zapatillas",
+    "category": "Ropa",
+    "problem": "Mojadas por lluvia",
+    "solution_text": "Saca la plantilla. Rellena el zapato con bolas de papel de periódico o de cocina. Cámbialo cada hora. No las pongas directamente en el radiador o se deforman.",
+    "risk_level": "Bajo",
+    "difficulty": 1,
+    "image_url": "images/trucos/secar_zapas.jpg",
+    "affiliate_url_primary": "https://www.amazon.es/s?k=secador+zapatos+electrico",
+    "tiktok_url": null,
+    "tools": [
+        { "name": "Papel", "image": "https://placehold.co/100x100/333/white?text=Papel", "amazon": "https://www.amazon.es/s?k=papel+periodico", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=newspaper" },
+        { "name": "Secador", "image": "https://placehold.co/100x100/333/white?text=Secador", "amazon": "https://www.amazon.es/s?k=secador+calzado", "aliexpress": "https://es.aliexpress.com/wholesale?SearchText=shoe+dryer" }
+    ]
   }
+]
 ]
